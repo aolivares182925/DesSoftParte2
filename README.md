@@ -1,7 +1,7 @@
 # GRUPO N°2
 
 # SISTEMA DE TUTORIA CRUD PARTE 2 ![LAPTOP](https://user-images.githubusercontent.com/72511623/126373916-3a2a40d0-43d7-4b21-832d-71de69caaef6.jpg) (DESARROLLO DE SOFTWARE I)
-
+Cancel changes
 ## Datos Academicos ![LIBRO1](https://user-images.githubusercontent.com/72511623/126376299-05c28cf4-eff8-407c-bfa6-ceeff8b94c77.png)
 
 - **Universidad:** Universidad de San Antonio Abad del Cusco
@@ -15,6 +15,7 @@
 
 ## Colaboradores ![descarga](https://user-images.githubusercontent.com/72511623/126371917-24df0242-6218-4cd8-8da8-3dd229f82203.png)
 
+- **CERATI CERRILLO, FIORELLA** -*CUENTA GITHUB*-[FIORELLA](https://github.com/Fiorella2919)
 - **OLIVARES CAMERO, ALER SEBASTIAN** -*CUENTA GITHUB*-[ALER SEBASTIAN](https://github.com/aolivares182925)
 
 - **VILCAHUAMAN CACERES, MIGUEL** -*CUENTA GITHUB*-[MIGUEL](https://github.com/MigVC)
