@@ -52,7 +52,7 @@ namespace SistemaTutoria
             this.panelMenuBar.Controls.Add(this.btnMenuAlumnos);
             this.panelMenuBar.Controls.Add(this.btnMenuTutores);
             this.panelMenuBar.Location = new System.Drawing.Point(0, 0);
-            this.panelMenuBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMenuBar.Margin = new System.Windows.Forms.Padding(4);
             this.panelMenuBar.Name = "panelMenuBar";
             this.panelMenuBar.Size = new System.Drawing.Size(267, 862);
             this.panelMenuBar.TabIndex = 0;
@@ -61,7 +61,7 @@ namespace SistemaTutoria
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(158)))), ((int)(((byte)(68)))));
             this.panel1.Location = new System.Drawing.Point(99, 197);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(67, 1);
             this.panel1.TabIndex = 3;
@@ -84,7 +84,7 @@ namespace SistemaTutoria
             this.pictureBox1.BackgroundImage = global::SistemaTutoria.Properties.Resources.logosmall;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(0, 18);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(267, 123);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -102,7 +102,7 @@ namespace SistemaTutoria
             this.btnMenuAlumnos.Image = global::SistemaTutoria.Properties.Resources.icons8_colegial_en_un_escritorio_32;
             this.btnMenuAlumnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenuAlumnos.Location = new System.Drawing.Point(0, 271);
-            this.btnMenuAlumnos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMenuAlumnos.Margin = new System.Windows.Forms.Padding(4);
             this.btnMenuAlumnos.Name = "btnMenuAlumnos";
             this.btnMenuAlumnos.Size = new System.Drawing.Size(267, 49);
             this.btnMenuAlumnos.TabIndex = 0;
@@ -120,7 +120,7 @@ namespace SistemaTutoria
             this.btnMenuTutores.Image = global::SistemaTutoria.Properties.Resources.icons8_profesor_32;
             this.btnMenuTutores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenuTutores.Location = new System.Drawing.Point(0, 222);
-            this.btnMenuTutores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMenuTutores.Margin = new System.Windows.Forms.Padding(4);
             this.btnMenuTutores.Name = "btnMenuTutores";
             this.btnMenuTutores.Size = new System.Drawing.Size(267, 49);
             this.btnMenuTutores.TabIndex = 0;
@@ -130,8 +130,8 @@ namespace SistemaTutoria
             // 
             // panel
             // 
-            this.panel.Location = new System.Drawing.Point(307, 62);
-            this.panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel.Location = new System.Drawing.Point(287, 62);
+            this.panel.Margin = new System.Windows.Forms.Padding(4);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(1253, 763);
             this.panel.TabIndex = 1;
@@ -145,8 +145,8 @@ namespace SistemaTutoria
             this.btnMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.ForeColor = System.Drawing.Color.White;
             this.btnMinimize.Image = global::SistemaTutoria.Properties.Resources.icons8_macos_minimizar_31;
-            this.btnMinimize.Location = new System.Drawing.Point(1493, 12);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMinimize.Location = new System.Drawing.Point(1430, 11);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(47, 43);
             this.btnMinimize.TabIndex = 2;
@@ -162,8 +162,8 @@ namespace SistemaTutoria
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Image = global::SistemaTutoria.Properties.Resources.icons8_macos_cerrar_31;
-            this.btnClose.Location = new System.Drawing.Point(1540, 12);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Location = new System.Drawing.Point(1485, 11);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(47, 43);
             this.btnClose.TabIndex = 2;
@@ -173,7 +173,7 @@ namespace SistemaTutoria
             // panel2
             // 
             this.panel2.Location = new System.Drawing.Point(267, 62);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1333, 800);
             this.panel2.TabIndex = 3;
