@@ -37,7 +37,12 @@ namespace Negocios
             string consulta = "select * from Administrador where Usuario ='" + usuario + "'and Contraseña ='" + contraseña + "'";
             return conn.Select(consulta);
         }
-
+        public virtual int ContarSeleccionAdministrador(string usuario, string contraseña)
+        {
+            DataTable dt = BuscarAdministrador(usuario, contraseña);
+            int R = dt.Rows.Count;
+            return R;
+        }
         public void EliminarAlumno(string CodAlumno)
         {
             string consulta = "DELETE FROM Alumno WHERE CodAlumno = @CodAlumno";
