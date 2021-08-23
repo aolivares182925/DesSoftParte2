@@ -66,6 +66,17 @@ namespace Negocios
             cmd.ExecuteNonQuery();
             conn.GetConeccion().Close();
         }
+        public virtual bool EliminarAlumnoCorrectamente(string CodAlumno)
+        {
+            bool correctamente = true;
+            correctamente = (CodAlumno == "") ? false : true;
+            if (correctamente)
+            {
+                EliminarAlumno(CodAlumno);
+            }
+
+            return correctamente;
+        }
 
         public void AgregarAlumno(string CodAlumno, string APaterno, string AMaterno, string Nombres,
             string Situacion, string CodTutor, string CodEscuela)

@@ -218,6 +218,26 @@ namespace TestMock
             //Funcion Assert verifica si los resultados son iguales
             Assert.AreEqual(actual, Expected);
         }
+        [TestMethod]
+        public void Eliminar_Alumno_Valido()
+        {
+
+            Mock<ConectarSQL> Alumno = new Mock<ConectarSQL>();
+
+            //variables de prueba
+            string CodAlumno = "164563";
+
+            bool Expected = true;
+
+            //Indicamos el resultado del objeto, que nos retorne un mensaje de que se elimino 
+            Alumno.Setup(a => a.EliminarAlumnoCorrectamente(It.IsAny<string>())).Returns(true);
+            //Para obtener el resultado usamos .Object y lo almacenamos
+
+            bool actual = Alumno.Object.EliminarAlumnoCorrectamente(CodAlumno);
+            //Funcion Assert verifica si los resultados son iguales
+            Assert.AreEqual(actual, Expected);
+
+        }
 
     }
 }
