@@ -32,6 +32,13 @@ namespace Negocios
             string consulta = "select * from Alumno where " + categoria + " like '" + buscar + "%'";
             return conn.Select(consulta);
         }
+        public virtual int TestBuscarAlumno(string categoria, string buscar)
+        {
+            DataTable dt = BuscarAlumno(categoria, buscar);
+            int R = dt.Rows.Count;
+            return R;
+        }
+
         public DataTable BuscarAdministrador(string usuario, string contraseña)
         {
             string consulta = "select * from Administrador where Usuario ='" + usuario + "'and Contraseña ='" + contraseña + "'";

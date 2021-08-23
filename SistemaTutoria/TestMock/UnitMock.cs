@@ -89,5 +89,62 @@ namespace TestMock
             //Funcion Assert verifica si los resultados son iguales
             Assert.AreEqual(actual, Expected);
         }
+        public void Test_Buscar_Alumno_Valido()
+        {
+
+            Mock<ConectarSQL> Conectar = new Mock<ConectarSQL>();
+            //variables
+            string categoria = "Codigo";
+            string buscar = "182905";
+
+            int Expected = 1;
+
+            //Indicamos el resultado del objeto, Que retorne una fila
+            Conectar.Setup(a => a.TestBuscarAlumno(It.IsAny<string>(), It.IsAny<string>())).Returns(1);
+            //Para obtener el resultado usamos .Object y lo almacenamos
+
+            int actual = Conectar.Object.TestBuscarAlumno(categoria, buscar);
+            //Funcion Assert verifica si los resultados son iguales
+            Assert.AreEqual(actual, Expected);
+        }
+        [TestMethod]
+        public void Test_Buscar_Alumno_Invalido()
+        {
+
+            Mock<ConectarSQL> Conectar = new Mock<ConectarSQL>();
+            //variables
+            string categoria = "Codigo";
+            string buscar = "jhon";
+
+            int Expected = 0;
+
+            //Indicamos el resultado del objeto, Que retorne una fila
+            Conectar.Setup(a => a.TestBuscarAlumno(It.IsAny<string>(), It.IsAny<string>())).Returns(1);
+            //Para obtener el resultado usamos .Object y lo almacenamos
+
+            int actual = Conectar.Object.TestBuscarAlumno(categoria, buscar);
+            //Funcion Assert verifica si los resultados son iguales
+            Assert.AreEqual(actual, Expected);
+        }
+        [TestMethod]
+        public void Test_Buscar_Alumno_Invalido1()
+        {
+
+            Mock<ConectarSQL> Conectar = new Mock<ConectarSQL>();
+            //variables
+            string categoria = "Codigo";
+            string buscar = "";
+
+            int Expected = 0;
+
+            //Indicamos el resultado del objeto, Que retorne una fila
+            Conectar.Setup(a => a.TestBuscarAlumno(It.IsAny<string>(), It.IsAny<string>())).Returns(1);
+            //Para obtener el resultado usamos .Object y lo almacenamos
+
+            int actual = Conectar.Object.TestBuscarAlumno(categoria, buscar);
+            //Funcion Assert verifica si los resultados son iguales
+            Assert.AreEqual(actual, Expected);
+        }
+
     }
 }
