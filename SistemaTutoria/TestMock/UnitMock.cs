@@ -78,10 +78,9 @@ namespace TestMock
             bool Expected = false;
 
             //Indicamos el resultado del objeto, Que retorne una fila
-            Alumno.Setup(a => a.AgregarAlumnoSiPosible(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(),
-                It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>())).Returns(false);
-            //Alumno.Setup(a => a.Agregar(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), 
-            //    It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>())).Returns(true);
+            Alumno.Setup(a => a.AgregarAlumnoSiPosible(It.IsAny<string>(), It.IsAny<string>(),It.IsAny<string>(), 
+                It.IsAny<string>(),It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>())).Returns(false);
+
             //Para obtener el resultado usamos .Object y lo almacenamos
 
             bool actual = Alumno.Object.AgregarAlumnoSiPosible(CodAlumno, APaterno, AMaterno, Nombres, Situacion, CodTutor,
