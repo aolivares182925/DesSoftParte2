@@ -113,6 +113,24 @@ namespace Negocios
             conn.GetConeccion().Close();
         }
 
+        public virtual bool EditarAlumnoSiEsPosible(string CodAlumno, string APaterno, string AMaterno, string Nombres,
+            string Situacion, string CodTutor, string CodEscuela)
+        {
+            bool posible = true;
+
+            posible = (CodAlumno == "" || APaterno == "" || AMaterno == "" || Nombres == "" || Situacion == "" ||
+                CodTutor == "" || CodEscuela == "") ? false : true;
+
+            if (posible)
+            {
+                EditarAlumno(CodAlumno, APaterno, AMaterno, Nombres, Situacion, CodTutor, CodEscuela);
+            }
+
+            return posible;
+        }
+
+
+
         public void EliminarTutor(string CodTutor)
         {
             string consulta = "DELETE FROM Tutor WHERE CodTutor = @CodTutor";

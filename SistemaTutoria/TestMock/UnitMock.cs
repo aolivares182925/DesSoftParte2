@@ -163,5 +163,60 @@ namespace TestMock
 
         }
 
+
+        [TestMethod]
+        public void EditarAlumnoCorrecto()
+        {
+            Mock<ConectarSQL> Alumno = new Mock<ConectarSQL>();
+
+            //variables de prueba
+            string CodAlumno = "666666";
+            string Nombres = "SOYLA";
+            string APaterno = ""; // variable incompleta
+            string AMaterno = "DEL CAMPO";
+            string Situacion = "EN RIESGO";
+            string CodTutor = "004";
+            string CodEscuela = "IN";
+
+            bool Expected = true;
+
+            //Indicamos el resultado del objeto, Que retorne una fila
+            Alumno.Setup(a => a.EditarAlumnoSiEsPosible(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(),
+                It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>())).Returns(true);
+            //Para obtener el resultado usamos .Object y lo almacenamos
+
+            bool actual = Alumno.Object.EditarAlumnoSiEsPosible(CodAlumno, APaterno, AMaterno, Nombres, Situacion, CodTutor,
+                CodEscuela);
+            //Funcion Assert verifica si los resultados son iguales
+            Assert.AreEqual(actual, Expected);
+        }
+
+        [TestMethod]
+        public void EditarAlumnoIncorrecto()
+        {
+            Mock<ConectarSQL> Alumno = new Mock<ConectarSQL>();
+
+            //variables de prueba
+            string CodAlumno = "666666";
+            string Nombres = "SOYLA";
+            string APaterno = ""; // variable incompleta
+            string AMaterno = "DEL CAMPO";
+            string Situacion = "EN RIESGO";
+            string CodTutor = "004";
+            string CodEscuela = "IN";
+
+            bool Expected = false;
+
+            //Indicamos el resultado del objeto, Que retorne una fila
+            Alumno.Setup(a => a.EditarAlumnoSiEsPosible(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(),
+                It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>())).Returns(false);
+            //Para obtener el resultado usamos .Object y lo almacenamos
+
+            bool actual = Alumno.Object.EditarAlumnoSiEsPosible(CodAlumno, APaterno, AMaterno, Nombres, Situacion, CodTutor,
+                CodEscuela);
+            //Funcion Assert verifica si los resultados son iguales
+            Assert.AreEqual(actual, Expected);
+        }
+
     }
 }
