@@ -17,6 +17,12 @@ namespace Negocios
             string consulta = "Select * from Alumno";
             return conn.Select(consulta);
         }
+        public virtual int SeleccionAlumnos()
+        {
+            DataTable dt = SelectAlumnos();
+            int A = dt.Rows.Count;
+            return A;
+        }
         public DataTable SelectTutores()
         {
             string consulta = "Select * from Tutor";

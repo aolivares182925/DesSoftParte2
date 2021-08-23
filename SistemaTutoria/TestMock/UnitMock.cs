@@ -145,6 +145,24 @@ namespace TestMock
             //Funcion Assert verifica si los resultados son iguales
             Assert.AreEqual(actual, Expected);
         }
+        [TestMethod]
+        public void TestMockSeleccionarAlumnos()
+        {
+
+            Mock<ConectarSQL> Conectar = new Mock<ConectarSQL>();
+
+            //variable
+            int Expected = 1;
+
+            //Indicamos el resultado del objeto, Que retorne una fila
+            Conectar.Setup(a => a.SeleccionAlumnos()).Returns(1);
+            //Para obtener el resultado usamos .Object y lo almacenamos
+
+            int actual = Conectar.Object.SeleccionAlumnos();
+            //Funcion Assert verifica si los resultados son iguales
+            Assert.AreEqual(actual, Expected);
+
+        }
 
     }
 }
