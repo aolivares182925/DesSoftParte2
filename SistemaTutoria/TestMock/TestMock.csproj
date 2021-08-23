@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Negocios\Negocios.csproj" />
+    <ProjectReference Include="..\SistemaTutoria\SistemaTutoria.csproj" />
   </ItemGroup>
 
 </Project>

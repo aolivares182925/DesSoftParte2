@@ -106,14 +106,17 @@ namespace SistemaTutoria
 
             }
         }
+        
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (btnAgregar.Text == "AGREGAR")
             {
                 try
                 {
-                    ConectarSQL conn = new ConectarSQL();
+                    bool agregado;
                     string Situacion;
+
+                    ConectarSQL C = new ConectarSQL();
                     if (cbRiesgo.Checked == true)
                     {
                         Situacion = "Riesgo";
@@ -122,16 +125,20 @@ namespace SistemaTutoria
                     {
                         Situacion = "No Riesgo";
                     }
-                    conn.AgregarAlumno(tbCodigo.Text, tbApPaterno.Text, tbApMaterno.Text, tbNombres.Text, Situacion,
-                        tbCodTutor.Text, tbCodEscuela.Text);
-                    MessageBox.Show("Agregado Correctamente");
-                    Clear();
+                    agregado = C.AgregarAlumnoSiPosible(tbCodigo.Text, tbApPaterno.Text, tbApMaterno.Text, tbNombres.Text, Situacion,
+                                        tbCodTutor.Text, tbCodEscuela.Text);
+                    if (agregado)
+                    {
+                        MessageBox.Show("Agregado Correctamente");
+                    }
 
                 }
                 catch
                 {
                     MessageBox.Show("Datos incorrectos o existentes");
                 }
+                Clear();
+                
             }
             else
             {

@@ -65,6 +65,21 @@ namespace Negocios
             cmd.ExecuteNonQuery();
             conn.GetConeccion().Close();
         }
+        public virtual bool AgregarAlumnoSiPosible(string CodAlumno, string APaterno, string AMaterno, string Nombres,
+            string Situacion, string CodTutor, string CodEscuela)
+        {
+            bool posible = true;
+
+            posible = (CodAlumno == "" || APaterno == "" || AMaterno == "" || Nombres == "" || Situacion == "" ||
+                CodTutor == "" || CodEscuela == "") ? false :true;
+
+            if (posible)
+            {
+                AgregarAlumno(CodAlumno, APaterno, AMaterno, Nombres,Situacion, CodTutor, CodEscuela);
+            }
+            
+            return posible;
+        }
 
         public void EditarAlumno(string CodAlumno, string APaterno, string AMaterno, string Nombres,
             string Situacion, string CodTutor, string CodEscuela)
