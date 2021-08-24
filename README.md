@@ -17,6 +17,7 @@ Cancel changes
 - **CCUITO QUISPE, JHON ALBERT** -*CUENTA GITHUB*-[JHON ALBERT](https://github.com/jhonjacc)
 - **CERATI CERRILLO, FIORELLA** -*CUENTA GITHUB*-[FIORELLA](https://github.com/Fiorella2919)
 - **ESPINOZA CHAMPI, ISRAEL ENRIQUE** -*CUENTA GITHUB*-[ISRAEL ENRIQUE](https://github.com/EnriYp26)
+- **MASIAS USCAMAYTA, NAOMI ISABEL** -*CUENTA GITHUB*-[NAOMI ISABEL](https://github.com/naomi159)
 - **MORA CCARHUARUPAY, LUZ LUCERO** -*CUENTA GITHUB*-[LUZ LUCERO](https://github.com/lmc1221)
 - **OLIVARES CAMERO, ALER SEBASTIAN** -*CUENTA GITHUB*-[ALER SEBASTIAN](https://github.com/aolivares182925)
 - **QUISPE PUMA, LUCERO** -*CUENTA GITHUB*-[LUCERO](https://github.com/lucero5796)
