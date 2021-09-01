@@ -7,7 +7,7 @@ Cancel changes
 - **Universidad:** Universidad de San Antonio Abad del Cusco
 - **Facultad:** Facultad de ingenieria electrica, electronica, informatica y mecanica
 - **Escuela Profesional:** Ingenieria Informatica y de Sistemas
-## Ingeniera
+## Ingeniera 👩‍🏫👩‍💻
 **Quintanilla Portugal Roxana Lisette** - *DOCENTE* - [CONCYTEC](http://directorio.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do;jsessionid=a64a00668b861c4a52fdead99791?id_investigador=40930)
 ## Trabajo
 ### REALIZAR UN CRUD PARA EL SISTEMA DE TUTORIAS UNSAAC
