@@ -89,6 +89,7 @@ namespace SistemaTutoria
                 tbApMaterno.Text = dgvPrincipal.Rows[e.RowIndex].Cells["AMaterno"].FormattedValue.ToString();
                 cmbEstado.Text = dgvPrincipal.Rows[e.RowIndex].Cells["Estado"].FormattedValue.ToString();
 
+
                 btnAgregar.Text = "EDITAR";
                 btnCancelar.Visible = true;
                 tbCodigo.Enabled = false;

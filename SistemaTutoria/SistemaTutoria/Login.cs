@@ -14,6 +14,7 @@ namespace SistemaTutoria
 {
     public partial class Login : Form
     {
+        bool F = true;
         #region mover ventana
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -39,19 +40,46 @@ namespace SistemaTutoria
         private void btEntrar_Click(object sender, EventArgs e)
         {
             ConectarSQL conn = new ConectarSQL();
-            if (conn.BuscarAdministrador(tbUsuario.Text, tbContra.Text).Rows.Count == 1)
+            
+            if (F)
             {
-                Crud C = new Crud();
-                this.Hide();
-                C.Show();
+                DataTable dt = conn.BuscarTutorLogin(tbUsuario.Text, tbContra.Text);
+                if (dt.Rows.Count == 1)
+                {
+                    FormTutor C = new FormTutor(dt.Rows[0][3].ToString(),
+                        dt.Rows[0][1].ToString(), dt.Rows[0][2].ToString());
+                    this.Hide();
+                    C.Show();
+                }
+                else
+                {
+                    MessageBox.Show("No se encontro el usuario");
+                }
+                tbUsuario.Text = "  Usuario";
+                tbContra.Text = "  Contraseña";
+                tbContra.UseSystemPasswordChar = false;
             }
             else
             {
-                MessageBox.Show("No se encontro el usuario");
+                DataTable dt = conn.BuscarAdministrador(tbUsuario.Text, tbContra.Text);
+                if (dt.Rows.Count == 1)
+                {
+                    FormAdmin C = new FormAdmin(dt.Rows[0][3].ToString(),
+                        dt.Rows[0][1].ToString(), dt.Rows[0][2].ToString());
+                    this.Hide();
+                    C.Show();
+                }
+                else
+                {
+                    MessageBox.Show("No se encontro el usuario");
+                }
+                tbUsuario.Text = "  Usuario";
+                tbContra.Text = "  Contraseña";
+                tbContra.UseSystemPasswordChar = false;
             }
-            tbUsuario.Text = "  Usuario";
-            tbContra.Text = "  Contraseña";
-            tbContra.UseSystemPasswordChar = false;
+
+
+            
 
         }
         private void tbUsuario_Enter(object sender, EventArgs e)
@@ -123,6 +151,20 @@ namespace SistemaTutoria
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void bDocente_Click(object sender, EventArgs e)
+        {
+            F = true;
+            lMensaje.Text = "Bienvenido docente";
+            
+        }
+
+        private void bAdministrador_Click(object sender, EventArgs e)
+        {
+            F = false;
+            lMensaje.Text = "Bienvenido administrador";
+            
         }
     }
 }

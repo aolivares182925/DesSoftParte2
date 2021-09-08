@@ -1,7 +1,7 @@
 ﻿
 namespace SistemaTutoria
 {
-    partial class Crud
+    partial class FormAdmin
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -39,6 +39,9 @@ namespace SistemaTutoria
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lNombre = new System.Windows.Forms.Label();
+            this.lApellido1 = new System.Windows.Forms.Label();
+            this.lApellido2 = new System.Windows.Forms.Label();
             this.panelMenuBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -46,6 +49,9 @@ namespace SistemaTutoria
             // panelMenuBar
             // 
             this.panelMenuBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
+            this.panelMenuBar.Controls.Add(this.lApellido2);
+            this.panelMenuBar.Controls.Add(this.lApellido1);
+            this.panelMenuBar.Controls.Add(this.lNombre);
             this.panelMenuBar.Controls.Add(this.panel1);
             this.panelMenuBar.Controls.Add(this.label4);
             this.panelMenuBar.Controls.Add(this.pictureBox1);
@@ -101,7 +107,7 @@ namespace SistemaTutoria
             this.btnMenuAlumnos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.btnMenuAlumnos.Image = global::SistemaTutoria.Properties.Resources.icons8_colegial_en_un_escritorio_32;
             this.btnMenuAlumnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuAlumnos.Location = new System.Drawing.Point(0, 271);
+            this.btnMenuAlumnos.Location = new System.Drawing.Point(0, 373);
             this.btnMenuAlumnos.Margin = new System.Windows.Forms.Padding(4);
             this.btnMenuAlumnos.Name = "btnMenuAlumnos";
             this.btnMenuAlumnos.Size = new System.Drawing.Size(267, 49);
@@ -119,7 +125,7 @@ namespace SistemaTutoria
             this.btnMenuTutores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.btnMenuTutores.Image = global::SistemaTutoria.Properties.Resources.icons8_profesor_32;
             this.btnMenuTutores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuTutores.Location = new System.Drawing.Point(0, 222);
+            this.btnMenuTutores.Location = new System.Drawing.Point(0, 315);
             this.btnMenuTutores.Margin = new System.Windows.Forms.Padding(4);
             this.btnMenuTutores.Name = "btnMenuTutores";
             this.btnMenuTutores.Size = new System.Drawing.Size(267, 49);
@@ -178,7 +184,37 @@ namespace SistemaTutoria
             this.panel2.Size = new System.Drawing.Size(1333, 800);
             this.panel2.TabIndex = 3;
             // 
-            // Crud
+            // lNombre
+            // 
+            this.lNombre.AutoSize = true;
+            this.lNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNombre.Location = new System.Drawing.Point(102, 225);
+            this.lNombre.Name = "lNombre";
+            this.lNombre.Size = new System.Drawing.Size(64, 25);
+            this.lNombre.TabIndex = 4;
+            this.lNombre.Text = "label1";
+            // 
+            // lApellido1
+            // 
+            this.lApellido1.AutoSize = true;
+            this.lApellido1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lApellido1.Location = new System.Drawing.Point(101, 250);
+            this.lApellido1.Name = "lApellido1";
+            this.lApellido1.Size = new System.Drawing.Size(64, 25);
+            this.lApellido1.TabIndex = 5;
+            this.lApellido1.Text = "label1";
+            // 
+            // lApellido2
+            // 
+            this.lApellido2.AutoSize = true;
+            this.lApellido2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lApellido2.Location = new System.Drawing.Point(101, 286);
+            this.lApellido2.Name = "lApellido2";
+            this.lApellido2.Size = new System.Drawing.Size(64, 25);
+            this.lApellido2.TabIndex = 6;
+            this.lApellido2.Text = "label1";
+            // 
+            // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -191,7 +227,7 @@ namespace SistemaTutoria
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Crud";
+            this.Name = "FormAdmin";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "miapp";
@@ -215,6 +251,9 @@ namespace SistemaTutoria
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lApellido1;
+        private System.Windows.Forms.Label lNombre;
+        private System.Windows.Forms.Label lApellido2;
     }
 }
 

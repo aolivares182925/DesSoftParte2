@@ -25,7 +25,7 @@ namespace Negocios
         }
         public DataTable SelectTutores()
         {
-            string consulta = "Select * from Tutor";
+            string consulta = "select CodTutor, APaterno, AMaterno, Nombres, Estado from Tutor";
             return conn.Select(consulta);
         }
         public DataTable BuscarTutor(string categoria, string buscar)
@@ -45,11 +45,20 @@ namespace Negocios
             return R;
         }
 
-        public DataTable BuscarAdministrador(string usuario, string contraseña)
+        public DataTable BuscarAdministrador(string usuario, string contra)
         {
-            string consulta = "select * from Administrador where Usuario ='" + usuario + "'and Contraseña ='" + contraseña + "'";
+            string consulta = "select * from Administrador where Usuario ='" + usuario +
+                "'and Contraseña = convert(varbinary,'" + contra + "')";
             return conn.Select(consulta);
         }
+
+        public DataTable BuscarTutorLogin(string usuario, string contra)
+        {
+            string consulta = "select * from Tutor where " +
+                "CodTutor ='" + usuario + "'and Contraseña = convert(varbinary,'" + contra + "')";
+            return conn.Select(consulta);
+        }
+
         public virtual int ContarSeleccionAdministrador(string usuario, string contraseña)
         {
             DataTable dt = BuscarAdministrador(usuario, contraseña);
