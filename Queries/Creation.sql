@@ -1,10 +1,10 @@
---use master
---go
+use master
+go
 ----drop database Tutoria
---create database Tutoria
---go
+create database Tutoria
+go
 
-use BD_Tutoria
+use Tutoria
 go
 
 --Tabla de tutor
@@ -48,16 +48,44 @@ create table Administrador
 	APaterno		varchar(50),
 	AMaterno		varchar(50),
 	Nombre			varchar(30),
+	Categoria		varchar(30),
 	Contraseña		varbinary(20) 
 )
 
+--Ficha de tutoria
+create table FichaTutoria
+(
+	CodTutor			char(3),
+	CodAlumno			char(6),
+	CodFichaTutoria		int identity (1,1),
+	primary key (CodFichaTutoria),
+	foreign key (CodTutor) references Tutor(CodTutor),
+	foreign key ( CodAlumno) references Alumno(CodAlumno)
+)
+
+create table FichaSesion
+(
+	CodFichaTutoria		int,
+	NroSesion			int,
+	FechaHora			date ,
+	Tipo				varchar(30),
+	Completado			int,
+	Descripcion			varchar(400), 
+	Referencia			varchar(400), 
+	Observaciones		varchar(400),
+	foreign key(CodFichaTutoria) references FichaTutoria(CodFichaTutoria)
+
+)
+
+
 --Datos de administrador
-insert into Administrador values('Admin1', 'Apellido1','Apellido1','Nombre1', convert (varbinary,'contrasenia1'))
-insert into Administrador values('Admin2', 'Apellido2','Apellido2','Nombre2', convert (varbinary,'contrasenia2'))
-insert into Administrador values('', 'Apellido2','Apellido2','Nombre2', convert (varbinary,'contrasenia2'))
+insert into Administrador values('Admin1', 'Apellido1','Apellido1','Nombre1','administrador', convert (varbinary,'contrasenia1'))
+insert into Administrador values('Admin2', 'Apellido2','Apellido2','Nombre2', 'administrador',convert (varbinary,'contrasenia2'))
+
+
 
 --Usar esta consulta para ver las contraseñas
-select *,convert(varchar,Contraseña) from Administrador
+select * from Administrador
 
 
 

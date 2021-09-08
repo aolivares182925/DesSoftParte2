@@ -10,8 +10,8 @@ namespace Datos
 {
     public class ConexionSQL
     {
-        SqlConnection conn = new SqlConnection("Data Source=tcp:serverproyectotutoria.database.windows.net;Initial Catalog=BD_Tutoria;User ID=admin1;Password=Grupo2DesarrolloSoftware");
-        //SqlConnection conn = new SqlConnection("Data Source=LAPTOP-IUT020T4;Initial Catalog=Tutoria;Integrated Security=True");
+        //SqlConnection conn = new SqlConnection("Data Source=tcp:serverproyectotutoria.database.windows.net;Initial Catalog=BD_Tutoria;User ID=admin1;Password=Grupo2DesarrolloSoftware");
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-H4RJ2LR;Initial Catalog=Tutoria;Integrated Security=True");
 
         public DataTable Select(string consulta)
         {
