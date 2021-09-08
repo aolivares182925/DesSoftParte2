@@ -4,7 +4,7 @@ delete from Alumno where CodEscuela='IN'
 delete from Tutor where Estado='Nombrado'
 
 
-insert into Tutor (CodTutor,Nombres,APaterno,AMaterno,Estado)
+insert into Tutor (CodTutor,Nombres,APaterno,AMaterno,Estado,Contraseña)
 values 
 	('001','Boris','Chullo','Llave','Nombrado','1234'),
 	('002','Carlos Ramon','Quispe','Onofre','Nombrado','1234'),

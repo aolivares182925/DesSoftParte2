@@ -15,6 +15,7 @@ create table Tutor
 	AMaterno		varchar(50),
 	Nombres			varchar(30),
 	Estado			varchar(40) check (Estado in('Contratado','Nombrado')),
+	Contraseña		varbinary(20),
 	primary key (CodTutor)
 )
 
