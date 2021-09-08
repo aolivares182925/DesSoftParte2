@@ -43,6 +43,9 @@ namespace SistemaTutoria
             this.tbUsuario = new System.Windows.Forms.TextBox();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.bDocente = new System.Windows.Forms.Button();
+            this.bAdministrador = new System.Windows.Forms.Button();
+            this.lMensaje = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -51,6 +54,8 @@ namespace SistemaTutoria
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
+            this.panel1.Controls.Add(this.bAdministrador);
+            this.panel1.Controls.Add(this.bDocente);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -67,7 +72,7 @@ namespace SistemaTutoria
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(28, 382);
+            this.label2.Location = new System.Drawing.Point(37, 386);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(245, 25);
@@ -79,7 +84,7 @@ namespace SistemaTutoria
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(123, 252);
+            this.label4.Location = new System.Drawing.Point(121, 207);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 17);
@@ -90,7 +95,7 @@ namespace SistemaTutoria
             // 
             this.pictureBox1.BackgroundImage = global::SistemaTutoria.Properties.Resources.logosmall;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(80, 74);
+            this.pictureBox1.Location = new System.Drawing.Point(76, 13);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(160, 172);
@@ -99,6 +104,7 @@ namespace SistemaTutoria
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lMensaje);
             this.panel2.Controls.Add(this.btnVisible);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.lineUsuario);
@@ -152,12 +158,12 @@ namespace SistemaTutoria
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
-            this.label1.Location = new System.Drawing.Point(259, 12);
+            this.label1.Location = new System.Drawing.Point(289, 11);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 69);
+            this.label1.Size = new System.Drawing.Size(173, 55);
             this.label1.TabIndex = 10;
             this.label1.Text = "LOGIN";
             // 
@@ -232,6 +238,49 @@ namespace SistemaTutoria
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // bDocente
+            // 
+            this.bDocente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
+            this.bDocente.FlatAppearance.BorderSize = 0;
+            this.bDocente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bDocente.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bDocente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.bDocente.Location = new System.Drawing.Point(12, 243);
+            this.bDocente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bDocente.Name = "bDocente";
+            this.bDocente.Size = new System.Drawing.Size(301, 49);
+            this.bDocente.TabIndex = 14;
+            this.bDocente.Text = "Docente";
+            this.bDocente.UseVisualStyleBackColor = false;
+            this.bDocente.Click += new System.EventHandler(this.bDocente_Click);
+            // 
+            // bAdministrador
+            // 
+            this.bAdministrador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
+            this.bAdministrador.FlatAppearance.BorderSize = 0;
+            this.bAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bAdministrador.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bAdministrador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.bAdministrador.Location = new System.Drawing.Point(12, 308);
+            this.bAdministrador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bAdministrador.Name = "bAdministrador";
+            this.bAdministrador.Size = new System.Drawing.Size(301, 49);
+            this.bAdministrador.TabIndex = 15;
+            this.bAdministrador.Text = "Administrador";
+            this.bAdministrador.UseVisualStyleBackColor = false;
+            this.bAdministrador.Click += new System.EventHandler(this.bAdministrador_Click);
+            // 
+            // lMensaje
+            // 
+            this.lMensaje.AutoSize = true;
+            this.lMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lMensaje.ForeColor = System.Drawing.Color.Maroon;
+            this.lMensaje.Location = new System.Drawing.Point(255, 82);
+            this.lMensaje.Name = "lMensaje";
+            this.lMensaje.Size = new System.Drawing.Size(285, 32);
+            this.lMensaje.TabIndex = 14;
+            this.lMensaje.Text = "Bienvenido docente";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -274,5 +323,8 @@ namespace SistemaTutoria
         private System.Windows.Forms.TextBox tbContra;
         private System.Windows.Forms.TextBox tbUsuario;
         private System.Windows.Forms.Button btnVisible;
+        private System.Windows.Forms.Button bAdministrador;
+        private System.Windows.Forms.Button bDocente;
+        private System.Windows.Forms.Label lMensaje;
     }
 }

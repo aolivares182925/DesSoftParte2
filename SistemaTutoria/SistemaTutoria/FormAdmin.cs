@@ -8,15 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocios;
-
+ 
 namespace SistemaTutoria
 {
-    public partial class Crud : Form
+    public partial class FormAdmin : Form
     {
-        public Crud()
+        public FormAdmin(string Nombre, string Apellido1, string Apellido2)
         {
             InitializeComponent();
-            showTutores();
+            lNombre.Text = Nombre;
+            lApellido1.Text = Apellido1;
+            lApellido2.Text = Apellido2;
+            //showTutores();
         }
 
         #region mover ventana
