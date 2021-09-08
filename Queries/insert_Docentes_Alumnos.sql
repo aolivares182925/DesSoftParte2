@@ -3,51 +3,53 @@ select *from Alumno
 delete from Alumno where CodEscuela='IN'
 delete from Tutor where Estado='Nombrado'
 
+select * from Tutor
 
 insert into Tutor (CodTutor,Nombres,APaterno,AMaterno,Estado,Contraseña)
 values 
-	('001','Boris','Chullo','Llave','Nombrado','1234'),
-	('002','Carlos Ramon','Quispe','Onofre','Nombrado','1234'),
-	('003','Dennis Ivan','Candia','Oviedo','Nombrado','1234'),
-	('004','Edwin','Carrasco','Poblete','Nombrado','1234'),
-	('005','Emilio','Palomino','Olivera','Nombrado','1234'),
-	('006','Enrique','Gamarra','Saldivar','Nombrado','1234'),
-	('007','Esther','Pacheco','Vasquez','Nombrado','1234'),
-	('008','Gladys Efraina','Cutipa','Arapa','Nombrado','1234'),
-	('009','Guzman','Ticona','Pari','Nombrado','1234'),
-	('010','Hector Eduardo','Ugarte','Rojas','Nombrado','1234'),
-	('011','Hernan','Nina','Hanco','Nombrado','1234'),
-	('012','Ivan','Cesar','Medrano','Nombrado','1234'),
-	('013','Javier Arturo','Rozas','Huacho','Nombrado','1234'),
-	('014','Javier David','Chavez','Centeno','Nombrado','1234'),
-	('015','Jose Luis','Soncco','Alvarez','Nombrado','1234'),
-	('016','Jose Mauro','Pillco','Quispe','Nombrado','1234'),
-	('017','Julio Cesar','Carvajal','Luna','Nombrado','1234'),
-	('018','Karelia','Medina','Miranda','Nombrado','1234'),
-	('019','Lauro','Enciso','Rodas','Nombrado','1234'),
-	('020','Lino Aquiles','Baca','Cardenas','Nombrado','1234'),
-	('021','Lino Prisciliano','Flores','Pacheco','Nombrado','1234'),
-	('022','Liseth Urpy','Segundo','Carpio','Nombrado','1234'),
-	('023','Luis Beltran','Palma','Ttito','Nombrado','1234'),
-	('024','Manuel','Peñaloza','Figueroa','Nombrado','1234'),
-	('025','Maria del Pilar','Venegas','Vergara','Nombrado','1234'),
-	('026','Maritza','Irpanocca','Cusimayta','Nombrado','1234'),
-	('027','Nila Sonia','Acurio','Ucsa','Nombrado','1234'),
-	('028','Robert Wilbert','Alzamora','Paredes','Nombrado','1234'),
-	('029','Roger Mario','Cusihuaman','Phocco','Nombrado','1234'),
-	('030','Rony','Villafuerte','Serna','Nombrado','1234'),
-	('031','Roxana Lisette','Quintanilla','Portugal','Nombrado','1234'),
-	('032','Victor David','Sosa','Jauregui','Nombrado','1234'),
-	('033','Waldo Elio','Ibarra','Zambrano','Nombrado','1234'),
-	('034','Willian','Zamalloa','Paro','Nombrado','1234'),
-	('035','Yeshica Isela','Ormeño','Ayala','Nombrado','1234')
+	('001','Boris','Chullo','Llave','Nombrado',convert (varbinary,'1234')),
+	('002','Carlos Ramon','Quispe','Onofre','Nombrado',convert (varbinary,'1234')),
+	('003','Dennis Ivan','Candia','Oviedo','Nombrado',convert (varbinary,'1234')),
+	('004','Edwin','Carrasco','Poblete','Nombrado',convert (varbinary,'1234')),
+	('005','Emilio','Palomino','Olivera','Nombrado',convert (varbinary,'1234')),
+	('006','Enrique','Gamarra','Saldivar','Nombrado',convert (varbinary,'1234')),
+	('007','Esther','Pacheco','Vasquez','Nombrado',convert (varbinary,'1234')),
+	('008','Gladys Efraina','Cutipa','Arapa','Nombrado',convert (varbinary,'1234')),
+	('009','Guzman','Ticona','Pari','Nombrado',convert (varbinary,'1234')),
+	('010','Hector Eduardo','Ugarte','Rojas','Nombrado',convert (varbinary,'1234')),
+	('011','Hernan','Nina','Hanco','Nombrado',convert (varbinary,'1234')),
+	('012','Ivan','Cesar','Medrano','Nombrado',convert (varbinary,'1234')),
+	('013','Javier Arturo','Rozas','Huacho','Nombrado',convert (varbinary,'1234')),
+	('014','Javier David','Chavez','Centeno','Nombrado',convert (varbinary,'1234')),
+	('015','Jose Luis','Soncco','Alvarez','Nombrado',convert (varbinary,'1234')),
+	('016','Jose Mauro','Pillco','Quispe','Nombrado',convert (varbinary,'1234')),
+	('017','Julio Cesar','Carvajal','Luna','Nombrado',convert (varbinary,'1234')),
+	('018','Karelia','Medina','Miranda','Nombrado',convert (varbinary,'1234')),
+	('019','Lauro','Enciso','Rodas','Nombrado',convert (varbinary,'1234')),
+	('020','Lino Aquiles','Baca','Cardenas','Nombrado',convert (varbinary,'1234')),
+	('021','Lino Prisciliano','Flores','Pacheco','Nombrado',convert (varbinary,'1234')),
+	('022','Liseth Urpy','Segundo','Carpio','Nombrado',convert (varbinary,'1234')),
+	('023','Luis Beltran','Palma','Ttito','Nombrado',convert (varbinary,'1234')),
+	('024','Manuel','Peñaloza','Figueroa','Nombrado',convert (varbinary,'1234')),
+	('025','Maria del Pilar','Venegas','Vergara','Nombrado',convert (varbinary,'1234')),
+	('026','Maritza','Irpanocca','Cusimayta','Nombrado',convert (varbinary,'1234')),
+	('027','Nila Sonia','Acurio','Ucsa','Nombrado',convert (varbinary,'1234')),
+	('028','Robert Wilbert','Alzamora','Paredes','Nombrado',convert (varbinary,'1234')),
+	('029','Roger Mario','Cusihuaman','Phocco','Nombrado',convert (varbinary,'1234')),
+	('030','Rony','Villafuerte','Serna','Nombrado',convert (varbinary,'1234')),
+	('031','Roxana Lisette','Quintanilla','Portugal','Nombrado',convert (varbinary,'1234')),
+	('032','Victor David','Sosa','Jauregui','Nombrado',convert (varbinary,'1234')),
+	('033','Waldo Elio','Ibarra','Zambrano','Nombrado',convert (varbinary,'1234')),
+	('034','Willian','Zamalloa','Paro','Nombrado',convert (varbinary,'1234')),
+	('035','Yeshica Isela','Ormeño','Ayala','Nombrado',convert (varbinary,'1234'))
 
-
+	
+select * from Alumno
+select * from Tutor
 select *from EscuelaProfesional
 insert into EscuelaProfesional
 values ('IN','Ingenieria Informatica y de Sistemas')
 
-USE BD_Tutoria
 insert into Alumno values
 						('112207','IBARRA','CASTILLO','WALDO ERICK','Riesgo','001','IN'),
 						('141660','AROSTEGUI','CERNA','JAIR FREDERICK','Riesgo','001','IN'),

@@ -18,6 +18,7 @@ create table Tutor
 	Contraseña		varbinary(20),
 	primary key (CodTutor)
 )
+select CodTutor, APaterno, AMaterno, Nombres, Estado from Tutor
 
 --Tabla de escuela profesional
 create table EscuelaProfesional
@@ -80,13 +81,10 @@ create table FichaSesion
 
 
 --Datos de administrador
-insert into Administrador values('Admin1', 'Apellido1','Apellido1','Nombre1','administrador', convert (varbinary,'contrasenia1'))
-insert into Administrador values('Admin2', 'Apellido2','Apellido2','Nombre2', 'administrador',convert (varbinary,'contrasenia2'))
+insert into Administrador values('Admin1', 'Apellido1','Apellido1','Nombre1','admin', convert (varbinary,'contrasenia1'))
+insert into Administrador values('Admin2', 'Apellido2','Apellido2','Nombre2', 'admin',convert (varbinary,'contrasenia2'))
 
 
-
---Usar esta consulta para ver las contraseñas
-select * from Administrador
 
 
 
