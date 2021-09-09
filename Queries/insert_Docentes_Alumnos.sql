@@ -1,9 +1,4 @@
-select *from Tutor
-select *from Alumno
-delete from Alumno where CodEscuela='IN'
-delete from Tutor where Estado='Nombrado'
 
-select * from Tutor
 
 insert into Tutor (CodTutor,Nombres,APaterno,AMaterno,Estado,Contraseña)
 values 
@@ -44,11 +39,8 @@ values
 	('035','Yeshica Isela','Ormeño','Ayala','Nombrado',convert (varbinary,'1234'))
 
 	
-select * from Alumno
-select * from Tutor
-select *from EscuelaProfesional
-insert into EscuelaProfesional
-values ('IN','Ingenieria Informatica y de Sistemas')
+
+insert into EscuelaProfesional values ('IN','Ingenieria Informatica y de Sistemas')
 
 insert into Alumno values
 						('112207','IBARRA','CASTILLO','WALDO ERICK','Riesgo','001','IN'),

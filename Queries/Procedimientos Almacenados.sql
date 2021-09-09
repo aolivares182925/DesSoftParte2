@@ -1,5 +1,5 @@
 
-use BD_Tutoria
+use Tutoria
 go
 
 create proc ModificarAlumno

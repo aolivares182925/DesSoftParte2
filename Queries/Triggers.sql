@@ -1,5 +1,5 @@
 --TABLA DE HISTORIAL
-use BD_Tutoria 
+use Tutoria 
 go
 
 create table Historial
