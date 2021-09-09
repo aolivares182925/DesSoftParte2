@@ -35,6 +35,7 @@ namespace SistemaTutoria
         public Login()
         {
             InitializeComponent();
+            bDocente.BackColor = Color.FromArgb(255, 255, 255);
         }
 
         private void btEntrar_Click(object sender, EventArgs e)
@@ -156,15 +157,19 @@ namespace SistemaTutoria
         private void bDocente_Click(object sender, EventArgs e)
         {
             F = true;
-            lMensaje.Text = "Bienvenido docente";
             
+            bDocente.BackColor = Color.FromArgb(255, 255, 255);
+            bAdministrador.BackColor = Color.FromArgb(104, 13, 15);
         }
 
         private void bAdministrador_Click(object sender, EventArgs e)
         {
             F = false;
-            lMensaje.Text = "Bienvenido administrador";
             
+            bAdministrador.BackColor = Color.FromArgb(255, 255, 255);
+            bDocente.BackColor = Color.FromArgb(104, 13, 15);
         }
+
+        
     }
 }

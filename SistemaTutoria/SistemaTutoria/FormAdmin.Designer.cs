@@ -107,7 +107,7 @@ namespace SistemaTutoria
             this.btnMenuAlumnos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.btnMenuAlumnos.Image = global::SistemaTutoria.Properties.Resources.icons8_colegial_en_un_escritorio_32;
             this.btnMenuAlumnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuAlumnos.Location = new System.Drawing.Point(0, 373);
+            this.btnMenuAlumnos.Location = new System.Drawing.Point(0, 366);
             this.btnMenuAlumnos.Margin = new System.Windows.Forms.Padding(4);
             this.btnMenuAlumnos.Name = "btnMenuAlumnos";
             this.btnMenuAlumnos.Size = new System.Drawing.Size(267, 49);
@@ -125,7 +125,7 @@ namespace SistemaTutoria
             this.btnMenuTutores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.btnMenuTutores.Image = global::SistemaTutoria.Properties.Resources.icons8_profesor_32;
             this.btnMenuTutores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuTutores.Location = new System.Drawing.Point(0, 315);
+            this.btnMenuTutores.Location = new System.Drawing.Point(0, 308);
             this.btnMenuTutores.Margin = new System.Windows.Forms.Padding(4);
             this.btnMenuTutores.Name = "btnMenuTutores";
             this.btnMenuTutores.Size = new System.Drawing.Size(267, 49);
@@ -187,32 +187,43 @@ namespace SistemaTutoria
             // lNombre
             // 
             this.lNombre.AutoSize = true;
+            this.lNombre.BackColor = System.Drawing.Color.Transparent;
             this.lNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombre.Location = new System.Drawing.Point(102, 225);
+            this.lNombre.ForeColor = System.Drawing.Color.White;
+            this.lNombre.Location = new System.Drawing.Point(12, 202);
             this.lNombre.Name = "lNombre";
-            this.lNombre.Size = new System.Drawing.Size(64, 25);
+            this.lNombre.Size = new System.Drawing.Size(81, 25);
             this.lNombre.TabIndex = 4;
-            this.lNombre.Text = "label1";
+            this.lNombre.Text = "Nombre";
+            this.lNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lApellido1
             // 
+            this.lApellido1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lApellido1.AutoSize = true;
+            this.lApellido1.BackColor = System.Drawing.Color.Transparent;
             this.lApellido1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lApellido1.Location = new System.Drawing.Point(101, 250);
+            this.lApellido1.ForeColor = System.Drawing.Color.White;
+            this.lApellido1.Location = new System.Drawing.Point(12, 234);
             this.lApellido1.Name = "lApellido1";
-            this.lApellido1.Size = new System.Drawing.Size(64, 25);
+            this.lApellido1.Size = new System.Drawing.Size(155, 25);
             this.lApellido1.TabIndex = 5;
-            this.lApellido1.Text = "label1";
+            this.lApellido1.Text = "Apellido Paterno";
+            this.lApellido1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lApellido2
             // 
+            this.lApellido2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lApellido2.AutoSize = true;
+            this.lApellido2.BackColor = System.Drawing.Color.Transparent;
             this.lApellido2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lApellido2.Location = new System.Drawing.Point(101, 286);
+            this.lApellido2.ForeColor = System.Drawing.Color.White;
+            this.lApellido2.Location = new System.Drawing.Point(12, 266);
             this.lApellido2.Name = "lApellido2";
-            this.lApellido2.Size = new System.Drawing.Size(64, 25);
+            this.lApellido2.Size = new System.Drawing.Size(159, 25);
             this.lApellido2.TabIndex = 6;
-            this.lApellido2.Text = "label1";
+            this.lApellido2.Text = "Apellido Materno";
+            this.lApellido2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormAdmin
             // 
@@ -251,9 +262,9 @@ namespace SistemaTutoria
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lApellido1;
         private System.Windows.Forms.Label lNombre;
         private System.Windows.Forms.Label lApellido2;
+        private System.Windows.Forms.Label lApellido1;
     }
 }
 

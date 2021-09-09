@@ -30,6 +30,8 @@ namespace SistemaTutoria
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bAdministrador = new System.Windows.Forms.Button();
+            this.bDocente = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -43,9 +45,6 @@ namespace SistemaTutoria
             this.tbUsuario = new System.Windows.Forms.TextBox();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.bDocente = new System.Windows.Forms.Button();
-            this.bAdministrador = new System.Windows.Forms.Button();
-            this.lMensaje = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -65,6 +64,38 @@ namespace SistemaTutoria
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(320, 431);
             this.panel1.TabIndex = 0;
+            // 
+            // bAdministrador
+            // 
+            this.bAdministrador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
+            this.bAdministrador.FlatAppearance.BorderSize = 0;
+            this.bAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bAdministrador.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bAdministrador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.bAdministrador.Location = new System.Drawing.Point(12, 308);
+            this.bAdministrador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bAdministrador.Name = "bAdministrador";
+            this.bAdministrador.Size = new System.Drawing.Size(301, 49);
+            this.bAdministrador.TabIndex = 15;
+            this.bAdministrador.Text = "Administrador";
+            this.bAdministrador.UseVisualStyleBackColor = false;
+            this.bAdministrador.Click += new System.EventHandler(this.bAdministrador_Click);
+            // 
+            // bDocente
+            // 
+            this.bDocente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
+            this.bDocente.FlatAppearance.BorderSize = 0;
+            this.bDocente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bDocente.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bDocente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.bDocente.Location = new System.Drawing.Point(12, 243);
+            this.bDocente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bDocente.Name = "bDocente";
+            this.bDocente.Size = new System.Drawing.Size(301, 49);
+            this.bDocente.TabIndex = 14;
+            this.bDocente.Text = "Docente";
+            this.bDocente.UseVisualStyleBackColor = false;
+            this.bDocente.Click += new System.EventHandler(this.bDocente_Click);
             // 
             // label2
             // 
@@ -104,7 +135,6 @@ namespace SistemaTutoria
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.lMensaje);
             this.panel2.Controls.Add(this.btnVisible);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.lineUsuario);
@@ -238,49 +268,6 @@ namespace SistemaTutoria
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // bDocente
-            // 
-            this.bDocente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
-            this.bDocente.FlatAppearance.BorderSize = 0;
-            this.bDocente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bDocente.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bDocente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.bDocente.Location = new System.Drawing.Point(12, 243);
-            this.bDocente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bDocente.Name = "bDocente";
-            this.bDocente.Size = new System.Drawing.Size(301, 49);
-            this.bDocente.TabIndex = 14;
-            this.bDocente.Text = "Docente";
-            this.bDocente.UseVisualStyleBackColor = false;
-            this.bDocente.Click += new System.EventHandler(this.bDocente_Click);
-            // 
-            // bAdministrador
-            // 
-            this.bAdministrador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
-            this.bAdministrador.FlatAppearance.BorderSize = 0;
-            this.bAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bAdministrador.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAdministrador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.bAdministrador.Location = new System.Drawing.Point(12, 308);
-            this.bAdministrador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bAdministrador.Name = "bAdministrador";
-            this.bAdministrador.Size = new System.Drawing.Size(301, 49);
-            this.bAdministrador.TabIndex = 15;
-            this.bAdministrador.Text = "Administrador";
-            this.bAdministrador.UseVisualStyleBackColor = false;
-            this.bAdministrador.Click += new System.EventHandler(this.bAdministrador_Click);
-            // 
-            // lMensaje
-            // 
-            this.lMensaje.AutoSize = true;
-            this.lMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lMensaje.ForeColor = System.Drawing.Color.Maroon;
-            this.lMensaje.Location = new System.Drawing.Point(255, 82);
-            this.lMensaje.Name = "lMensaje";
-            this.lMensaje.Size = new System.Drawing.Size(285, 32);
-            this.lMensaje.TabIndex = 14;
-            this.lMensaje.Text = "Bienvenido docente";
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -325,6 +312,5 @@ namespace SistemaTutoria
         private System.Windows.Forms.Button btnVisible;
         private System.Windows.Forms.Button bAdministrador;
         private System.Windows.Forms.Button bDocente;
-        private System.Windows.Forms.Label lMensaje;
     }
 }
