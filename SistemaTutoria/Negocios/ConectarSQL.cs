@@ -17,6 +17,11 @@ namespace Negocios
             string consulta = "Select * from Alumno";
             return conn.Select(consulta);
         }
+        public DataTable SelectAlumnosDeTutor(string CodTutor)
+        {
+            string consulta = "Select * from Alumno where CodTutor = " + CodTutor;
+            return conn.Select(consulta);
+        }
         public virtual int SeleccionAlumnos()
         {
             DataTable dt = SelectAlumnos();
@@ -36,6 +41,11 @@ namespace Negocios
         public DataTable BuscarAlumno(string categoria, string buscar)
         {
             string consulta = "select * from Alumno where " + categoria + " like '" + buscar + "%'";
+            return conn.Select(consulta);
+        }
+        public DataTable BuscarAlumnoDeTutor(string categoria, string buscar,string CodTutor)
+        {
+            string consulta = "select * from Alumno where  CodTutor = '"+ CodTutor +"' and " + categoria + " like '" + buscar + "%'";
             return conn.Select(consulta);
         }
         public virtual int TestBuscarAlumno(string categoria, string buscar)

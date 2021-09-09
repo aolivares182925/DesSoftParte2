@@ -48,7 +48,7 @@ namespace SistemaTutoria
                 if (dt.Rows.Count == 1)
                 {
                     FormTutor C = new FormTutor(dt.Rows[0][3].ToString(),
-                        dt.Rows[0][1].ToString(), dt.Rows[0][2].ToString());
+                        dt.Rows[0][1].ToString(), dt.Rows[0][2].ToString(),dt.Rows[0][0].ToString());
                     this.Hide();
                     C.Show();
                 }
@@ -144,20 +144,12 @@ namespace SistemaTutoria
             }
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void bDocente_Click(object sender, EventArgs e)
         {
             F = true;
-            
+
+            lblCategoria.Text = "Ingresando como Docente"; 
             bDocente.BackColor = Color.FromArgb(255, 255, 255);
             bAdministrador.BackColor = Color.FromArgb(104, 13, 15);
         }
@@ -165,7 +157,7 @@ namespace SistemaTutoria
         private void bAdministrador_Click(object sender, EventArgs e)
         {
             F = false;
-            
+            lblCategoria.Text = "Ingresando como Administrador";
             bAdministrador.BackColor = Color.FromArgb(255, 255, 255);
             bDocente.BackColor = Color.FromArgb(104, 13, 15);
         }

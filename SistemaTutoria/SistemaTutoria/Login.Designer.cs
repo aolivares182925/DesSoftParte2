@@ -45,6 +45,7 @@ namespace SistemaTutoria
             this.tbUsuario = new System.Windows.Forms.TextBox();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.lblCategoria = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -72,10 +73,10 @@ namespace SistemaTutoria
             this.bAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bAdministrador.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAdministrador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.bAdministrador.Location = new System.Drawing.Point(12, 308);
+            this.bAdministrador.Location = new System.Drawing.Point(13, 308);
             this.bAdministrador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bAdministrador.Name = "bAdministrador";
-            this.bAdministrador.Size = new System.Drawing.Size(301, 49);
+            this.bAdministrador.Size = new System.Drawing.Size(308, 49);
             this.bAdministrador.TabIndex = 15;
             this.bAdministrador.Text = "Administrador";
             this.bAdministrador.UseVisualStyleBackColor = false;
@@ -88,10 +89,10 @@ namespace SistemaTutoria
             this.bDocente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bDocente.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bDocente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.bDocente.Location = new System.Drawing.Point(12, 243);
+            this.bDocente.Location = new System.Drawing.Point(13, 243);
             this.bDocente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bDocente.Name = "bDocente";
-            this.bDocente.Size = new System.Drawing.Size(301, 49);
+            this.bDocente.Size = new System.Drawing.Size(308, 49);
             this.bDocente.TabIndex = 14;
             this.bDocente.Text = "Docente";
             this.bDocente.UseVisualStyleBackColor = false;
@@ -135,6 +136,7 @@ namespace SistemaTutoria
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lblCategoria);
             this.panel2.Controls.Add(this.btnVisible);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.lineUsuario);
@@ -147,7 +149,6 @@ namespace SistemaTutoria
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(747, 382);
             this.panel2.TabIndex = 5;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // btnVisible
             // 
@@ -268,6 +269,18 @@ namespace SistemaTutoria
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // lblCategoria
+            // 
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.BackColor = System.Drawing.Color.Transparent;
+            this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
+            this.lblCategoria.Location = new System.Drawing.Point(102, 89);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(296, 29);
+            this.lblCategoria.TabIndex = 14;
+            this.lblCategoria.Text = "Ingresando como Docente";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -283,7 +296,6 @@ namespace SistemaTutoria
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -312,5 +324,6 @@ namespace SistemaTutoria
         private System.Windows.Forms.Button btnVisible;
         private System.Windows.Forms.Button bAdministrador;
         private System.Windows.Forms.Button bDocente;
+        private System.Windows.Forms.Label lblCategoria;
     }
 }
