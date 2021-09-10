@@ -31,8 +31,6 @@ namespace SistemaTutoria
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnMinimize = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.tbCodigo = new System.Windows.Forms.TextBox();
             this.tbNombres = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
@@ -47,8 +45,6 @@ namespace SistemaTutoria
             this.lblNombres = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.btnEditar3 = new System.Windows.Forms.PictureBox();
-            this.btnGuardar3 = new System.Windows.Forms.PictureBox();
             this.txtObservaciones3 = new System.Windows.Forms.TextBox();
             this.txtReferencia3 = new System.Windows.Forms.TextBox();
             this.txtDescripcion3 = new System.Windows.Forms.TextBox();
@@ -61,8 +57,6 @@ namespace SistemaTutoria
             this.lblFecha3 = new System.Windows.Forms.Label();
             this.cbTipo3 = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnEditar2 = new System.Windows.Forms.PictureBox();
-            this.btnGuardar2 = new System.Windows.Forms.PictureBox();
             this.txtObservaciones2 = new System.Windows.Forms.TextBox();
             this.txtReferencia2 = new System.Windows.Forms.TextBox();
             this.txtDescripcion2 = new System.Windows.Forms.TextBox();
@@ -75,8 +69,6 @@ namespace SistemaTutoria
             this.lblFecha2 = new System.Windows.Forms.Label();
             this.cbTipo2 = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnEditar1 = new System.Windows.Forms.PictureBox();
-            this.btnGuardar1 = new System.Windows.Forms.PictureBox();
             this.txtObservaciones1 = new System.Windows.Forms.TextBox();
             this.txtReferencia1 = new System.Windows.Forms.TextBox();
             this.txtDescripcion1 = new System.Windows.Forms.TextBox();
@@ -88,20 +80,28 @@ namespace SistemaTutoria
             this.lblSesion1 = new System.Windows.Forms.Label();
             this.lblFecha1 = new System.Windows.Forms.Label();
             this.cbTipo1 = new System.Windows.Forms.ComboBox();
+            this.btnEditar3 = new System.Windows.Forms.PictureBox();
+            this.btnGuardar3 = new System.Windows.Forms.PictureBox();
+            this.btnEditar2 = new System.Windows.Forms.PictureBox();
+            this.btnGuardar2 = new System.Windows.Forms.PictureBox();
+            this.btnEditar1 = new System.Windows.Forms.PictureBox();
+            this.btnGuardar1 = new System.Windows.Forms.PictureBox();
+            this.btnMinimize = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditar3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnGuardar3)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditar2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnGuardar2)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditar3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGuardar3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditar2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGuardar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar1)).BeginInit();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -127,42 +127,6 @@ namespace SistemaTutoria
             this.label5.Size = new System.Drawing.Size(198, 32);
             this.label5.TabIndex = 7;
             this.label5.Text = "Ficha de Tutoria";
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.BackColor = System.Drawing.Color.Transparent;
-            this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(195)))));
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinimize.ForeColor = System.Drawing.Color.White;
-            this.btnMinimize.Image = global::SistemaTutoria.Properties.Resources.icons8_macos_minimizar_31;
-            this.btnMinimize.Location = new System.Drawing.Point(831, 0);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(47, 49);
-            this.btnMinimize.TabIndex = 6;
-            this.btnMinimize.UseVisualStyleBackColor = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(224)))));
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Image = global::SistemaTutoria.Properties.Resources.icons8_macos_cerrar_31;
-            this.btnClose.Location = new System.Drawing.Point(878, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(47, 49);
-            this.btnClose.TabIndex = 7;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // tbCodigo
             // 
@@ -309,9 +273,9 @@ namespace SistemaTutoria
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 264);
+            this.panel2.Location = new System.Drawing.Point(0, 282);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(925, 336);
+            this.panel2.Size = new System.Drawing.Size(925, 418);
             this.panel2.TabIndex = 35;
             // 
             // panel7
@@ -330,28 +294,6 @@ namespace SistemaTutoria
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(865, 249);
             this.panel7.TabIndex = 42;
-            // 
-            // btnEditar3
-            // 
-            this.btnEditar3.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnEditar3.Image = global::SistemaTutoria.Properties.Resources.writing;
-            this.btnEditar3.Location = new System.Drawing.Point(772, 158);
-            this.btnEditar3.Name = "btnEditar3";
-            this.btnEditar3.Size = new System.Drawing.Size(61, 59);
-            this.btnEditar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnEditar3.TabIndex = 52;
-            this.btnEditar3.TabStop = false;
-            // 
-            // btnGuardar3
-            // 
-            this.btnGuardar3.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnGuardar3.Image = global::SistemaTutoria.Properties.Resources.save_file_button;
-            this.btnGuardar3.Location = new System.Drawing.Point(772, 82);
-            this.btnGuardar3.Name = "btnGuardar3";
-            this.btnGuardar3.Size = new System.Drawing.Size(61, 59);
-            this.btnGuardar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnGuardar3.TabIndex = 51;
-            this.btnGuardar3.TabStop = false;
             // 
             // txtObservaciones3
             // 
@@ -487,28 +429,6 @@ namespace SistemaTutoria
             this.panel5.Size = new System.Drawing.Size(865, 248);
             this.panel5.TabIndex = 41;
             // 
-            // btnEditar2
-            // 
-            this.btnEditar2.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnEditar2.Image = global::SistemaTutoria.Properties.Resources.writing;
-            this.btnEditar2.Location = new System.Drawing.Point(773, 158);
-            this.btnEditar2.Name = "btnEditar2";
-            this.btnEditar2.Size = new System.Drawing.Size(61, 59);
-            this.btnEditar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnEditar2.TabIndex = 52;
-            this.btnEditar2.TabStop = false;
-            // 
-            // btnGuardar2
-            // 
-            this.btnGuardar2.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnGuardar2.Image = global::SistemaTutoria.Properties.Resources.save_file_button;
-            this.btnGuardar2.Location = new System.Drawing.Point(773, 82);
-            this.btnGuardar2.Name = "btnGuardar2";
-            this.btnGuardar2.Size = new System.Drawing.Size(61, 59);
-            this.btnGuardar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnGuardar2.TabIndex = 51;
-            this.btnGuardar2.TabStop = false;
-            // 
             // txtObservaciones2
             // 
             this.txtObservaciones2.Location = new System.Drawing.Point(143, 181);
@@ -643,28 +563,6 @@ namespace SistemaTutoria
             this.panel3.Size = new System.Drawing.Size(865, 249);
             this.panel3.TabIndex = 40;
             // 
-            // btnEditar1
-            // 
-            this.btnEditar1.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnEditar1.Image = global::SistemaTutoria.Properties.Resources.writing;
-            this.btnEditar1.Location = new System.Drawing.Point(774, 158);
-            this.btnEditar1.Name = "btnEditar1";
-            this.btnEditar1.Size = new System.Drawing.Size(61, 59);
-            this.btnEditar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnEditar1.TabIndex = 50;
-            this.btnEditar1.TabStop = false;
-            // 
-            // btnGuardar1
-            // 
-            this.btnGuardar1.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnGuardar1.Image = global::SistemaTutoria.Properties.Resources.save_file_button;
-            this.btnGuardar1.Location = new System.Drawing.Point(774, 82);
-            this.btnGuardar1.Name = "btnGuardar1";
-            this.btnGuardar1.Size = new System.Drawing.Size(61, 59);
-            this.btnGuardar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnGuardar1.TabIndex = 49;
-            this.btnGuardar1.TabStop = false;
-            // 
             // txtObservaciones1
             // 
             this.txtObservaciones1.Location = new System.Drawing.Point(143, 181);
@@ -782,12 +680,114 @@ namespace SistemaTutoria
             this.cbTipo1.TabIndex = 39;
             this.cbTipo1.Text = "Tipo";
             // 
+            // btnEditar3
+            // 
+            this.btnEditar3.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar3.Image = global::SistemaTutoria.Properties.Resources.icons8_editar_archivo_64;
+            this.btnEditar3.Location = new System.Drawing.Point(772, 158);
+            this.btnEditar3.Name = "btnEditar3";
+            this.btnEditar3.Size = new System.Drawing.Size(50, 50);
+            this.btnEditar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnEditar3.TabIndex = 52;
+            this.btnEditar3.TabStop = false;
+            // 
+            // btnGuardar3
+            // 
+            this.btnGuardar3.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar3.Image = global::SistemaTutoria.Properties.Resources.icons8_guardar_cerrar_80;
+            this.btnGuardar3.Location = new System.Drawing.Point(772, 82);
+            this.btnGuardar3.Name = "btnGuardar3";
+            this.btnGuardar3.Size = new System.Drawing.Size(50, 50);
+            this.btnGuardar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnGuardar3.TabIndex = 51;
+            this.btnGuardar3.TabStop = false;
+            // 
+            // btnEditar2
+            // 
+            this.btnEditar2.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar2.Image = global::SistemaTutoria.Properties.Resources.icons8_editar_archivo_64;
+            this.btnEditar2.Location = new System.Drawing.Point(773, 158);
+            this.btnEditar2.Name = "btnEditar2";
+            this.btnEditar2.Size = new System.Drawing.Size(50, 50);
+            this.btnEditar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnEditar2.TabIndex = 52;
+            this.btnEditar2.TabStop = false;
+            // 
+            // btnGuardar2
+            // 
+            this.btnGuardar2.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar2.Image = global::SistemaTutoria.Properties.Resources.icons8_guardar_cerrar_80;
+            this.btnGuardar2.Location = new System.Drawing.Point(773, 82);
+            this.btnGuardar2.Name = "btnGuardar2";
+            this.btnGuardar2.Size = new System.Drawing.Size(50, 50);
+            this.btnGuardar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnGuardar2.TabIndex = 51;
+            this.btnGuardar2.TabStop = false;
+            // 
+            // btnEditar1
+            // 
+            this.btnEditar1.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar1.Image = global::SistemaTutoria.Properties.Resources.icons8_editar_archivo_64;
+            this.btnEditar1.Location = new System.Drawing.Point(774, 158);
+            this.btnEditar1.Name = "btnEditar1";
+            this.btnEditar1.Size = new System.Drawing.Size(50, 50);
+            this.btnEditar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnEditar1.TabIndex = 50;
+            this.btnEditar1.TabStop = false;
+            // 
+            // btnGuardar1
+            // 
+            this.btnGuardar1.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar1.Image = global::SistemaTutoria.Properties.Resources.icons8_guardar_cerrar_80;
+            this.btnGuardar1.Location = new System.Drawing.Point(774, 82);
+            this.btnGuardar1.Name = "btnGuardar1";
+            this.btnGuardar1.Size = new System.Drawing.Size(50, 50);
+            this.btnGuardar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnGuardar1.TabIndex = 49;
+            this.btnGuardar1.TabStop = false;
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(195)))));
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimize.ForeColor = System.Drawing.Color.White;
+            this.btnMinimize.Image = global::SistemaTutoria.Properties.Resources.icons8_macos_minimizar_31;
+            this.btnMinimize.Location = new System.Drawing.Point(831, 0);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(47, 49);
+            this.btnMinimize.TabIndex = 6;
+            this.btnMinimize.UseVisualStyleBackColor = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(224)))));
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Image = global::SistemaTutoria.Properties.Resources.icons8_macos_cerrar_31;
+            this.btnClose.Location = new System.Drawing.Point(878, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(47, 49);
+            this.btnClose.TabIndex = 7;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // FormFichaTutoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(925, 600);
+            this.ClientSize = new System.Drawing.Size(925, 700);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.tbCodigo);
             this.Controls.Add(this.tbNombres);
@@ -810,22 +810,22 @@ namespace SistemaTutoria
             this.panel2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditar3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnGuardar3)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditar2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnGuardar2)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnGuardar1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditar3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGuardar3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGuardar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGuardar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

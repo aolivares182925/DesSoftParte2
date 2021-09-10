@@ -103,9 +103,29 @@ namespace SistemaTutoria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_editar_archivo_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-editar-archivo-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_guardar_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-guardar-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_guardar_cerrar_80 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-guardar-cerrar-80", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -175,5 +175,11 @@
   <ItemGroup>
     <None Include="Resources\writing.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-editar-archivo-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-guardar-cerrar-80.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -16,7 +16,7 @@ namespace SistemaTutoria
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormFichaTutoria("182898", "Fiorella"," ", " ", " ", " "));
+            Application.Run(new Login());
         }
     }
 }
