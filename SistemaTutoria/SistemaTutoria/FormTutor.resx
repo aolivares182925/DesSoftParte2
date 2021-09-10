@@ -123,10 +123,10 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="FichaTutoria.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAACTSURBVEhL5ZVBDoAgDAR5EfAMn+XRP+IJH6KYbJMGWy2cCE6yhyXd3SNuPvzul5DCUXS+Kaa4
-        ItJGCee6TFPXCIVhRfhI0YZnGxSEFWHl7SMUghVhxVy2EQrAirDSWt8jdAwrwgofwomO+bDixwPkNeFs
-        4AEr4w6Q14SzgQesDDVg/nAEZdTo4MvsGcl3FjXT4NwFHDlzlVNa3eIAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAJNJREFUSEvl
+        lUEOgCAMBHkR8Ayf5dE/4gkfophskwZbLZwITrKHJd3dI24+/O6XkMJRdL4pprgi0kYJ57pMU9cIhWFF
+        +EjRhmcbFIQVYeXtIxSCFWHFXLYRCsCKsNJa3yN0DCvCCh/CiY75sOLHA+Q14WzgASvjDpDXhLOBB6wM
+        NWD+cARl1Ojgy+wZyXcWNdPg3AUcOXOVU1rd4gAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>
