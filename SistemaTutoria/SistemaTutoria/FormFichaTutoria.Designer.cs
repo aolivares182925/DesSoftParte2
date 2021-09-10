@@ -115,6 +115,7 @@ namespace SistemaTutoria
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(925, 49);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // label5
             // 
@@ -308,9 +309,9 @@ namespace SistemaTutoria
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 278);
+            this.panel2.Location = new System.Drawing.Point(0, 264);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(925, 705);
+            this.panel2.Size = new System.Drawing.Size(925, 336);
             this.panel2.TabIndex = 35;
             // 
             // panel7
@@ -786,7 +787,7 @@ namespace SistemaTutoria
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(925, 983);
+            this.ClientSize = new System.Drawing.Size(925, 600);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.tbCodigo);
             this.Controls.Add(this.tbNombres);

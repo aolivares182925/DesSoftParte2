@@ -63,6 +63,12 @@
     <Compile Include="FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormFichaTutoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFichaTutoria.Designer.cs">
+      <DependentUpon>FormFichaTutoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTutor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFichaTutoria.resx">
+      <DependentUpon>FormFichaTutoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTutor.resx">
       <DependentUpon>FormTutor.cs</DependentUpon>
@@ -156,6 +165,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-ojo-cerrado-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-guardar-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-file-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\writing.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
