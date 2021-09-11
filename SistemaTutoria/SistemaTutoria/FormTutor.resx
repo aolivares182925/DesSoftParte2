@@ -117,11 +117,36 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnCambiarContraseña.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAqlJREFUWEft
+        Vz1rFFEUHbSwEG39LARBQbQOZt7IVpHd2dlYmN9gqYWJnQhq53+w9wcYmwhahjSpE9KY3Zk1iBoFP5r1
+        nDsns4OzO85mMwQhBx68Pffce9/HffPeekf4LxG3XYI2+KslMteL7Wbj4ojk1j60b16QrD4kUTCvhK9F
+        eXHklsklod8RVR+Q7AWT9SL/uSiPfRsUbKKmQ3yncQkB1+IoeLzdclfIJa1bN8C9t0TWgrsmBtjP+Mh/
+        Ry15+jIG+DXGNHEVYCavhomsraP9SPvBRtJ295O5uZOSe+yTo016aukzjIGYkpcD4oacvsah/xKBPyvA
+        b8zu4eCJd0zSAmijxrTwMV/EsFhpzIakozFYWDgOkUYeLJHbaDZPsPB6kXMmqgBq6UNf/mYsDWCdOUw0
+        CiimeybEDHjcRBeQRK4dt/0VaL+jfbN+GIQyF2BHV6vCHKKL6Hb8qxBt2SCwn/3m7GWZMiShe5baiw1L
+        /lSyDIyRq40t5pBpNPqdmTNwWJVDf+8UEOnMjf/Jvd65HZxjg37RONpyK2GnADFSn2CVsWUqB6saTl1z
+        nA+uiebpeGsckovKgATaZ39FlEfflHPd/KmpBCT7Quedjn9KFE8I9tsNPrYaZ0VlIKdku6I8+hqHWKKq
+        Y8wAdo3DsovKwHvAkuHIifI+NWdOGzfpAMZuQVr53M9FURni0D1KbVNuQVkRssDEo+CCJazOeTYl/2W2
+        XBGmJ2CCIqx0DHHUUnuxTX0Mq36I0pWw7WBRHtyH6NA/xQRE4y8jFN8/LyMm02wnvoz2gADjr+PIbfZC
+        /0G+qtknR5v0+7+OibEPEjw2hkFLHiTh7HXy+36QlAEzqf9JVgY+PJVsWRTr5g057Hkkqj7kPrmFxo+S
+        ZPUCyQ7vj8kRDhae9wePRtdjOXrM2QAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="FichaTutoria.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="FichaTutoria.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAJNJREFUSEvl
+        lUEOgCAMBHkR8Ayf5dE/4gkfophskwZbLZwITrKHJd3dI24+/O6XkMJRdL4pprgi0kYJ57pMU9cIhWFF
+        +EjRhmcbFIQVYeXtIxSCFWHFXLYRCsCKsNJa3yN0DCvCCh/CiY75sOLHA+Q14WzgASvjDpDXhLOBB6wM
+        NWD+cARl1Ojgy+wZyXcWNdPg3AUcOXOVU1rd4gAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="dataGridViewImageColumn1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAJNJREFUSEvl
         lUEOgCAMBHkR8Ayf5dE/4gkfophskwZbLZwITrKHJd3dI24+/O6XkMJRdL4pprgi0kYJ57pMU9cIhWFF

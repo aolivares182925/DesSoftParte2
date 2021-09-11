@@ -22,6 +22,7 @@ namespace SistemaTutoria
             lblAMaterno.Text = Apellido2;
             lblCodigo.Text = Codigo;
 
+            
             CodigoTutor = Codigo;
 
             refreshDataGridView();
@@ -58,10 +59,12 @@ namespace SistemaTutoria
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
-            {
-                Application.OpenForms[i].Close();
-            }
+            this.Close();
+            Program.Login1.Show();
+            //for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+            //{
+            //    Application.OpenForms[i].Close();
+            //}
         }
 
         private void tbBuscar_TextChanged(object sender, EventArgs e)
@@ -78,5 +81,63 @@ namespace SistemaTutoria
             }
         }
 
+        private void dgvPrincipal_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex >= 0 && dgvPrincipal.Columns[e.ColumnIndex].Name == "FichaTutoria")
+            {
+                //obtener el codigo del alumno
+                string CodigoAlumno = dgvPrincipal.Rows[e.RowIndex].Cells["CodAlumno"].FormattedValue.ToString();
+
+                FormFichaTutoria Ficha = new FormFichaTutoria(CodigoAlumno,CodigoTutor);
+                
+
+                Ficha.Show();
+            }
+        }
+
+        private void btnCambiarContraseña_Click(object sender, EventArgs e)
+        {
+            if (panelContraseña.Visible)
+            {
+                panelContraseña.Visible = false;
+                txtContraseñaN.Text = "";
+                txtContraseñaN2.Text = "";
+
+                picboxVerificar.Visible = false;
+            }
+            else
+            {
+                panelContraseña.Visible = true;
+            }
+            
+        }
+
+        private void btnOjo_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.btnOjo.Image = global::SistemaTutoria.Properties.Resources.icons8_visible_24_blanco;
+            txtContraseñaN.UseSystemPasswordChar = false;
+            txtContraseñaN2.UseSystemPasswordChar = false;
+        }
+
+        private void btnOjo_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.btnOjo.Image = global::SistemaTutoria.Properties.Resources.icons8_ojo_cerrado_24_blanco;
+            txtContraseñaN.UseSystemPasswordChar = true;
+            txtContraseñaN2.UseSystemPasswordChar = true;
+            
+        }
+
+        private void txtContraseñaN2_TextChanged(object sender, EventArgs e)
+        {
+            picboxVerificar.Visible = true;
+            if (txtContraseñaN.Text == txtContraseñaN2.Text)
+            {
+                picboxVerificar.Image = global::SistemaTutoria.Properties.Resources.icons8_check_64;
+            }
+            else
+            {
+                picboxVerificar.Image = global::SistemaTutoria.Properties.Resources.icons8_xbox_x_32;
+            }
+        }
     }
 }

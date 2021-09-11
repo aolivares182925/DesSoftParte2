@@ -11,12 +11,15 @@ namespace SistemaTutoria
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
+        
+        public static Login Login1;
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            //Application.Run(new Login());
+            Application.Run(Login1 = new Login());
         }
     }
 }

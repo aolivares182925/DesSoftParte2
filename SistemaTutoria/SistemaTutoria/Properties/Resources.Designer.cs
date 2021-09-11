@@ -83,6 +83,16 @@ namespace SistemaTutoria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_check_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-check-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_colegial_en_un_escritorio_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-colegial-en-un-escritorio-32", resourceCulture);
@@ -163,6 +173,16 @@ namespace SistemaTutoria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_ojo_cerrado_24_blanco {
+            get {
+                object obj = ResourceManager.GetObject("icons8-ojo-cerrado-24-blanco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_profesor_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-profesor-32", resourceCulture);
@@ -176,6 +196,36 @@ namespace SistemaTutoria.Properties {
         internal static System.Drawing.Bitmap icons8_visible_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-visible-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_visible_24_blanco {
+            get {
+                object obj = ResourceManager.GetObject("icons8-visible-24-blanco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_xbox_x_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-xbox-x-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_xbox_x_32__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-xbox-x-32 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

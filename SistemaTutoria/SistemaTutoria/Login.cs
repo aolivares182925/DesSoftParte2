@@ -51,6 +51,9 @@ namespace SistemaTutoria
                         dt.Rows[0][1].ToString(), dt.Rows[0][2].ToString(),dt.Rows[0][0].ToString());
                     this.Hide();
                     C.Show();
+                    
+                    //this.Show();
+                    
                 }
                 else
                 {
@@ -149,7 +152,7 @@ namespace SistemaTutoria
         {
             F = true;
 
-            lblCategoria.Text = "Ingresando como Docente"; 
+            lblCategoria.Text = "Ingresando como Docente";
             bDocente.BackColor = Color.FromArgb(255, 255, 255);
             bAdministrador.BackColor = Color.FromArgb(104, 13, 15);
         }

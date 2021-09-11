@@ -36,6 +36,7 @@ namespace SistemaTutoria
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblCategoria = new System.Windows.Forms.Label();
             this.btnVisible = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lineUsuario = new System.Windows.Forms.Panel();
@@ -45,7 +46,6 @@ namespace SistemaTutoria
             this.tbUsuario = new System.Windows.Forms.TextBox();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.lblCategoria = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -149,6 +149,18 @@ namespace SistemaTutoria
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(747, 382);
             this.panel2.TabIndex = 5;
+            // 
+            // lblCategoria
+            // 
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.BackColor = System.Drawing.Color.Transparent;
+            this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
+            this.lblCategoria.Location = new System.Drawing.Point(102, 89);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(296, 29);
+            this.lblCategoria.TabIndex = 14;
+            this.lblCategoria.Text = "Ingresando como Docente";
             // 
             // btnVisible
             // 
@@ -268,18 +280,6 @@ namespace SistemaTutoria
             this.btnClose.TabIndex = 4;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // lblCategoria
-            // 
-            this.lblCategoria.AutoSize = true;
-            this.lblCategoria.BackColor = System.Drawing.Color.Transparent;
-            this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
-            this.lblCategoria.Location = new System.Drawing.Point(102, 89);
-            this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(296, 29);
-            this.lblCategoria.TabIndex = 14;
-            this.lblCategoria.Text = "Ingresando como Docente";
             // 
             // Login
             // 
