@@ -14,6 +14,7 @@ namespace SistemaTutoria
     public partial class FormTutor : Form
     {
         string CodigoTutor;
+        
         public FormTutor(string Nombre, string Apellido1, string Apellido2,string Codigo)
         {
             InitializeComponent();
@@ -55,9 +56,17 @@ namespace SistemaTutoria
         public void refreshDataGridView()
         {
             ConectarSQL conn = new ConectarSQL();
-            dgvPrincipal.DataSource = conn.SelectAlumnosDeTutor(CodigoTutor);
+            if (chboxSoloTutorados.Checked == true)
+            {
+                dgvPrincipal.DataSource = conn.SelectAlumnosDeTutor(CodigoTutor);
+            }
+            else
+            {
+                dgvPrincipal.DataSource = conn.SelectAlumnos();
+            }
+            
         }
-
+        #region Botones de abrir y cerrar
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
@@ -72,7 +81,7 @@ namespace SistemaTutoria
             //    Application.OpenForms[i].Close();
             //}
         }
-
+        #endregion Botones de abrir y cerrar
         private void tbBuscar_TextChanged(object sender, EventArgs e)
         {
             if (tbBuscar.Text != "")
@@ -93,11 +102,20 @@ namespace SistemaTutoria
             {
                 //obtener el codigo del alumno
                 string CodigoAlumno = dgvPrincipal.Rows[e.RowIndex].Cells["CodAlumno"].FormattedValue.ToString();
-
-                FormFichaTutoria Ficha = new FormFichaTutoria(CodigoAlumno,CodigoTutor);
+                string CodTutorSeleccionado = dgvPrincipal.Rows[e.RowIndex].Cells["CodTutor"].FormattedValue.ToString();
+                if(CodigoTutor == CodTutorSeleccionado )
+                {
+                    FormFichaTutoria Ficha = new FormFichaTutoria(CodigoAlumno,CodigoTutor);
+                    Ficha.Show();
+                }
+                else
+                {
+                    //Cambiar esta parte
+                    FormFichaTutoria Ficha = new FormFichaTutoria(CodigoAlumno, CodigoTutor);
+                    Ficha.Show();
+                }
                 
-
-                Ficha.Show();
+               
             }
         }
 
@@ -208,6 +226,20 @@ namespace SistemaTutoria
             this.btnOjo2.Image = global::SistemaTutoria.Properties.Resources.icons8_ojo_cerrado_24_blanco;
             txtContraseñaActual.UseSystemPasswordChar = true;
             txtContraseñaActual.UseSystemPasswordChar = true;
+        }
+
+        private void chboxSoloTutorados_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chboxSoloTutorados.Checked == true)
+            {
+                lblTitle.Text = "TUTORADOS";
+                refreshDataGridView();
+            }
+            else
+            {
+                lblTitle.Text = "TODOS LOS ALUMNOS";
+                refreshDataGridView();
+            }
         }
     }
 }

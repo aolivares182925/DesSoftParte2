@@ -72,6 +72,7 @@ namespace SistemaTutoria
             this.btnClose = new System.Windows.Forms.Button();
             this.btnOjo2 = new System.Windows.Forms.PictureBox();
             this.txtContraseñaActual = new System.Windows.Forms.TextBox();
+            this.chboxSoloTutorados = new System.Windows.Forms.CheckBox();
             this.panelMenuBar.SuspendLayout();
             this.panelContraseña.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxVerificar)).BeginInit();
@@ -383,6 +384,7 @@ namespace SistemaTutoria
             // 
             // panel
             // 
+            this.panel.Controls.Add(this.chboxSoloTutorados);
             this.panel.Controls.Add(this.label6);
             this.panel.Controls.Add(this.cmbCategoria);
             this.panel.Controls.Add(this.btnBuscar);
@@ -601,6 +603,21 @@ namespace SistemaTutoria
             this.txtContraseñaActual.TabIndex = 17;
             this.txtContraseñaActual.UseSystemPasswordChar = true;
             // 
+            // chboxSoloTutorados
+            // 
+            this.chboxSoloTutorados.AutoSize = true;
+            this.chboxSoloTutorados.Checked = true;
+            this.chboxSoloTutorados.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chboxSoloTutorados.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chboxSoloTutorados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
+            this.chboxSoloTutorados.Location = new System.Drawing.Point(944, 8);
+            this.chboxSoloTutorados.Name = "chboxSoloTutorados";
+            this.chboxSoloTutorados.Size = new System.Drawing.Size(192, 29);
+            this.chboxSoloTutorados.TabIndex = 16;
+            this.chboxSoloTutorados.Text = "Ver solo tutorados";
+            this.chboxSoloTutorados.UseVisualStyleBackColor = true;
+            this.chboxSoloTutorados.CheckedChanged += new System.EventHandler(this.chboxSoloTutorados_CheckedChanged);
+            // 
             // FormTutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -675,5 +692,6 @@ namespace SistemaTutoria
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.PictureBox btnOjo2;
         private System.Windows.Forms.TextBox txtContraseñaActual;
+        private System.Windows.Forms.CheckBox chboxSoloTutorados;
     }
 }
