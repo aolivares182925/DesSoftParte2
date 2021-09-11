@@ -75,6 +75,20 @@ namespace Negocios
             return conn.Select(consulta);
         }
 
+        public DataTable SelectAlumno(string CodAlumno)
+        {
+            string consulta = "select * from Alumno where CodAlumno = '" + CodAlumno + "'";
+            return conn.Select(consulta);
+        }
+
+        public DataTable SelectFichaSesionAlumno(string CodAlumno)
+        {
+            string consulta = "select NroSesion, FechaHora, Tipo, Descripcion," +
+                "Referencia,Observaciones from FichaTutoria as FT inner join FichaSesion" +
+                " as FS on(FT.CodFichaTutoria = FS.CodFichaTutoria) where CodAlumno = '" + CodAlumno + "'";
+            return conn.Select(consulta);
+        }
+
         public virtual int ContarSeleccionAdministrador(string usuario, string contraseña)
         {
             DataTable dt = BuscarAdministrador(usuario, contraseña);

@@ -31,6 +31,8 @@ namespace SistemaTutoria
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnMinimize = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.tbCodigo = new System.Windows.Forms.TextBox();
             this.tbNombres = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
@@ -45,6 +47,8 @@ namespace SistemaTutoria
             this.lblNombres = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btnEditar3 = new System.Windows.Forms.PictureBox();
+            this.btnGuardar3 = new System.Windows.Forms.PictureBox();
             this.txtObservaciones3 = new System.Windows.Forms.TextBox();
             this.txtReferencia3 = new System.Windows.Forms.TextBox();
             this.txtDescripcion3 = new System.Windows.Forms.TextBox();
@@ -57,6 +61,8 @@ namespace SistemaTutoria
             this.lblFecha3 = new System.Windows.Forms.Label();
             this.cbTipo3 = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnEditar2 = new System.Windows.Forms.PictureBox();
+            this.btnGuardar2 = new System.Windows.Forms.PictureBox();
             this.txtObservaciones2 = new System.Windows.Forms.TextBox();
             this.txtReferencia2 = new System.Windows.Forms.TextBox();
             this.txtDescripcion2 = new System.Windows.Forms.TextBox();
@@ -69,6 +75,8 @@ namespace SistemaTutoria
             this.lblFecha2 = new System.Windows.Forms.Label();
             this.cbTipo2 = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnEditar1 = new System.Windows.Forms.PictureBox();
+            this.btnGuardar1 = new System.Windows.Forms.PictureBox();
             this.txtObservaciones1 = new System.Windows.Forms.TextBox();
             this.txtReferencia1 = new System.Windows.Forms.TextBox();
             this.txtDescripcion1 = new System.Windows.Forms.TextBox();
@@ -80,28 +88,20 @@ namespace SistemaTutoria
             this.lblSesion1 = new System.Windows.Forms.Label();
             this.lblFecha1 = new System.Windows.Forms.Label();
             this.cbTipo1 = new System.Windows.Forms.ComboBox();
-            this.btnEditar3 = new System.Windows.Forms.PictureBox();
-            this.btnGuardar3 = new System.Windows.Forms.PictureBox();
-            this.btnEditar2 = new System.Windows.Forms.PictureBox();
-            this.btnGuardar2 = new System.Windows.Forms.PictureBox();
-            this.btnEditar1 = new System.Windows.Forms.PictureBox();
-            this.btnGuardar1 = new System.Windows.Forms.PictureBox();
-            this.btnMinimize = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar3)).BeginInit();
+            this.panel8.SuspendLayout();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar2)).BeginInit();
+            this.panel6.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar1)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -127,27 +127,67 @@ namespace SistemaTutoria
             this.label5.Size = new System.Drawing.Size(198, 32);
             this.label5.TabIndex = 7;
             this.label5.Text = "Ficha de Tutoria";
+            this.label5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label5_MouseDown);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(195)))));
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimize.ForeColor = System.Drawing.Color.White;
+            this.btnMinimize.Image = global::SistemaTutoria.Properties.Resources.icons8_macos_minimizar_31;
+            this.btnMinimize.Location = new System.Drawing.Point(831, 0);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(47, 49);
+            this.btnMinimize.TabIndex = 6;
+            this.btnMinimize.UseVisualStyleBackColor = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(224)))));
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Image = global::SistemaTutoria.Properties.Resources.icons8_macos_cerrar_31;
+            this.btnClose.Location = new System.Drawing.Point(878, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(47, 49);
+            this.btnClose.TabIndex = 7;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // tbCodigo
             // 
-            this.tbCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCodigo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCodigo.Enabled = false;
             this.tbCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCodigo.Location = new System.Drawing.Point(138, 61);
+            this.tbCodigo.Location = new System.Drawing.Point(138, 63);
             this.tbCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.ReadOnly = true;
-            this.tbCodigo.Size = new System.Drawing.Size(242, 26);
+            this.tbCodigo.Size = new System.Drawing.Size(242, 19);
             this.tbCodigo.TabIndex = 34;
             // 
             // tbNombres
             // 
-            this.tbNombres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbNombres.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbNombres.Enabled = false;
             this.tbNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNombres.Location = new System.Drawing.Point(138, 95);
+            this.tbNombres.Location = new System.Drawing.Point(138, 90);
             this.tbNombres.Margin = new System.Windows.Forms.Padding(4);
             this.tbNombres.Name = "tbNombres";
             this.tbNombres.ReadOnly = true;
-            this.tbNombres.Size = new System.Drawing.Size(242, 26);
+            this.tbNombres.Size = new System.Drawing.Size(242, 19);
             this.tbNombres.TabIndex = 29;
             // 
             // lblCodigo
@@ -164,24 +204,26 @@ namespace SistemaTutoria
             // 
             // tbCodEscuela
             // 
-            this.tbCodEscuela.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCodEscuela.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCodEscuela.Enabled = false;
             this.tbCodEscuela.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCodEscuela.Location = new System.Drawing.Point(138, 197);
+            this.tbCodEscuela.Location = new System.Drawing.Point(138, 171);
             this.tbCodEscuela.Margin = new System.Windows.Forms.Padding(4);
             this.tbCodEscuela.Name = "tbCodEscuela";
             this.tbCodEscuela.ReadOnly = true;
-            this.tbCodEscuela.Size = new System.Drawing.Size(242, 26);
+            this.tbCodEscuela.Size = new System.Drawing.Size(242, 19);
             this.tbCodEscuela.TabIndex = 30;
             // 
             // tbSituacion
             // 
-            this.tbSituacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSituacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbSituacion.Enabled = false;
             this.tbSituacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSituacion.Location = new System.Drawing.Point(138, 231);
+            this.tbSituacion.Location = new System.Drawing.Point(138, 198);
             this.tbSituacion.Margin = new System.Windows.Forms.Padding(4);
             this.tbSituacion.Name = "tbSituacion";
             this.tbSituacion.ReadOnly = true;
-            this.tbSituacion.Size = new System.Drawing.Size(242, 26);
+            this.tbSituacion.Size = new System.Drawing.Size(242, 19);
             this.tbSituacion.TabIndex = 31;
             // 
             // lblCodEscuela
@@ -189,7 +231,7 @@ namespace SistemaTutoria
             this.lblCodEscuela.AutoSize = true;
             this.lblCodEscuela.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodEscuela.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.lblCodEscuela.Location = new System.Drawing.Point(27, 199);
+            this.lblCodEscuela.Location = new System.Drawing.Point(27, 171);
             this.lblCodEscuela.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodEscuela.Name = "lblCodEscuela";
             this.lblCodEscuela.Size = new System.Drawing.Size(89, 20);
@@ -198,13 +240,14 @@ namespace SistemaTutoria
             // 
             // tbApMaterno
             // 
-            this.tbApMaterno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbApMaterno.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbApMaterno.Enabled = false;
             this.tbApMaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbApMaterno.Location = new System.Drawing.Point(138, 163);
+            this.tbApMaterno.Location = new System.Drawing.Point(138, 144);
             this.tbApMaterno.Margin = new System.Windows.Forms.Padding(4);
             this.tbApMaterno.Name = "tbApMaterno";
             this.tbApMaterno.ReadOnly = true;
-            this.tbApMaterno.Size = new System.Drawing.Size(242, 26);
+            this.tbApMaterno.Size = new System.Drawing.Size(242, 19);
             this.tbApMaterno.TabIndex = 32;
             // 
             // lblSituacion
@@ -212,7 +255,7 @@ namespace SistemaTutoria
             this.lblSituacion.AutoSize = true;
             this.lblSituacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSituacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.lblSituacion.Location = new System.Drawing.Point(27, 233);
+            this.lblSituacion.Location = new System.Drawing.Point(27, 198);
             this.lblSituacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSituacion.Name = "lblSituacion";
             this.lblSituacion.Size = new System.Drawing.Size(78, 20);
@@ -221,13 +264,14 @@ namespace SistemaTutoria
             // 
             // tbApPaterno
             // 
-            this.tbApPaterno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbApPaterno.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbApPaterno.Enabled = false;
             this.tbApPaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbApPaterno.Location = new System.Drawing.Point(138, 129);
+            this.tbApPaterno.Location = new System.Drawing.Point(138, 117);
             this.tbApPaterno.Margin = new System.Windows.Forms.Padding(4);
             this.tbApPaterno.Name = "tbApPaterno";
             this.tbApPaterno.ReadOnly = true;
-            this.tbApPaterno.Size = new System.Drawing.Size(242, 26);
+            this.tbApPaterno.Size = new System.Drawing.Size(242, 19);
             this.tbApPaterno.TabIndex = 33;
             // 
             // lblApMaterno
@@ -235,7 +279,7 @@ namespace SistemaTutoria
             this.lblApMaterno.AutoSize = true;
             this.lblApMaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApMaterno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.lblApMaterno.Location = new System.Drawing.Point(27, 169);
+            this.lblApMaterno.Location = new System.Drawing.Point(27, 144);
             this.lblApMaterno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblApMaterno.Name = "lblApMaterno";
             this.lblApMaterno.Size = new System.Drawing.Size(99, 20);
@@ -247,7 +291,7 @@ namespace SistemaTutoria
             this.lblApPaterno.AutoSize = true;
             this.lblApPaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApPaterno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.lblApPaterno.Location = new System.Drawing.Point(27, 135);
+            this.lblApPaterno.Location = new System.Drawing.Point(27, 117);
             this.lblApPaterno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblApPaterno.Name = "lblApPaterno";
             this.lblApPaterno.Size = new System.Drawing.Size(96, 20);
@@ -259,7 +303,7 @@ namespace SistemaTutoria
             this.lblNombres.AutoSize = true;
             this.lblNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombres.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.lblNombres.Location = new System.Drawing.Point(27, 97);
+            this.lblNombres.Location = new System.Drawing.Point(27, 90);
             this.lblNombres.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombres.Name = "lblNombres";
             this.lblNombres.Size = new System.Drawing.Size(77, 20);
@@ -273,9 +317,9 @@ namespace SistemaTutoria
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 282);
+            this.panel2.Location = new System.Drawing.Point(0, 237);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(925, 418);
+            this.panel2.Size = new System.Drawing.Size(925, 463);
             this.panel2.TabIndex = 35;
             // 
             // panel7
@@ -294,6 +338,28 @@ namespace SistemaTutoria
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(865, 249);
             this.panel7.TabIndex = 42;
+            // 
+            // btnEditar3
+            // 
+            this.btnEditar3.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar3.Image = global::SistemaTutoria.Properties.Resources.icons8_editar_archivo_64;
+            this.btnEditar3.Location = new System.Drawing.Point(772, 158);
+            this.btnEditar3.Name = "btnEditar3";
+            this.btnEditar3.Size = new System.Drawing.Size(50, 50);
+            this.btnEditar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnEditar3.TabIndex = 52;
+            this.btnEditar3.TabStop = false;
+            // 
+            // btnGuardar3
+            // 
+            this.btnGuardar3.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar3.Image = global::SistemaTutoria.Properties.Resources.icons8_guardar_cerrar_80;
+            this.btnGuardar3.Location = new System.Drawing.Point(772, 82);
+            this.btnGuardar3.Name = "btnGuardar3";
+            this.btnGuardar3.Size = new System.Drawing.Size(50, 50);
+            this.btnGuardar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnGuardar3.TabIndex = 51;
+            this.btnGuardar3.TabStop = false;
             // 
             // txtObservaciones3
             // 
@@ -370,9 +436,11 @@ namespace SistemaTutoria
             // 
             // dtpFecha3
             // 
+            this.dtpFecha3.CustomFormat = "dd/mm/yyyy hh:mm:ss";
+            this.dtpFecha3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFecha3.Location = new System.Drawing.Point(249, 12);
             this.dtpFecha3.Name = "dtpFecha3";
-            this.dtpFecha3.Size = new System.Drawing.Size(242, 22);
+            this.dtpFecha3.Size = new System.Drawing.Size(194, 22);
             this.dtpFecha3.TabIndex = 38;
             // 
             // lblSesion3
@@ -428,6 +496,28 @@ namespace SistemaTutoria
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(865, 248);
             this.panel5.TabIndex = 41;
+            // 
+            // btnEditar2
+            // 
+            this.btnEditar2.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar2.Image = global::SistemaTutoria.Properties.Resources.icons8_editar_archivo_64;
+            this.btnEditar2.Location = new System.Drawing.Point(773, 158);
+            this.btnEditar2.Name = "btnEditar2";
+            this.btnEditar2.Size = new System.Drawing.Size(50, 50);
+            this.btnEditar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnEditar2.TabIndex = 52;
+            this.btnEditar2.TabStop = false;
+            // 
+            // btnGuardar2
+            // 
+            this.btnGuardar2.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar2.Image = global::SistemaTutoria.Properties.Resources.icons8_guardar_cerrar_80;
+            this.btnGuardar2.Location = new System.Drawing.Point(773, 82);
+            this.btnGuardar2.Name = "btnGuardar2";
+            this.btnGuardar2.Size = new System.Drawing.Size(50, 50);
+            this.btnGuardar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnGuardar2.TabIndex = 51;
+            this.btnGuardar2.TabStop = false;
             // 
             // txtObservaciones2
             // 
@@ -504,9 +594,11 @@ namespace SistemaTutoria
             // 
             // dtpFecha2
             // 
+            this.dtpFecha2.CustomFormat = "dd/mm/yyyy hh:mm:ss";
+            this.dtpFecha2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFecha2.Location = new System.Drawing.Point(249, 12);
             this.dtpFecha2.Name = "dtpFecha2";
-            this.dtpFecha2.Size = new System.Drawing.Size(242, 22);
+            this.dtpFecha2.Size = new System.Drawing.Size(194, 22);
             this.dtpFecha2.TabIndex = 38;
             // 
             // lblSesion2
@@ -562,6 +654,28 @@ namespace SistemaTutoria
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(865, 249);
             this.panel3.TabIndex = 40;
+            // 
+            // btnEditar1
+            // 
+            this.btnEditar1.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar1.Image = global::SistemaTutoria.Properties.Resources.icons8_editar_archivo_64;
+            this.btnEditar1.Location = new System.Drawing.Point(774, 158);
+            this.btnEditar1.Name = "btnEditar1";
+            this.btnEditar1.Size = new System.Drawing.Size(50, 50);
+            this.btnEditar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnEditar1.TabIndex = 50;
+            this.btnEditar1.TabStop = false;
+            // 
+            // btnGuardar1
+            // 
+            this.btnGuardar1.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar1.Image = global::SistemaTutoria.Properties.Resources.icons8_guardar_cerrar_80;
+            this.btnGuardar1.Location = new System.Drawing.Point(774, 82);
+            this.btnGuardar1.Name = "btnGuardar1";
+            this.btnGuardar1.Size = new System.Drawing.Size(50, 50);
+            this.btnGuardar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnGuardar1.TabIndex = 49;
+            this.btnGuardar1.TabStop = false;
             // 
             // txtObservaciones1
             // 
@@ -638,9 +752,11 @@ namespace SistemaTutoria
             // 
             // dtpFecha1
             // 
+            this.dtpFecha1.CustomFormat = "dd/mm/yyyy hh:mm:ss";
+            this.dtpFecha1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFecha1.Location = new System.Drawing.Point(249, 12);
             this.dtpFecha1.Name = "dtpFecha1";
-            this.dtpFecha1.Size = new System.Drawing.Size(242, 22);
+            this.dtpFecha1.Size = new System.Drawing.Size(195, 22);
             this.dtpFecha1.TabIndex = 38;
             // 
             // lblSesion1
@@ -680,108 +796,6 @@ namespace SistemaTutoria
             this.cbTipo1.TabIndex = 39;
             this.cbTipo1.Text = "Tipo";
             // 
-            // btnEditar3
-            // 
-            this.btnEditar3.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditar3.Image = global::SistemaTutoria.Properties.Resources.icons8_editar_archivo_64;
-            this.btnEditar3.Location = new System.Drawing.Point(772, 158);
-            this.btnEditar3.Name = "btnEditar3";
-            this.btnEditar3.Size = new System.Drawing.Size(50, 50);
-            this.btnEditar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnEditar3.TabIndex = 52;
-            this.btnEditar3.TabStop = false;
-            // 
-            // btnGuardar3
-            // 
-            this.btnGuardar3.BackColor = System.Drawing.Color.Transparent;
-            this.btnGuardar3.Image = global::SistemaTutoria.Properties.Resources.icons8_guardar_cerrar_80;
-            this.btnGuardar3.Location = new System.Drawing.Point(772, 82);
-            this.btnGuardar3.Name = "btnGuardar3";
-            this.btnGuardar3.Size = new System.Drawing.Size(50, 50);
-            this.btnGuardar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnGuardar3.TabIndex = 51;
-            this.btnGuardar3.TabStop = false;
-            // 
-            // btnEditar2
-            // 
-            this.btnEditar2.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditar2.Image = global::SistemaTutoria.Properties.Resources.icons8_editar_archivo_64;
-            this.btnEditar2.Location = new System.Drawing.Point(773, 158);
-            this.btnEditar2.Name = "btnEditar2";
-            this.btnEditar2.Size = new System.Drawing.Size(50, 50);
-            this.btnEditar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnEditar2.TabIndex = 52;
-            this.btnEditar2.TabStop = false;
-            // 
-            // btnGuardar2
-            // 
-            this.btnGuardar2.BackColor = System.Drawing.Color.Transparent;
-            this.btnGuardar2.Image = global::SistemaTutoria.Properties.Resources.icons8_guardar_cerrar_80;
-            this.btnGuardar2.Location = new System.Drawing.Point(773, 82);
-            this.btnGuardar2.Name = "btnGuardar2";
-            this.btnGuardar2.Size = new System.Drawing.Size(50, 50);
-            this.btnGuardar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnGuardar2.TabIndex = 51;
-            this.btnGuardar2.TabStop = false;
-            // 
-            // btnEditar1
-            // 
-            this.btnEditar1.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditar1.Image = global::SistemaTutoria.Properties.Resources.icons8_editar_archivo_64;
-            this.btnEditar1.Location = new System.Drawing.Point(774, 158);
-            this.btnEditar1.Name = "btnEditar1";
-            this.btnEditar1.Size = new System.Drawing.Size(50, 50);
-            this.btnEditar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnEditar1.TabIndex = 50;
-            this.btnEditar1.TabStop = false;
-            // 
-            // btnGuardar1
-            // 
-            this.btnGuardar1.BackColor = System.Drawing.Color.Transparent;
-            this.btnGuardar1.Image = global::SistemaTutoria.Properties.Resources.icons8_guardar_cerrar_80;
-            this.btnGuardar1.Location = new System.Drawing.Point(774, 82);
-            this.btnGuardar1.Name = "btnGuardar1";
-            this.btnGuardar1.Size = new System.Drawing.Size(50, 50);
-            this.btnGuardar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnGuardar1.TabIndex = 49;
-            this.btnGuardar1.TabStop = false;
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.BackColor = System.Drawing.Color.Transparent;
-            this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(195)))));
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinimize.ForeColor = System.Drawing.Color.White;
-            this.btnMinimize.Image = global::SistemaTutoria.Properties.Resources.icons8_macos_minimizar_31;
-            this.btnMinimize.Location = new System.Drawing.Point(831, 0);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(47, 49);
-            this.btnMinimize.TabIndex = 6;
-            this.btnMinimize.UseVisualStyleBackColor = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(224)))));
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Image = global::SistemaTutoria.Properties.Resources.icons8_macos_cerrar_31;
-            this.btnClose.Location = new System.Drawing.Point(878, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(47, 49);
-            this.btnClose.TabIndex = 7;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // FormFichaTutoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -804,28 +818,29 @@ namespace SistemaTutoria
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormFichaTutoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormFichaTutoria";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditar3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGuardar3)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGuardar2)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditar3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnGuardar3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditar2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnGuardar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar1)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
