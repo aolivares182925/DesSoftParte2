@@ -57,7 +57,7 @@ namespace SistemaTutoria
                 }
                 else
                 {
-                    MessageBox.Show("No se encontro el usuario");
+                    MessageBox.Show("Usuario o contraseña Incorrectos");
                 }
                 tbUsuario.Text = "  Usuario";
                 tbContra.Text = "  Contraseña";

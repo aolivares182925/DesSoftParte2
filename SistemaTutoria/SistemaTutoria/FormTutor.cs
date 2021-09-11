@@ -29,7 +29,7 @@ namespace SistemaTutoria
             DataTable dt = new DataTable();
             dt = conn.SelectTutorCodigo(CodigoTutor);
 
-            lblContraseñaActual.Text = dt.Rows[0]["Contraseña"].ToString();
+            //lblContraseñaActual.Text = dt.Rows[0]["Contraseña"].ToString();
 
             refreshDataGridView();
         }
@@ -108,6 +108,7 @@ namespace SistemaTutoria
                 panelContraseña.Visible = false;
                 txtContraseñaN.Text = "";
                 txtContraseñaN2.Text = "";
+                txtContraseñaActual.Text = "";
 
                 picboxVerificar.Visible = false;
             }
@@ -149,10 +150,14 @@ namespace SistemaTutoria
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             //Crear coneccion con la base de datos
-            
+            ConectarSQL conn = new ConectarSQL();
 
-            
-            if ((txtContraseñaN.Text != "") && (txtContraseñaN.Text == txtContraseñaN2.Text))
+            DataTable dt = new DataTable();
+            dt = conn.SelectTutorCodigo(CodigoTutor);
+
+            string PassWord = dt.Rows[0]["Contraseña"].ToString();
+
+            if ((txtContraseñaActual.Text == PassWord) && (txtContraseñaN.Text != "") && (txtContraseñaN.Text == txtContraseñaN2.Text))
             {
                 
                 string ContraseñaNueva = txtContraseñaN.Text.ToString();
@@ -164,10 +169,10 @@ namespace SistemaTutoria
                     case DialogResult.Yes:
                         try
                         {
-                            ConectarSQL conn = new ConectarSQL();
+                            
                             conn.EditarContraseñaTutor(CodigoTutor, ContraseñaNueva);
                             MessageBox.Show("Contraseña actualizada");
-                            lblContraseñaActual.Text = ContraseñaNueva;
+                            //lblContraseñaActual.Text = ContraseñaNueva;
                         }
                         catch
                         {
@@ -179,11 +184,30 @@ namespace SistemaTutoria
                         break;
                 }
                 panelContraseña.Visible = false;
+                txtContraseñaActual.Text = "";
                 txtContraseñaN.Text = "";
                 txtContraseñaN2.Text = "";
                 picboxVerificar.Visible = false;
 
             }
+            else
+            {
+                MessageBox.Show("Contraseña actual erronea o Contraseña nueva invalida");
+            }
+        }
+
+        private void btnOjo2_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.btnOjo2.Image = global::SistemaTutoria.Properties.Resources.icons8_visible_24_blanco;
+            txtContraseñaActual.UseSystemPasswordChar = false;
+            txtContraseñaActual.UseSystemPasswordChar = false;
+        }
+
+        private void btnOjo2_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.btnOjo2.Image = global::SistemaTutoria.Properties.Resources.icons8_ojo_cerrado_24_blanco;
+            txtContraseñaActual.UseSystemPasswordChar = true;
+            txtContraseñaActual.UseSystemPasswordChar = true;
         }
     }
 }
