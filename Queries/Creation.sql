@@ -53,24 +53,23 @@ create table Administrador
 	Categoria		varchar(30),
 	Contraseña		varbinary(20) 
 )
-
+--drop table FichaTutoria
+--drop table FichaSesion
 --Ficha de tutoria
 create table FichaTutoria
 (
-	CodTutor			char(3),
 	CodAlumno			char(6),
 	CodFichaTutoria		int identity (1,1),
 	primary key (CodFichaTutoria),
-	foreign key (CodTutor) references Tutor(CodTutor),
 	foreign key ( CodAlumno) references Alumno(CodAlumno)
 )
 
 create table FichaSesion
 (
 	CodFichaTutoria		int,
-	NroSesion			int,
-	FechaHora			date ,
-	Tipo				varchar(30),
+	NroSesion			int check (NroSesion in(1,2,3)),
+	FechaHora			smalldatetime ,
+	Tipo				varchar(30) check (Tipo in('Academico','Profesional','Personal')),
 	Completado			int,
 	Descripcion			varchar(400), 
 	Referencia			varchar(400), 
@@ -84,7 +83,8 @@ create table FichaSesion
 insert into Administrador values('Admin1', 'Apellido1','Apellido1','Nombre1','admin', convert (varbinary,'contrasenia1'))
 insert into Administrador values('Admin2', 'Apellido2','Apellido2','Nombre2', 'admin',convert (varbinary,'contrasenia2'))
 
-
+set Dateformat dmy
+go
 
 
 

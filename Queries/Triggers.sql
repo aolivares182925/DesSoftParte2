@@ -56,6 +56,7 @@ declare @cod char(6)
 select @cod = CodTutor from deleted
 insert into Historial values(system_user, getdate(), 'Tutor', 'delete', @cod)
 
+--drop trigger trHistorialTutorUpdate
 --update tutor
 create trigger trHistorialTutorUpdate
 on Tutor for update
