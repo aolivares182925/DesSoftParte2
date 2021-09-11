@@ -35,3 +35,11 @@ update Tutor set CodTutor = @CodTutor,
 					Nombres = @Nombres,
 					Estado = @Estado
 where Codtutor = @CodTutor
+
+---
+create proc ModificarContraseñaTutor
+@CodTutor char(3),
+@Contraseña varchar(20)
+as
+update Tutor set Contraseña = convert (varbinary,@Contraseña)
+where Codtutor = @CodTutor

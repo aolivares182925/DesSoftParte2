@@ -33,6 +33,12 @@ namespace Negocios
             string consulta = "select CodTutor, APaterno, AMaterno, Nombres, Estado from Tutor";
             return conn.Select(consulta);
         }
+        public DataTable SelectTutorCodigo(string CodTutor)
+        {
+            string consulta = "select CodTutor, APaterno, AMaterno, Nombres, Estado,Contraseña = CAST(Contraseña as varchar(20)) from Tutor where CodTutor = '"+ 
+                CodTutor + "'";
+            return conn.Select(consulta);
+        }
         public DataTable BuscarTutor(string categoria, string buscar)
         {
             string consulta = "select * from Tutor where " + categoria + " like '" + buscar + "%'";
@@ -193,6 +199,17 @@ namespace Negocios
             cmd.Parameters.AddWithValue("@AMaterno", AMaterno);
             cmd.Parameters.AddWithValue("@Nombres", Nombres);
             cmd.Parameters.AddWithValue("@Estado", Estado);
+
+            conn.GetConeccion().Open();
+            cmd.ExecuteNonQuery();
+            conn.GetConeccion().Close();
+        }
+        public void EditarContraseñaTutor(string CodTutor, string Contraseña)
+        {
+            SqlCommand cmd = new SqlCommand("ModificarContraseñaTutor", conn.GetConeccion());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@CodTutor", CodTutor);
+            cmd.Parameters.AddWithValue("@Contraseña", Contraseña);
 
             conn.GetConeccion().Open();
             cmd.ExecuteNonQuery();

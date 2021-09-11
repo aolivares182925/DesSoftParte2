@@ -29,19 +29,22 @@ namespace SistemaTutoria
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTutor));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTutor));
             this.panelMenuBar = new System.Windows.Forms.Panel();
             this.panelContraseña = new System.Windows.Forms.Panel();
+            this.picboxVerificar = new System.Windows.Forms.PictureBox();
+            this.btnOjo = new System.Windows.Forms.PictureBox();
             this.txtContraseñaN2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtContraseñaN = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.lblContraseñaActual = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnCambiarContraseña = new System.Windows.Forms.Button();
             this.pnlInformacion = new System.Windows.Forms.Panel();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -54,31 +57,29 @@ namespace SistemaTutoria
             this.pnlUnsaac = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.tbBuscar = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.dgvPrincipal = new System.Windows.Forms.DataGridView();
+            this.FichaTutoria = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.FichaTutoria = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnMinimize = new System.Windows.Forms.Button();
-            this.picboxVerificar = new System.Windows.Forms.PictureBox();
-            this.btnOjo = new System.Windows.Forms.PictureBox();
-            this.btnCambiarContraseña = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.Button();
+            this.btnConfirmar = new System.Windows.Forms.Button();
             this.panelMenuBar.SuspendLayout();
             this.panelContraseña.SuspendLayout();
-            this.pnlInformacion.SuspendLayout();
-            this.pnlUnsaac.SuspendLayout();
-            this.panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxVerificar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOjo)).BeginInit();
+            this.pnlInformacion.SuspendLayout();
+            this.pnlUnsaac.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenuBar
@@ -98,6 +99,7 @@ namespace SistemaTutoria
             // 
             // panelContraseña
             // 
+            this.panelContraseña.Controls.Add(this.btnConfirmar);
             this.panelContraseña.Controls.Add(this.picboxVerificar);
             this.panelContraseña.Controls.Add(this.btnOjo);
             this.panelContraseña.Controls.Add(this.txtContraseñaN2);
@@ -112,6 +114,29 @@ namespace SistemaTutoria
             this.panelContraseña.Size = new System.Drawing.Size(329, 406);
             this.panelContraseña.TabIndex = 5;
             this.panelContraseña.Visible = false;
+            // 
+            // picboxVerificar
+            // 
+            this.picboxVerificar.Image = global::SistemaTutoria.Properties.Resources.icons8_xbox_x_32;
+            this.picboxVerificar.Location = new System.Drawing.Point(281, 202);
+            this.picboxVerificar.Name = "picboxVerificar";
+            this.picboxVerificar.Size = new System.Drawing.Size(30, 30);
+            this.picboxVerificar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picboxVerificar.TabIndex = 14;
+            this.picboxVerificar.TabStop = false;
+            this.picboxVerificar.Visible = false;
+            // 
+            // btnOjo
+            // 
+            this.btnOjo.Image = global::SistemaTutoria.Properties.Resources.icons8_ojo_cerrado_24_blanco;
+            this.btnOjo.Location = new System.Drawing.Point(281, 130);
+            this.btnOjo.Name = "btnOjo";
+            this.btnOjo.Size = new System.Drawing.Size(30, 30);
+            this.btnOjo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnOjo.TabIndex = 13;
+            this.btnOjo.TabStop = false;
+            this.btnOjo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnOjo_MouseDown);
+            this.btnOjo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnOjo_MouseUp);
             // 
             // txtContraseñaN2
             // 
@@ -159,7 +184,7 @@ namespace SistemaTutoria
             this.lblContraseñaActual.AutoSize = true;
             this.lblContraseñaActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContraseñaActual.ForeColor = System.Drawing.Color.White;
-            this.lblContraseñaActual.Location = new System.Drawing.Point(7, 64);
+            this.lblContraseñaActual.Location = new System.Drawing.Point(7, 58);
             this.lblContraseñaActual.Name = "lblContraseñaActual";
             this.lblContraseñaActual.Size = new System.Drawing.Size(114, 25);
             this.lblContraseñaActual.TabIndex = 8;
@@ -175,6 +200,26 @@ namespace SistemaTutoria
             this.label7.Size = new System.Drawing.Size(198, 25);
             this.label7.TabIndex = 7;
             this.label7.Text = "Contraseña Actual:";
+            // 
+            // btnCambiarContraseña
+            // 
+            this.btnCambiarContraseña.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnCambiarContraseña.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.btnCambiarContraseña.FlatAppearance.BorderSize = 0;
+            this.btnCambiarContraseña.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnCambiarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCambiarContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCambiarContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.btnCambiarContraseña.Image = ((System.Drawing.Image)(resources.GetObject("btnCambiarContraseña.Image")));
+            this.btnCambiarContraseña.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCambiarContraseña.Location = new System.Drawing.Point(0, 797);
+            this.btnCambiarContraseña.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCambiarContraseña.Name = "btnCambiarContraseña";
+            this.btnCambiarContraseña.Size = new System.Drawing.Size(329, 65);
+            this.btnCambiarContraseña.TabIndex = 4;
+            this.btnCambiarContraseña.Text = "  Cambiar Contraseña";
+            this.btnCambiarContraseña.UseVisualStyleBackColor = true;
+            this.btnCambiarContraseña.Click += new System.EventHandler(this.btnCambiarContraseña_Click);
             // 
             // pnlInformacion
             // 
@@ -311,6 +356,20 @@ namespace SistemaTutoria
             this.label4.TabIndex = 4;
             this.label4.Text = "UNSAAC";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
+            this.pictureBox1.BackgroundImage = global::SistemaTutoria.Properties.Resources.logosmall;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(329, 140);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel
             // 
             this.panel.Controls.Add(this.label6);
@@ -351,6 +410,18 @@ namespace SistemaTutoria
             this.cmbCategoria.Size = new System.Drawing.Size(160, 28);
             this.cmbCategoria.TabIndex = 14;
             this.cmbCategoria.Text = "CodAlumno";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Image = global::SistemaTutoria.Properties.Resources.icons8_búsqueda_24;
+            this.btnBuscar.Location = new System.Drawing.Point(1141, 69);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(40, 37);
+            this.btnBuscar.TabIndex = 13;
+            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // tbBuscar
             // 
@@ -433,6 +504,17 @@ namespace SistemaTutoria
             this.dgvPrincipal.TabIndex = 7;
             this.dgvPrincipal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrincipal_CellContentClick);
             // 
+            // FichaTutoria
+            // 
+            this.FichaTutoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.FichaTutoria.HeaderText = "";
+            this.FichaTutoria.Image = ((System.Drawing.Image)(resources.GetObject("FichaTutoria.Image")));
+            this.FichaTutoria.MinimumWidth = 6;
+            this.FichaTutoria.Name = "FichaTutoria";
+            this.FichaTutoria.ReadOnly = true;
+            this.FichaTutoria.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.FichaTutoria.Width = 40;
+            // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -453,29 +535,6 @@ namespace SistemaTutoria
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewImageColumn1.Width = 40;
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Image = global::SistemaTutoria.Properties.Resources.icons8_búsqueda_24;
-            this.btnBuscar.Location = new System.Drawing.Point(1141, 69);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(40, 37);
-            this.btnBuscar.TabIndex = 13;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // FichaTutoria
-            // 
-            this.FichaTutoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.FichaTutoria.HeaderText = "";
-            this.FichaTutoria.Image = ((System.Drawing.Image)(resources.GetObject("FichaTutoria.Image")));
-            this.FichaTutoria.MinimumWidth = 6;
-            this.FichaTutoria.Name = "FichaTutoria";
-            this.FichaTutoria.ReadOnly = true;
-            this.FichaTutoria.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.FichaTutoria.Width = 40;
-            // 
             // btnMinimize
             // 
             this.btnMinimize.BackColor = System.Drawing.Color.White;
@@ -493,63 +552,6 @@ namespace SistemaTutoria
             this.btnMinimize.UseVisualStyleBackColor = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
-            // picboxVerificar
-            // 
-            this.picboxVerificar.Image = global::SistemaTutoria.Properties.Resources.icons8_xbox_x_32;
-            this.picboxVerificar.Location = new System.Drawing.Point(281, 202);
-            this.picboxVerificar.Name = "picboxVerificar";
-            this.picboxVerificar.Size = new System.Drawing.Size(30, 30);
-            this.picboxVerificar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picboxVerificar.TabIndex = 14;
-            this.picboxVerificar.TabStop = false;
-            this.picboxVerificar.Visible = false;
-            // 
-            // btnOjo
-            // 
-            this.btnOjo.Image = global::SistemaTutoria.Properties.Resources.icons8_ojo_cerrado_24_blanco;
-            this.btnOjo.Location = new System.Drawing.Point(281, 130);
-            this.btnOjo.Name = "btnOjo";
-            this.btnOjo.Size = new System.Drawing.Size(30, 30);
-            this.btnOjo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnOjo.TabIndex = 13;
-            this.btnOjo.TabStop = false;
-            this.btnOjo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnOjo_MouseDown);
-            this.btnOjo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnOjo_MouseUp);
-            // 
-            // btnCambiarContraseña
-            // 
-            this.btnCambiarContraseña.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnCambiarContraseña.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.btnCambiarContraseña.FlatAppearance.BorderSize = 0;
-            this.btnCambiarContraseña.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnCambiarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCambiarContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCambiarContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.btnCambiarContraseña.Image = ((System.Drawing.Image)(resources.GetObject("btnCambiarContraseña.Image")));
-            this.btnCambiarContraseña.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCambiarContraseña.Location = new System.Drawing.Point(0, 797);
-            this.btnCambiarContraseña.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCambiarContraseña.Name = "btnCambiarContraseña";
-            this.btnCambiarContraseña.Size = new System.Drawing.Size(329, 65);
-            this.btnCambiarContraseña.TabIndex = 4;
-            this.btnCambiarContraseña.Text = "  Cambiar Contraseña";
-            this.btnCambiarContraseña.UseVisualStyleBackColor = true;
-            this.btnCambiarContraseña.Click += new System.EventHandler(this.btnCambiarContraseña_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
-            this.pictureBox1.BackgroundImage = global::SistemaTutoria.Properties.Resources.logosmall;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(329, 140);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.White;
@@ -566,6 +568,25 @@ namespace SistemaTutoria
             this.btnClose.TabIndex = 5;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(174)))), ((int)(((byte)(29)))));
+            this.btnConfirmar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.btnConfirmar.FlatAppearance.BorderSize = 0;
+            this.btnConfirmar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfirmar.Location = new System.Drawing.Point(12, 254);
+            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(255, 41);
+            this.btnConfirmar.TabIndex = 15;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // FormTutor
             // 
@@ -586,16 +607,16 @@ namespace SistemaTutoria
             this.panelMenuBar.ResumeLayout(false);
             this.panelContraseña.ResumeLayout(false);
             this.panelContraseña.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxVerificar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnOjo)).EndInit();
             this.pnlInformacion.ResumeLayout(false);
             this.pnlInformacion.PerformLayout();
             this.pnlUnsaac.ResumeLayout(false);
             this.pnlUnsaac.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxVerificar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnOjo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -638,5 +659,6 @@ namespace SistemaTutoria
         private System.Windows.Forms.Label lblContraseñaActual;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.Button btnConfirmar;
     }
 }

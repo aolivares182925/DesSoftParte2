@@ -22,8 +22,14 @@ namespace SistemaTutoria
             lblAMaterno.Text = Apellido2;
             lblCodigo.Text = Codigo;
 
-            
             CodigoTutor = Codigo;
+
+            ConectarSQL conn = new ConectarSQL();
+
+            DataTable dt = new DataTable();
+            dt = conn.SelectTutorCodigo(CodigoTutor);
+
+            lblContraseñaActual.Text = dt.Rows[0]["Contraseña"].ToString();
 
             refreshDataGridView();
         }
@@ -137,6 +143,48 @@ namespace SistemaTutoria
             else
             {
                 picboxVerificar.Image = global::SistemaTutoria.Properties.Resources.icons8_xbox_x_32;
+            }
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            //Crear coneccion con la base de datos
+            
+
+            
+            if ((txtContraseñaN.Text != "") && (txtContraseñaN.Text == txtContraseñaN2.Text))
+            {
+                //string Codigo = dgvPrincipal.Rows[e.RowIndex].Cells["CodTutor"].FormattedValue.ToString();
+
+                string ContraseñaActual = lblContraseñaActual.Text;
+                string ContraseñaNueva = txtContraseñaN.Text.ToString();
+                DialogResult result = MessageBox.Show("Seguro que desea cambiar su contraseña de " + ContraseñaActual + " a "+ ContraseñaNueva + "?", 
+                    "Cambiar Contraseña",MessageBoxButtons.YesNo);
+
+                switch (result)
+                {
+                    case DialogResult.Yes:
+                        try
+                        {
+                            ConectarSQL conn = new ConectarSQL();
+                            conn.EditarContraseñaTutor(CodigoTutor, ContraseñaNueva);
+                            MessageBox.Show("Contraseña actualizada");
+                            lblContraseñaActual.Text = ContraseñaNueva;
+                        }
+                        catch
+                        {
+                            MessageBox.Show("No es posible actualizar la contraseña");
+                        }
+                        break;
+
+                    case DialogResult.No:
+                        break;
+                }
+                panelContraseña.Visible = false;
+                txtContraseñaN.Text = "";
+                txtContraseñaN2.Text = "";
+                picboxVerificar.Visible = false;
+
             }
         }
     }
