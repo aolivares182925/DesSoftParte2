@@ -154,11 +154,9 @@ namespace SistemaTutoria
             
             if ((txtContraseñaN.Text != "") && (txtContraseñaN.Text == txtContraseñaN2.Text))
             {
-                //string Codigo = dgvPrincipal.Rows[e.RowIndex].Cells["CodTutor"].FormattedValue.ToString();
-
-                string ContraseñaActual = lblContraseñaActual.Text;
+                
                 string ContraseñaNueva = txtContraseñaN.Text.ToString();
-                DialogResult result = MessageBox.Show("Seguro que desea cambiar su contraseña de " + ContraseñaActual + " a "+ ContraseñaNueva + "?", 
+                DialogResult result = MessageBox.Show("¿Seguro que desea cambiar su contraseña?", 
                     "Cambiar Contraseña",MessageBoxButtons.YesNo);
 
                 switch (result)
