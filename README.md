@@ -23,7 +23,7 @@ Cancel changes
 - **QUISPE PUMA, LUCERO** -*CUENTA GITHUB*-[LUCERO](https://github.com/lucero5796)
 - **TINTAYA TACO, YUREMA LISBETH** -*CUENTA GITHUB*-[YUREMA LISBETH](https://github.com/YuremaLTT)
 - **VILCAHUAMAN CACERES, MIGUEL** -*CUENTA GITHUB*-[MIGUEL](https://github.com/MigVC)
-# Descripción
+# Descripción 📄
 El Sistema de Tutorias es un programa de asignacion de Tutor a cada lista de alumnos los cuales se matriculan en un determinado semestre.
 ## Implementado 
 - Lenguaje:C# 
