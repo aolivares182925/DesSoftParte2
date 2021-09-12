@@ -231,12 +231,12 @@ namespace SistemaTutoria
         {
             if (chboxSoloTutorados.Checked == true)
             {
-                lblTitle.Text = "TUTORADOS";
+                lblTitle.Text = "Tutorados";
                 refreshDataGridView();
             }
             else
             {
-                lblTitle.Text = "TODOS LOS ALUMNOS";
+                lblTitle.Text = "Todos los Alumnos";
                 refreshDataGridView();
             }
         }
