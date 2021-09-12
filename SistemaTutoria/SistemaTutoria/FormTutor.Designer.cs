@@ -30,12 +30,14 @@ namespace SistemaTutoria
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTutor));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMenuBar = new System.Windows.Forms.Panel();
             this.panelContraseña = new System.Windows.Forms.Panel();
+            this.txtContraseñaActual = new System.Windows.Forms.TextBox();
+            this.btnOjo2 = new System.Windows.Forms.PictureBox();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.picboxVerificar = new System.Windows.Forms.PictureBox();
             this.btnOjo = new System.Windows.Forms.PictureBox();
@@ -59,6 +61,7 @@ namespace SistemaTutoria
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel = new System.Windows.Forms.Panel();
+            this.chboxSoloTutorados = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -70,11 +73,9 @@ namespace SistemaTutoria
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnOjo2 = new System.Windows.Forms.PictureBox();
-            this.txtContraseñaActual = new System.Windows.Forms.TextBox();
-            this.chboxSoloTutorados = new System.Windows.Forms.CheckBox();
             this.panelMenuBar.SuspendLayout();
             this.panelContraseña.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnOjo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxVerificar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOjo)).BeginInit();
             this.pnlInformacion.SuspendLayout();
@@ -82,7 +83,6 @@ namespace SistemaTutoria
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnOjo2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenuBar
@@ -118,6 +118,27 @@ namespace SistemaTutoria
             this.panelContraseña.Size = new System.Drawing.Size(329, 406);
             this.panelContraseña.TabIndex = 5;
             this.panelContraseña.Visible = false;
+            // 
+            // txtContraseñaActual
+            // 
+            this.txtContraseñaActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseñaActual.Location = new System.Drawing.Point(12, 58);
+            this.txtContraseñaActual.Name = "txtContraseñaActual";
+            this.txtContraseñaActual.Size = new System.Drawing.Size(255, 30);
+            this.txtContraseñaActual.TabIndex = 17;
+            this.txtContraseñaActual.UseSystemPasswordChar = true;
+            // 
+            // btnOjo2
+            // 
+            this.btnOjo2.Image = global::SistemaTutoria.Properties.Resources.icons8_ojo_cerrado_24_blanco;
+            this.btnOjo2.Location = new System.Drawing.Point(281, 58);
+            this.btnOjo2.Name = "btnOjo2";
+            this.btnOjo2.Size = new System.Drawing.Size(30, 30);
+            this.btnOjo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnOjo2.TabIndex = 16;
+            this.btnOjo2.TabStop = false;
+            this.btnOjo2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnOjo2_MouseDown);
+            this.btnOjo2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnOjo2_MouseUp);
             // 
             // btnConfirmar
             // 
@@ -397,6 +418,21 @@ namespace SistemaTutoria
             this.panel.Size = new System.Drawing.Size(1210, 763);
             this.panel.TabIndex = 6;
             // 
+            // chboxSoloTutorados
+            // 
+            this.chboxSoloTutorados.AutoSize = true;
+            this.chboxSoloTutorados.Checked = true;
+            this.chboxSoloTutorados.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chboxSoloTutorados.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chboxSoloTutorados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
+            this.chboxSoloTutorados.Location = new System.Drawing.Point(944, 8);
+            this.chboxSoloTutorados.Name = "chboxSoloTutorados";
+            this.chboxSoloTutorados.Size = new System.Drawing.Size(192, 29);
+            this.chboxSoloTutorados.TabIndex = 16;
+            this.chboxSoloTutorados.Text = "Ver solo tutorados";
+            this.chboxSoloTutorados.UseVisualStyleBackColor = true;
+            this.chboxSoloTutorados.CheckedChanged += new System.EventHandler(this.chboxSoloTutorados_CheckedChanged);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -416,6 +452,7 @@ namespace SistemaTutoria
             "APaterno",
             "AMaterno",
             "Nombres",
+            "CodTutor",
             "Situacion",
             "CodEscuela"});
             this.cmbCategoria.Location = new System.Drawing.Point(693, 73);
@@ -470,26 +507,26 @@ namespace SistemaTutoria
             this.dgvPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPrincipal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvPrincipal.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPrincipal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPrincipal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPrincipal.ColumnHeadersHeight = 30;
             this.dgvPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPrincipal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FichaTutoria});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPrincipal.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPrincipal.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPrincipal.EnableHeadersVisualStyles = false;
             this.dgvPrincipal.GridColor = System.Drawing.Color.White;
             this.dgvPrincipal.Location = new System.Drawing.Point(4, 114);
@@ -497,21 +534,21 @@ namespace SistemaTutoria
             this.dgvPrincipal.Name = "dgvPrincipal";
             this.dgvPrincipal.ReadOnly = true;
             this.dgvPrincipal.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPrincipal.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPrincipal.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPrincipal.RowHeadersVisible = false;
             this.dgvPrincipal.RowHeadersWidth = 51;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(158)))), ((int)(((byte)(68)))));
-            this.dgvPrincipal.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(158)))), ((int)(((byte)(68)))));
+            this.dgvPrincipal.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPrincipal.Size = new System.Drawing.Size(1163, 645);
             this.dgvPrincipal.TabIndex = 7;
@@ -582,42 +619,6 @@ namespace SistemaTutoria
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnOjo2
-            // 
-            this.btnOjo2.Image = global::SistemaTutoria.Properties.Resources.icons8_ojo_cerrado_24_blanco;
-            this.btnOjo2.Location = new System.Drawing.Point(281, 58);
-            this.btnOjo2.Name = "btnOjo2";
-            this.btnOjo2.Size = new System.Drawing.Size(30, 30);
-            this.btnOjo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnOjo2.TabIndex = 16;
-            this.btnOjo2.TabStop = false;
-            this.btnOjo2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnOjo2_MouseDown);
-            this.btnOjo2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnOjo2_MouseUp);
-            // 
-            // txtContraseñaActual
-            // 
-            this.txtContraseñaActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseñaActual.Location = new System.Drawing.Point(12, 58);
-            this.txtContraseñaActual.Name = "txtContraseñaActual";
-            this.txtContraseñaActual.Size = new System.Drawing.Size(255, 30);
-            this.txtContraseñaActual.TabIndex = 17;
-            this.txtContraseñaActual.UseSystemPasswordChar = true;
-            // 
-            // chboxSoloTutorados
-            // 
-            this.chboxSoloTutorados.AutoSize = true;
-            this.chboxSoloTutorados.Checked = true;
-            this.chboxSoloTutorados.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chboxSoloTutorados.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chboxSoloTutorados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
-            this.chboxSoloTutorados.Location = new System.Drawing.Point(944, 8);
-            this.chboxSoloTutorados.Name = "chboxSoloTutorados";
-            this.chboxSoloTutorados.Size = new System.Drawing.Size(192, 29);
-            this.chboxSoloTutorados.TabIndex = 16;
-            this.chboxSoloTutorados.Text = "Ver solo tutorados";
-            this.chboxSoloTutorados.UseVisualStyleBackColor = true;
-            this.chboxSoloTutorados.CheckedChanged += new System.EventHandler(this.chboxSoloTutorados_CheckedChanged);
-            // 
             // FormTutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -637,6 +638,7 @@ namespace SistemaTutoria
             this.panelMenuBar.ResumeLayout(false);
             this.panelContraseña.ResumeLayout(false);
             this.panelContraseña.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnOjo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxVerificar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOjo)).EndInit();
             this.pnlInformacion.ResumeLayout(false);
@@ -647,7 +649,6 @@ namespace SistemaTutoria
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnOjo2)).EndInit();
             this.ResumeLayout(false);
 
         }

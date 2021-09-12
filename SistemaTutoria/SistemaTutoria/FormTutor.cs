@@ -84,7 +84,14 @@ namespace SistemaTutoria
             {
                 dgvPrincipal.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 ConectarSQL conn = new ConectarSQL();
-                dgvPrincipal.DataSource = conn.BuscarAlumnoDeTutor(cmbCategoria.Text.ToString(), tbBuscar.Text.ToString(),CodigoTutor);
+                if (chboxSoloTutorados.Checked == true)
+                {
+                    dgvPrincipal.DataSource = conn.BuscarAlumnoDeTutor(cmbCategoria.Text.ToString(), tbBuscar.Text.ToString(), CodigoTutor);
+                }
+                else
+                {
+                    dgvPrincipal.DataSource = conn.BuscarAlumno(cmbCategoria.Text.ToString(), tbBuscar.Text.ToString());
+                }
             }
             else if (tbBuscar.Text == "")
             {
