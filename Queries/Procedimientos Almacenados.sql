@@ -35,3 +35,23 @@ update Tutor set CodTutor = @CodTutor,
 					Nombres = @Nombres,
 					Estado = @Estado
 where Codtutor = @CodTutor
+
+create proc ModificarFichaSesion
+@CodFichaTutoria	int,
+@NroSesion			int,
+@FechaHora			date ,
+@Tipo				varchar(30),
+@Completado			int,
+@Descripcion		varchar(400), 
+@Referencia			varchar(400), 
+@Observaciones		varchar(400)
+as
+update FichaSesion set CodFichaTutoria = @CodFichaTutoria, 
+					NroSesion = @NroSesion,
+					FechaHora = @FechaHora,
+					Tipo = @Tipo,
+					Completado = @Completado,
+					Descripcion = @Descripcion,
+					Referencia = @Referencia,
+					Observaciones = @Observaciones
+where CodFichaTutoria = @CodFichaTutoria and NroSesion = @NroSesion

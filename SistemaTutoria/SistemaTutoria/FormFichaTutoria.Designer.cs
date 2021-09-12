@@ -46,7 +46,7 @@ namespace SistemaTutoria
             this.lblApPaterno = new System.Windows.Forms.Label();
             this.lblNombres = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.p_sesion3 = new System.Windows.Forms.Panel();
             this.btnEditar3 = new System.Windows.Forms.PictureBox();
             this.btnGuardar3 = new System.Windows.Forms.PictureBox();
             this.txtObservaciones3 = new System.Windows.Forms.TextBox();
@@ -60,7 +60,7 @@ namespace SistemaTutoria
             this.lblSesion3 = new System.Windows.Forms.Label();
             this.lblFecha3 = new System.Windows.Forms.Label();
             this.cbTipo3 = new System.Windows.Forms.ComboBox();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.p_sesion2 = new System.Windows.Forms.Panel();
             this.btnEditar2 = new System.Windows.Forms.PictureBox();
             this.btnGuardar2 = new System.Windows.Forms.PictureBox();
             this.txtObservaciones2 = new System.Windows.Forms.TextBox();
@@ -74,7 +74,7 @@ namespace SistemaTutoria
             this.lblSesion2 = new System.Windows.Forms.Label();
             this.lblFecha2 = new System.Windows.Forms.Label();
             this.cbTipo2 = new System.Windows.Forms.ComboBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.p_sesion1 = new System.Windows.Forms.Panel();
             this.btnEditar1 = new System.Windows.Forms.PictureBox();
             this.btnGuardar1 = new System.Windows.Forms.PictureBox();
             this.txtObservaciones1 = new System.Windows.Forms.TextBox();
@@ -88,17 +88,20 @@ namespace SistemaTutoria
             this.lblSesion1 = new System.Windows.Forms.Label();
             this.lblFecha1 = new System.Windows.Forms.Label();
             this.cbTipo1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.p_sesion3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar3)).BeginInit();
             this.panel8.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.p_sesion2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar2)).BeginInit();
             this.panel6.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.p_sesion1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -313,53 +316,55 @@ namespace SistemaTutoria
             // panel2
             // 
             this.panel2.AutoScroll = true;
-            this.panel2.Controls.Add(this.panel7);
-            this.panel2.Controls.Add(this.panel5);
-            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.p_sesion3);
+            this.panel2.Controls.Add(this.p_sesion2);
+            this.panel2.Controls.Add(this.p_sesion1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 237);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(925, 463);
             this.panel2.TabIndex = 35;
             // 
-            // panel7
+            // p_sesion3
             // 
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.btnEditar3);
-            this.panel7.Controls.Add(this.btnGuardar3);
-            this.panel7.Controls.Add(this.txtObservaciones3);
-            this.panel7.Controls.Add(this.txtReferencia3);
-            this.panel7.Controls.Add(this.txtDescripcion3);
-            this.panel7.Controls.Add(this.lblReferencia3);
-            this.panel7.Controls.Add(this.lblObservaciones3);
-            this.panel7.Controls.Add(this.lblDescripcion3);
-            this.panel7.Controls.Add(this.panel8);
-            this.panel7.Location = new System.Drawing.Point(23, 522);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(865, 249);
-            this.panel7.TabIndex = 42;
+            this.p_sesion3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.p_sesion3.Controls.Add(this.btnEditar3);
+            this.p_sesion3.Controls.Add(this.btnGuardar3);
+            this.p_sesion3.Controls.Add(this.txtObservaciones3);
+            this.p_sesion3.Controls.Add(this.txtReferencia3);
+            this.p_sesion3.Controls.Add(this.txtDescripcion3);
+            this.p_sesion3.Controls.Add(this.lblReferencia3);
+            this.p_sesion3.Controls.Add(this.lblObservaciones3);
+            this.p_sesion3.Controls.Add(this.lblDescripcion3);
+            this.p_sesion3.Controls.Add(this.panel8);
+            this.p_sesion3.Location = new System.Drawing.Point(22, 522);
+            this.p_sesion3.Name = "p_sesion3";
+            this.p_sesion3.Size = new System.Drawing.Size(865, 249);
+            this.p_sesion3.TabIndex = 42;
             // 
             // btnEditar3
             // 
             this.btnEditar3.BackColor = System.Drawing.Color.Transparent;
             this.btnEditar3.Image = global::SistemaTutoria.Properties.Resources.icons8_editar_archivo_64;
-            this.btnEditar3.Location = new System.Drawing.Point(772, 158);
+            this.btnEditar3.Location = new System.Drawing.Point(774, 158);
             this.btnEditar3.Name = "btnEditar3";
             this.btnEditar3.Size = new System.Drawing.Size(50, 50);
             this.btnEditar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnEditar3.TabIndex = 52;
             this.btnEditar3.TabStop = false;
+            this.btnEditar3.Click += new System.EventHandler(this.btnEditar3_Click);
             // 
             // btnGuardar3
             // 
             this.btnGuardar3.BackColor = System.Drawing.Color.Transparent;
             this.btnGuardar3.Image = global::SistemaTutoria.Properties.Resources.icons8_guardar_cerrar_80;
-            this.btnGuardar3.Location = new System.Drawing.Point(772, 82);
+            this.btnGuardar3.Location = new System.Drawing.Point(774, 82);
             this.btnGuardar3.Name = "btnGuardar3";
             this.btnGuardar3.Size = new System.Drawing.Size(50, 50);
             this.btnGuardar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnGuardar3.TabIndex = 51;
             this.btnGuardar3.TabStop = false;
+            this.btnGuardar3.Click += new System.EventHandler(this.btnGuardar3_Click);
             // 
             // txtObservaciones3
             // 
@@ -424,6 +429,7 @@ namespace SistemaTutoria
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
+            this.panel8.Controls.Add(this.label3);
             this.panel8.Controls.Add(this.dtpFecha3);
             this.panel8.Controls.Add(this.lblSesion3);
             this.panel8.Controls.Add(this.lblFecha3);
@@ -436,7 +442,7 @@ namespace SistemaTutoria
             // 
             // dtpFecha3
             // 
-            this.dtpFecha3.CustomFormat = "dd/mm/yyyy hh:mm:ss";
+            this.dtpFecha3.CustomFormat = "yyyy-MM-dd hh:mm:ss";
             this.dtpFecha3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFecha3.Location = new System.Drawing.Point(249, 12);
             this.dtpFecha3.Name = "dtpFecha3";
@@ -474,50 +480,51 @@ namespace SistemaTutoria
             "Academico",
             "Profesional",
             "Personal"});
-            this.cbTipo3.Location = new System.Drawing.Point(566, 12);
+            this.cbTipo3.Location = new System.Drawing.Point(638, 12);
             this.cbTipo3.Name = "cbTipo3";
             this.cbTipo3.Size = new System.Drawing.Size(100, 24);
             this.cbTipo3.TabIndex = 39;
-            this.cbTipo3.Text = "Tipo";
             // 
-            // panel5
+            // p_sesion2
             // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.btnEditar2);
-            this.panel5.Controls.Add(this.btnGuardar2);
-            this.panel5.Controls.Add(this.txtObservaciones2);
-            this.panel5.Controls.Add(this.txtReferencia2);
-            this.panel5.Controls.Add(this.txtDescripcion2);
-            this.panel5.Controls.Add(this.lblReferencia2);
-            this.panel5.Controls.Add(this.lblObservaciones2);
-            this.panel5.Controls.Add(this.lblDescripcion2);
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Location = new System.Drawing.Point(22, 268);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(865, 248);
-            this.panel5.TabIndex = 41;
+            this.p_sesion2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.p_sesion2.Controls.Add(this.btnEditar2);
+            this.p_sesion2.Controls.Add(this.btnGuardar2);
+            this.p_sesion2.Controls.Add(this.txtObservaciones2);
+            this.p_sesion2.Controls.Add(this.txtReferencia2);
+            this.p_sesion2.Controls.Add(this.txtDescripcion2);
+            this.p_sesion2.Controls.Add(this.lblReferencia2);
+            this.p_sesion2.Controls.Add(this.lblObservaciones2);
+            this.p_sesion2.Controls.Add(this.lblDescripcion2);
+            this.p_sesion2.Controls.Add(this.panel6);
+            this.p_sesion2.Location = new System.Drawing.Point(22, 268);
+            this.p_sesion2.Name = "p_sesion2";
+            this.p_sesion2.Size = new System.Drawing.Size(865, 248);
+            this.p_sesion2.TabIndex = 41;
             // 
             // btnEditar2
             // 
             this.btnEditar2.BackColor = System.Drawing.Color.Transparent;
             this.btnEditar2.Image = global::SistemaTutoria.Properties.Resources.icons8_editar_archivo_64;
-            this.btnEditar2.Location = new System.Drawing.Point(773, 158);
+            this.btnEditar2.Location = new System.Drawing.Point(774, 158);
             this.btnEditar2.Name = "btnEditar2";
             this.btnEditar2.Size = new System.Drawing.Size(50, 50);
             this.btnEditar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnEditar2.TabIndex = 52;
             this.btnEditar2.TabStop = false;
+            this.btnEditar2.Click += new System.EventHandler(this.btnEditar2_Click);
             // 
             // btnGuardar2
             // 
             this.btnGuardar2.BackColor = System.Drawing.Color.Transparent;
             this.btnGuardar2.Image = global::SistemaTutoria.Properties.Resources.icons8_guardar_cerrar_80;
-            this.btnGuardar2.Location = new System.Drawing.Point(773, 82);
+            this.btnGuardar2.Location = new System.Drawing.Point(774, 82);
             this.btnGuardar2.Name = "btnGuardar2";
             this.btnGuardar2.Size = new System.Drawing.Size(50, 50);
             this.btnGuardar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnGuardar2.TabIndex = 51;
             this.btnGuardar2.TabStop = false;
+            this.btnGuardar2.Click += new System.EventHandler(this.btnGuardar2_Click);
             // 
             // txtObservaciones2
             // 
@@ -582,6 +589,7 @@ namespace SistemaTutoria
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
+            this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.dtpFecha2);
             this.panel6.Controls.Add(this.lblSesion2);
             this.panel6.Controls.Add(this.lblFecha2);
@@ -594,7 +602,7 @@ namespace SistemaTutoria
             // 
             // dtpFecha2
             // 
-            this.dtpFecha2.CustomFormat = "dd/mm/yyyy hh:mm:ss";
+            this.dtpFecha2.CustomFormat = "yyyy-MM-dd hh:mm:ss";
             this.dtpFecha2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFecha2.Location = new System.Drawing.Point(249, 12);
             this.dtpFecha2.Name = "dtpFecha2";
@@ -632,32 +640,32 @@ namespace SistemaTutoria
             "Academico",
             "Profesional",
             "Personal"});
-            this.cbTipo2.Location = new System.Drawing.Point(566, 12);
+            this.cbTipo2.Location = new System.Drawing.Point(638, 12);
             this.cbTipo2.Name = "cbTipo2";
             this.cbTipo2.Size = new System.Drawing.Size(100, 24);
             this.cbTipo2.TabIndex = 39;
-            this.cbTipo2.Text = "Tipo";
             // 
-            // panel3
+            // p_sesion1
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.btnEditar1);
-            this.panel3.Controls.Add(this.btnGuardar1);
-            this.panel3.Controls.Add(this.txtObservaciones1);
-            this.panel3.Controls.Add(this.txtReferencia1);
-            this.panel3.Controls.Add(this.txtDescripcion1);
-            this.panel3.Controls.Add(this.lblReferencia1);
-            this.panel3.Controls.Add(this.lblObservaciones1);
-            this.panel3.Controls.Add(this.lblDescripcion1);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(21, 13);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(865, 249);
-            this.panel3.TabIndex = 40;
+            this.p_sesion1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.p_sesion1.Controls.Add(this.btnEditar1);
+            this.p_sesion1.Controls.Add(this.btnGuardar1);
+            this.p_sesion1.Controls.Add(this.txtObservaciones1);
+            this.p_sesion1.Controls.Add(this.txtReferencia1);
+            this.p_sesion1.Controls.Add(this.txtDescripcion1);
+            this.p_sesion1.Controls.Add(this.lblReferencia1);
+            this.p_sesion1.Controls.Add(this.lblObservaciones1);
+            this.p_sesion1.Controls.Add(this.lblDescripcion1);
+            this.p_sesion1.Controls.Add(this.panel4);
+            this.p_sesion1.Location = new System.Drawing.Point(22, 13);
+            this.p_sesion1.Name = "p_sesion1";
+            this.p_sesion1.Size = new System.Drawing.Size(865, 249);
+            this.p_sesion1.TabIndex = 40;
             // 
             // btnEditar1
             // 
             this.btnEditar1.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar1.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnEditar1.Image = global::SistemaTutoria.Properties.Resources.icons8_editar_archivo_64;
             this.btnEditar1.Location = new System.Drawing.Point(774, 158);
             this.btnEditar1.Name = "btnEditar1";
@@ -665,6 +673,7 @@ namespace SistemaTutoria
             this.btnEditar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnEditar1.TabIndex = 50;
             this.btnEditar1.TabStop = false;
+            this.btnEditar1.Click += new System.EventHandler(this.btnEditar1_Click);
             // 
             // btnGuardar1
             // 
@@ -676,6 +685,7 @@ namespace SistemaTutoria
             this.btnGuardar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnGuardar1.TabIndex = 49;
             this.btnGuardar1.TabStop = false;
+            this.btnGuardar1.Click += new System.EventHandler(this.btnGuardar1_Click);
             // 
             // txtObservaciones1
             // 
@@ -740,6 +750,7 @@ namespace SistemaTutoria
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
+            this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.dtpFecha1);
             this.panel4.Controls.Add(this.lblSesion1);
             this.panel4.Controls.Add(this.lblFecha1);
@@ -752,7 +763,7 @@ namespace SistemaTutoria
             // 
             // dtpFecha1
             // 
-            this.dtpFecha1.CustomFormat = "dd/mm/yyyy hh:mm:ss";
+            this.dtpFecha1.CustomFormat = "yyyy-MM-dd hh:mm:ss";
             this.dtpFecha1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFecha1.Location = new System.Drawing.Point(249, 12);
             this.dtpFecha1.Name = "dtpFecha1";
@@ -790,11 +801,46 @@ namespace SistemaTutoria
             "Academico",
             "Profesional",
             "Personal"});
-            this.cbTipo1.Location = new System.Drawing.Point(566, 12);
+            this.cbTipo1.Location = new System.Drawing.Point(638, 12);
             this.cbTipo1.Name = "cbTipo1";
             this.cbTipo1.Size = new System.Drawing.Size(100, 24);
             this.cbTipo1.TabIndex = 39;
-            this.cbTipo1.Text = "Tipo";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(481, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(150, 25);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "Tipo de tutoría:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(480, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(150, 25);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "Tipo de tutoría:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(479, 11);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(150, 25);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "Tipo de tutoría:";
             // 
             // FormFichaTutoria
             // 
@@ -820,23 +866,24 @@ namespace SistemaTutoria
             this.Name = "FormFichaTutoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormFichaTutoria";
+            this.Load += new System.EventHandler(this.FormFichaTutoria_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            this.p_sesion3.ResumeLayout(false);
+            this.p_sesion3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar3)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.p_sesion2.ResumeLayout(false);
+            this.p_sesion2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar2)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.p_sesion1.ResumeLayout(false);
+            this.p_sesion1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar1)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -865,13 +912,13 @@ namespace SistemaTutoria
         private System.Windows.Forms.Label lblApPaterno;
         private System.Windows.Forms.Label lblNombres;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel p_sesion1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DateTimePicker dtpFecha1;
         private System.Windows.Forms.Label lblSesion1;
         private System.Windows.Forms.Label lblFecha1;
         private System.Windows.Forms.ComboBox cbTipo1;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel p_sesion3;
         private System.Windows.Forms.TextBox txtObservaciones3;
         private System.Windows.Forms.TextBox txtReferencia3;
         private System.Windows.Forms.TextBox txtDescripcion3;
@@ -883,7 +930,7 @@ namespace SistemaTutoria
         private System.Windows.Forms.Label lblSesion3;
         private System.Windows.Forms.Label lblFecha3;
         private System.Windows.Forms.ComboBox cbTipo3;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel p_sesion2;
         private System.Windows.Forms.TextBox txtObservaciones2;
         private System.Windows.Forms.TextBox txtReferencia2;
         private System.Windows.Forms.TextBox txtDescripcion2;
@@ -907,5 +954,8 @@ namespace SistemaTutoria
         private System.Windows.Forms.PictureBox btnGuardar3;
         private System.Windows.Forms.PictureBox btnEditar2;
         private System.Windows.Forms.PictureBox btnGuardar2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

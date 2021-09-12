@@ -87,6 +87,18 @@ insert into Administrador values('Admin2', 'Apellido2','Apellido2','Nombre2', 'a
 
 
 
+insert into FichaTutoria values('112207')
+insert into FichaSesion values(1, 1,'10/09/2021 ','Academico', 1,'asbdjkagfiua', 'asbdjkagfiua','asbdjkagfiua')
+insert into FichaSesion values(1, 2,'17/09/2021 ','Profesional', 1,'asbdjkagfiua', 'asbdjkagfiua','asbdjkagfiua')
+
+select * from Alumno
+	where CodTutor = '001' and CodAlumno = '112207'
+
+select * from FichaTutoria
+select NroSesion, FechaHora, Tipo, Descripcion,Referencia,Observaciones from FichaTutoria as FT inner join FichaSesion as FS
+	on ( FT.CodFichaTutoria = FS.CodFichaTutoria)
+	where CodAlumno = '112207'
+
 
 
 

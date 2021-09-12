@@ -61,10 +61,6 @@ namespace SistemaTutoria
         {
             this.Close();
             Program.Login1.Show();
-            //for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
-            //{
-            //    Application.OpenForms[i].Close();
-            //}
         }
 
         private void tbBuscar_TextChanged(object sender, EventArgs e)
@@ -87,8 +83,8 @@ namespace SistemaTutoria
             {
                 //obtener el codigo del alumno
                 string CodigoAlumno = dgvPrincipal.Rows[e.RowIndex].Cells["CodAlumno"].FormattedValue.ToString();
-
-                FormFichaTutoria Ficha = new FormFichaTutoria(CodigoAlumno,CodigoTutor);
+                bool es_tutor = true;
+                FormFichaTutoria Ficha = new FormFichaTutoria(CodigoAlumno,CodigoTutor,es_tutor);
                 
 
                 Ficha.Show();
