@@ -76,10 +76,6 @@ namespace SistemaTutoria
         {
             this.Close();
             Program.Login1.Show();
-            //for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
-            //{
-            //    Application.OpenForms[i].Close();
-            //}
         }
         #endregion Botones de abrir y cerrar
         private void tbBuscar_TextChanged(object sender, EventArgs e)
@@ -102,18 +98,21 @@ namespace SistemaTutoria
             {
                 //obtener el codigo del alumno
                 string CodigoAlumno = dgvPrincipal.Rows[e.RowIndex].Cells["CodAlumno"].FormattedValue.ToString();
+
                 string CodTutorSeleccionado = dgvPrincipal.Rows[e.RowIndex].Cells["CodTutor"].FormattedValue.ToString();
                 if(CodigoTutor == CodTutorSeleccionado )
                 {
-                    FormFichaTutoria Ficha = new FormFichaTutoria(CodigoAlumno,CodigoTutor);
+                    FormFichaTutoria Ficha = new FormFichaTutoria(CodigoAlumno,CodigoTutor, true);
                     Ficha.Show();
                 }
                 else
                 {
                     //Cambiar esta parte
-                    FormFichaTutoria Ficha = new FormFichaTutoria(CodigoAlumno, CodigoTutor);
+                    FormFichaTutoria Ficha = new FormFichaTutoria(CodigoAlumno, CodigoTutor,false);
                     Ficha.Show();
                 }
+
+
                 
                
             }

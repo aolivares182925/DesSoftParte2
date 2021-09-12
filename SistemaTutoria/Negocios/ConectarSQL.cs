@@ -89,6 +89,58 @@ namespace Negocios
             return conn.Select(consulta);
         }
 
+        public int Cod_Ficha_Tutoria(string CodAlumno)
+        {
+            string consulta = "select CodFichaTutoria from FichaTutoria where " + 
+                "CodAlumno = '" + CodAlumno + "'";
+            DataTable Dt = conn.Select(consulta);
+            if (Dt.Rows.Count == 0)
+                return 0;
+            else
+                return Int32.Parse(Dt.Rows[0][0].ToString());
+
+        }
+
+        public void AgregarFicha(string Cod_Tutor, string CodAlumno)
+        {
+            string consulta = "insert into FichaTutoria values ('" + Cod_Tutor + "','" + CodAlumno + "')";
+            SqlCommand cmd = new SqlCommand(consulta, conn.GetConeccion());
+            conn.GetConeccion().Open();
+            cmd.ExecuteNonQuery();
+            conn.GetConeccion().Close();
+        }
+
+        public void AgregarSesion(string CodFichaTutoria, string NroSesion, string date, string Tipo, string Completado,
+            string Descripcion, string Referencia, string Observaciones)
+        {
+            string consulta = "insert into FichaSesion values (" + CodFichaTutoria + "," + NroSesion + ",'" + date + "','" + Tipo + "'," +
+                Completado + ",'" + Descripcion + "','" + Referencia + "','" + Observaciones + "')";
+            SqlCommand cmd = new SqlCommand(consulta, conn.GetConeccion());
+
+            conn.GetConeccion().Open();
+            cmd.ExecuteNonQuery();
+            conn.GetConeccion().Close();
+        }
+        public void EditarFichaSesion(int CodFichaTutoria, int NroSesion, string FechaHora, string Tipo,
+            int Completado,string Descripcion, string Referencia, string Observaciones)
+        {
+
+            SqlCommand cmd = new SqlCommand("ModificarFichaSesion", conn.GetConeccion());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@CodFichaTutoria", CodFichaTutoria);
+            cmd.Parameters.AddWithValue("@NroSesion", NroSesion);
+            cmd.Parameters.AddWithValue("@FechaHora", FechaHora);
+            cmd.Parameters.AddWithValue("@Tipo", Tipo);
+            cmd.Parameters.AddWithValue("@Completado", Completado);
+            cmd.Parameters.AddWithValue("@Descripcion", Descripcion);
+            cmd.Parameters.AddWithValue("@Referencia", Referencia);
+            cmd.Parameters.AddWithValue("@Observaciones", Observaciones);
+
+            conn.GetConeccion().Open();
+            cmd.ExecuteNonQuery();
+            conn.GetConeccion().Close();
+        }
+
         public virtual int ContarSeleccionAdministrador(string usuario, string contraseña)
         {
             DataTable dt = BuscarAdministrador(usuario, contraseña);
