@@ -1,4 +1,6 @@
 --TABLA DE HISTORIAL
+use master
+go
 use Tutoria 
 go
 
