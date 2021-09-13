@@ -41,7 +41,7 @@ namespace Negocios
         }
         public DataTable BuscarTutor(string categoria, string buscar)
         {
-            string consulta = "select * from Tutor where " + categoria + " like '" + buscar + "%'";
+            string consulta = "select CodTutor, APaterno, AMaterno, Nombres, Estado from Tutor where " + categoria + " like '" + buscar + "%'";
             return conn.Select(consulta);
         }
         public DataTable BuscarAlumno(string categoria, string buscar)
