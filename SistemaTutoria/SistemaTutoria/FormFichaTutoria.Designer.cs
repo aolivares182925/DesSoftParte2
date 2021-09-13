@@ -45,7 +45,7 @@ namespace SistemaTutoria
             this.lblApMaterno = new System.Windows.Forms.Label();
             this.lblApPaterno = new System.Windows.Forms.Label();
             this.lblNombres = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.P_Sesiones = new System.Windows.Forms.Panel();
             this.p_sesion3 = new System.Windows.Forms.Panel();
             this.btnEditar3 = new System.Windows.Forms.PictureBox();
             this.btnGuardar3 = new System.Windows.Forms.PictureBox();
@@ -56,6 +56,7 @@ namespace SistemaTutoria
             this.lblObservaciones3 = new System.Windows.Forms.Label();
             this.lblDescripcion3 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.dtpFecha3 = new System.Windows.Forms.DateTimePicker();
             this.lblSesion3 = new System.Windows.Forms.Label();
             this.lblFecha3 = new System.Windows.Forms.Label();
@@ -70,6 +71,7 @@ namespace SistemaTutoria
             this.lblObservaciones2 = new System.Windows.Forms.Label();
             this.lblDescripcion2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.dtpFecha2 = new System.Windows.Forms.DateTimePicker();
             this.lblSesion2 = new System.Windows.Forms.Label();
             this.lblFecha2 = new System.Windows.Forms.Label();
@@ -84,15 +86,14 @@ namespace SistemaTutoria
             this.lblObservaciones1 = new System.Windows.Forms.Label();
             this.lblDescripcion1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.dtpFecha1 = new System.Windows.Forms.DateTimePicker();
             this.lblSesion1 = new System.Windows.Forms.Label();
             this.lblFecha1 = new System.Windows.Forms.Label();
             this.cbTipo1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.txtNota = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.P_Sesiones.SuspendLayout();
             this.p_sesion3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar3)).BeginInit();
@@ -313,17 +314,17 @@ namespace SistemaTutoria
             this.lblNombres.TabIndex = 27;
             this.lblNombres.Text = "Nombres";
             // 
-            // panel2
+            // P_Sesiones
             // 
-            this.panel2.AutoScroll = true;
-            this.panel2.Controls.Add(this.p_sesion3);
-            this.panel2.Controls.Add(this.p_sesion2);
-            this.panel2.Controls.Add(this.p_sesion1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 237);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(925, 463);
-            this.panel2.TabIndex = 35;
+            this.P_Sesiones.AutoScroll = true;
+            this.P_Sesiones.Controls.Add(this.p_sesion3);
+            this.P_Sesiones.Controls.Add(this.p_sesion2);
+            this.P_Sesiones.Controls.Add(this.p_sesion1);
+            this.P_Sesiones.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.P_Sesiones.Location = new System.Drawing.Point(0, 306);
+            this.P_Sesiones.Name = "P_Sesiones";
+            this.P_Sesiones.Size = new System.Drawing.Size(925, 394);
+            this.P_Sesiones.TabIndex = 35;
             // 
             // p_sesion3
             // 
@@ -439,6 +440,18 @@ namespace SistemaTutoria
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(863, 45);
             this.panel8.TabIndex = 40;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(479, 11);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(150, 25);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "Tipo de tutoría:";
             // 
             // dtpFecha3
             // 
@@ -599,6 +612,18 @@ namespace SistemaTutoria
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(863, 45);
             this.panel6.TabIndex = 40;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(480, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(150, 25);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "Tipo de tutoría:";
             // 
             // dtpFecha2
             // 
@@ -761,6 +786,18 @@ namespace SistemaTutoria
             this.panel4.Size = new System.Drawing.Size(863, 45);
             this.panel4.TabIndex = 40;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(481, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(150, 25);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "Tipo de tutoría:";
+            // 
             // dtpFecha1
             // 
             this.dtpFecha1.CustomFormat = "yyyy-MM-dd hh:mm:ss";
@@ -806,41 +843,17 @@ namespace SistemaTutoria
             this.cbTipo1.Size = new System.Drawing.Size(100, 24);
             this.cbTipo1.TabIndex = 39;
             // 
-            // label1
+            // txtNota
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(481, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 25);
-            this.label1.TabIndex = 40;
-            this.label1.Text = "Tipo de tutoría:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(480, 11);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 25);
-            this.label2.TabIndex = 41;
-            this.label2.Text = "Tipo de tutoría:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(479, 11);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 25);
-            this.label3.TabIndex = 41;
-            this.label3.Text = "Tipo de tutoría:";
+            this.txtNota.AutoSize = true;
+            this.txtNota.BackColor = System.Drawing.Color.RosyBrown;
+            this.txtNota.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txtNota.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtNota.Location = new System.Drawing.Point(29, 235);
+            this.txtNota.Name = "txtNota";
+            this.txtNota.Size = new System.Drawing.Size(61, 22);
+            this.txtNota.TabIndex = 36;
+            this.txtNota.Text = "NOTA.";
             // 
             // FormFichaTutoria
             // 
@@ -848,7 +861,8 @@ namespace SistemaTutoria
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(925, 700);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.txtNota);
+            this.Controls.Add(this.P_Sesiones);
             this.Controls.Add(this.tbCodigo);
             this.Controls.Add(this.tbNombres);
             this.Controls.Add(this.lblCodigo);
@@ -869,7 +883,7 @@ namespace SistemaTutoria
             this.Load += new System.EventHandler(this.FormFichaTutoria_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.P_Sesiones.ResumeLayout(false);
             this.p_sesion3.ResumeLayout(false);
             this.p_sesion3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar3)).EndInit();
@@ -911,7 +925,7 @@ namespace SistemaTutoria
         private System.Windows.Forms.Label lblApMaterno;
         private System.Windows.Forms.Label lblApPaterno;
         private System.Windows.Forms.Label lblNombres;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel P_Sesiones;
         private System.Windows.Forms.Panel p_sesion1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DateTimePicker dtpFecha1;
@@ -957,5 +971,6 @@ namespace SistemaTutoria
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label txtNota;
     }
 }

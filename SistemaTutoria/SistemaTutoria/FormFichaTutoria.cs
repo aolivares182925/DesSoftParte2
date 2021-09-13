@@ -51,12 +51,16 @@ namespace SistemaTutoria
                 p_sesion1.Location = new Point(22, 13);
                 p_sesion2.Location = new Point(22, 202);
                 p_sesion3.Location = new Point(22, 391);
+                txtNota.Visible = false;
+                P_Sesiones.Height = 424;
                 //
                 Bloquear(1);
                 Bloquear(2);
                 Bloquear(3);
 
             }
+            else
+                txtNota.Text = "NOTA: \n En la sección de observaciones se ingresa información confidencial del alumno \n que solo es visible para su tutor.";
 
             Cod_Ficha = conn.Cod_Ficha_Tutoria(Cod_Alumno); 
 
