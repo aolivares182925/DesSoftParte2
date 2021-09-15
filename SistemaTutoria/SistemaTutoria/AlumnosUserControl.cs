@@ -100,6 +100,14 @@ namespace SistemaTutoria
                 {
                     cbRiesgo.Checked = false;
                 }
+                if (Int32.Parse(dgvPrincipal.Rows[e.RowIndex].Cells["Activo"].FormattedValue.ToString()) == 1)
+                {
+                    chboxActivo.Checked = true;
+                }
+                else
+                {
+                    chboxActivo.Checked = false;
+                }
                 btnAgregar.Text = "EDITAR";
                 btnCancelar.Visible = true;
                 tbCodigo.Enabled = false;
@@ -115,6 +123,7 @@ namespace SistemaTutoria
                 {
                     bool agregado;
                     string Situacion;
+                    int Activo;
 
                     ConectarSQL C = new ConectarSQL();
                     if (cbRiesgo.Checked == true)
@@ -125,8 +134,16 @@ namespace SistemaTutoria
                     {
                         Situacion = "No Riesgo";
                     }
+                    if (chboxActivo.Checked == true)
+                    {
+                        Activo = 1;
+                    }
+                    else
+                    {
+                        Activo = 0;
+                    }
                     agregado = C.AgregarAlumnoSiPosible(tbCodigo.Text, tbApPaterno.Text, tbApMaterno.Text, tbNombres.Text, Situacion,
-                                        tbCodTutor.Text, tbCodEscuela.Text);
+                                        tbCodTutor.Text, tbCodEscuela.Text,Activo);
                     if (agregado)
                     {
                         MessageBox.Show("Agregado Correctamente");
@@ -146,6 +163,9 @@ namespace SistemaTutoria
                 {
                     ConectarSQL conn = new ConectarSQL();
                     string Situacion;
+                    int Activo;
+                    string CodTutor;
+
                     if (cbRiesgo.Checked == true)
                     {
                         Situacion = "Riesgo";
@@ -154,8 +174,24 @@ namespace SistemaTutoria
                     {
                         Situacion = "No Riesgo";
                     }
+                    if (chboxActivo.Checked == true)
+                    {
+                        Activo = 1;
+                    }
+                    else
+                    {
+                        Activo = 0;
+                    }
+                    if (tbCodTutor.Text == "")
+                    {
+                        CodTutor = "NNN";
+                    }
+                    else
+                    {
+                        CodTutor = tbCodTutor.Text;
+                    }
                     conn.EditarAlumno(tbCodigo.Text, tbApPaterno.Text, tbApMaterno.Text, tbNombres.Text, Situacion,
-                        tbCodTutor.Text, tbCodEscuela.Text);
+                        CodTutor, tbCodEscuela.Text,Activo);
 
                     MessageBox.Show("Fila editada correctamente");
                     btnCancelar.Visible = false;
@@ -212,6 +248,19 @@ namespace SistemaTutoria
         private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void chboxActivo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chboxActivo.Checked)
+            {
+                tbCodTutor.Enabled = true;
+            }
+            else
+            {
+                tbCodTutor.Text = "";
+                tbCodTutor.Enabled = false;
+            }
         }
     }
 }

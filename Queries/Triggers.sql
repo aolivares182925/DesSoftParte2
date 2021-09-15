@@ -4,17 +4,6 @@ go
 use Tutoria 
 go
 
-create table Historial
-(
-	NroOperacion		int identity,
-	Editor				varchar(250),
-	Fecha				datetime,
-	Tabla				varchar(30),
-	Operacion			varchar(50),
-	TuplaAfectada		char(6)
-)
-
-
 --TRIGGERS
 --ALUMNO
 --insert alumno

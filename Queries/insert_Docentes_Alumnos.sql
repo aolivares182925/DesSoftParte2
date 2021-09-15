@@ -2,6 +2,7 @@
 
 insert into Tutor (CodTutor,Nombres,APaterno,AMaterno,Estado,Contraseña)
 values 
+	('NNN','null','null','null','null',convert (varbinary,'1234')),
 	('001','Boris','Chullo','Llave','Nombrado',convert (varbinary,'1234')),
 	('002','Carlos Ramon','Quispe','Onofre','Nombrado',convert (varbinary,'1234')),
 	('003','Dennis Ivan','Candia','Oviedo','Nombrado',convert (varbinary,'1234')),
@@ -549,7 +550,7 @@ insert into Alumno values
 							('182921','MOLLINEDO','PEÑA','ALVARO SEBASTIAN','Riesgo','029','IN', 1),
 							('184780','PAUCCAR','BLANCO','HAPMYR ERWIN','Riesgo','029','IN', 1),
 							('133964','GONZALES','MEZA','JHENDY EDER','No riesgo','029','IN', 1),
-							('151388','CACERES','QUISPE','MARIA FERNANDA','No riesgo','029','IN', 1,
+							('151388','CACERES','QUISPE','MARIA FERNANDA','No riesgo','029','IN', 1),
 							('160920','CHOQUE','NAVARRO','MARCELO FABIAN','No riesgo','029','IN', 1),
 							('170429','CONDORI','LOPEZ','JUAN CARLOS','No riesgo','029','IN', 1),
 							('171916','PEREIRA','CHINCHERO','RICHARD MIKHAEL','No riesgo','029','IN', 1),

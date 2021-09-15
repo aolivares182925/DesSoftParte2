@@ -10,7 +10,8 @@ create proc ModificarAlumno
 @Nombres varchar(30),
 @Situacion varchar(50),
 @CodTutor char(3),
-@CodEscuela varchar(5)
+@CodEscuela varchar(5),
+@Activo int
 as
 update Alumno set CodAlumno = @CodAlumno, 
 					APaterno = @APaterno,
@@ -18,7 +19,8 @@ update Alumno set CodAlumno = @CodAlumno,
 					Nombres = @Nombres,
 					Situacion = @Situacion,
 					CodTutor = @CodTutor,
-					CodEscuela = @CodEscuela
+					CodEscuela = @CodEscuela,
+					Activo = @Activo
 where CodAlumno = @CodAlumno
 
 

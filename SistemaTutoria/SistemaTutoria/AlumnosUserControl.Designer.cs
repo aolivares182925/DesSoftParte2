@@ -59,6 +59,7 @@ namespace SistemaTutoria
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.chboxActivo = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -327,7 +328,7 @@ namespace SistemaTutoria
             // 
             this.cbRiesgo.AutoSize = true;
             this.cbRiesgo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbRiesgo.Location = new System.Drawing.Point(1032, 129);
+            this.cbRiesgo.Location = new System.Drawing.Point(939, 126);
             this.cbRiesgo.Margin = new System.Windows.Forms.Padding(4);
             this.cbRiesgo.Name = "cbRiesgo";
             this.cbRiesgo.Size = new System.Drawing.Size(102, 24);
@@ -413,11 +414,25 @@ namespace SistemaTutoria
             this.label1.TabIndex = 11;
             this.label1.Text = "Campo:";
             // 
+            // chboxActivo
+            // 
+            this.chboxActivo.AutoSize = true;
+            this.chboxActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chboxActivo.Location = new System.Drawing.Point(1102, 127);
+            this.chboxActivo.Margin = new System.Windows.Forms.Padding(4);
+            this.chboxActivo.Name = "chboxActivo";
+            this.chboxActivo.Size = new System.Drawing.Size(77, 24);
+            this.chboxActivo.TabIndex = 12;
+            this.chboxActivo.Text = "Activo";
+            this.chboxActivo.UseVisualStyleBackColor = true;
+            this.chboxActivo.CheckedChanged += new System.EventHandler(this.chboxActivo_CheckedChanged);
+            // 
             // AlumnosUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.chboxActivo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.cmbCategoria);
@@ -477,5 +492,6 @@ namespace SistemaTutoria
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox chboxActivo;
     }
 }

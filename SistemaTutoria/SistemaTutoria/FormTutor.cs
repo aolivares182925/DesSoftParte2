@@ -62,7 +62,7 @@ namespace SistemaTutoria
             }
             else
             {
-                dgvPrincipal.DataSource = conn.SelectAlumnos();
+                dgvPrincipal.DataSource = conn.SelectTodosAlumnosParaTutor();
             }
             
         }

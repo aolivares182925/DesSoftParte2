@@ -19,7 +19,12 @@ namespace Negocios
         }
         public DataTable SelectAlumnosDeTutor(string CodTutor)
         {
-            string consulta = "Select * from Alumno where CodTutor = " + CodTutor;
+            string consulta = "Select * from Alumno where CodTutor = " + CodTutor + " and Activo = 1";
+            return conn.Select(consulta);
+        }
+        public DataTable SelectTodosAlumnosParaTutor()
+        {
+            string consulta = "Select * from Alumno where Activo = 1";
             return conn.Select(consulta);
         }
         public virtual int SeleccionAlumnos()
@@ -170,10 +175,10 @@ namespace Negocios
         }
 
         public void AgregarAlumno(string CodAlumno, string APaterno, string AMaterno, string Nombres,
-            string Situacion, string CodTutor, string CodEscuela)
+            string Situacion, string CodTutor, string CodEscuela, int Activo)
         {
             string consulta = "insert into Alumno values ('" + CodAlumno + "','" + APaterno + "','" + AMaterno + "','" + Nombres + "','" +
-                Situacion + "','" + CodTutor + "','" + CodEscuela + "')";
+                Situacion + "','" + CodTutor + "','" + CodEscuela + "'," + Activo.ToString() +")";
             SqlCommand cmd = new SqlCommand(consulta, conn.GetConeccion());
 
             conn.GetConeccion().Open();
@@ -181,23 +186,23 @@ namespace Negocios
             conn.GetConeccion().Close();
         }
         public virtual bool AgregarAlumnoSiPosible(string CodAlumno, string APaterno, string AMaterno, string Nombres,
-            string Situacion, string CodTutor, string CodEscuela)
+            string Situacion, string CodTutor, string CodEscuela, int Activo)
         {
             bool posible = true;
 
             posible = (CodAlumno == "" || APaterno == "" || AMaterno == "" || Nombres == "" || Situacion == "" ||
-                CodTutor == "" || CodEscuela == "") ? false :true;
+                CodTutor == "" || CodEscuela == "" || Activo == 0) ? false :true;
 
             if (posible)
             {
-                AgregarAlumno(CodAlumno, APaterno, AMaterno, Nombres,Situacion, CodTutor, CodEscuela);
+                AgregarAlumno(CodAlumno, APaterno, AMaterno, Nombres,Situacion, CodTutor, CodEscuela,Activo);
             }
             
             return posible;
         }
 
         public void EditarAlumno(string CodAlumno, string APaterno, string AMaterno, string Nombres,
-            string Situacion, string CodTutor, string CodEscuela)
+            string Situacion, string CodTutor, string CodEscuela,int Activo)
         {
 
             SqlCommand cmd = new SqlCommand("ModificarAlumno", conn.GetConeccion());
@@ -209,6 +214,7 @@ namespace Negocios
             cmd.Parameters.AddWithValue("@Situacion", Situacion);
             cmd.Parameters.AddWithValue("@CodTutor", CodTutor);
             cmd.Parameters.AddWithValue("@CodEscuela", CodEscuela);
+            cmd.Parameters.AddWithValue("@Activo", Activo);
 
             conn.GetConeccion().Open();
             cmd.ExecuteNonQuery();
@@ -216,7 +222,7 @@ namespace Negocios
         }
 
         public virtual bool EditarAlumnoSiEsPosible(string CodAlumno, string APaterno, string AMaterno, string Nombres,
-            string Situacion, string CodTutor, string CodEscuela)
+            string Situacion, string CodTutor, string CodEscuela, int Activo)
         {
             bool posible = true;
 
@@ -225,7 +231,7 @@ namespace Negocios
 
             if (posible)
             {
-                EditarAlumno(CodAlumno, APaterno, AMaterno, Nombres, Situacion, CodTutor, CodEscuela);
+                EditarAlumno(CodAlumno, APaterno, AMaterno, Nombres, Situacion, CodTutor, CodEscuela, Activo);
             }
 
             return posible;
