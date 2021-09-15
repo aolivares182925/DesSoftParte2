@@ -37,6 +37,7 @@ create table Alumno
 	Situacion		varchar(50) check (Situacion in('Riesgo', 'No riesgo')),
 	CodTutor		char(3),
 	CodEscuela		varchar(5),
+	Activo			int check (Activo in(1, 0)), 
 	primary key (CodAlumno),
 	foreign key (CodTutor) references Tutor(CodTutor),
 	foreign key ( CodEscuela) references EscuelaProfesional(CodEscuela)
