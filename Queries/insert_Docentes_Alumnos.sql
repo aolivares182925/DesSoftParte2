@@ -2,7 +2,7 @@
 
 insert into Tutor (CodTutor,Nombres,APaterno,AMaterno,Estado,Contraseña)
 values 
-	('NNN','null','null','null','null',convert (varbinary,'1234')),
+	('NNN','null','null','null','Nombrado',convert (varbinary,'')),
 	('001','Boris','Chullo','Llave','Nombrado',convert (varbinary,'1234')),
 	('002','Carlos Ramon','Quispe','Onofre','Nombrado',convert (varbinary,'1234')),
 	('003','Dennis Ivan','Candia','Oviedo','Nombrado',convert (varbinary,'1234')),
