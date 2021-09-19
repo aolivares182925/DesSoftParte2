@@ -41,11 +41,11 @@ where Codtutor = @CodTutor
 
 
 ---
-create proc ModificarContrase�aTutor
+create proc ModificarContraseñaTutor
 @CodTutor char(3),
-@Contrase�a varchar(20)
+@Contraseña varchar(20)
 as
-update Tutor set Contrase�a = convert (varbinary,@Contrase�a)
+update Tutor set Contraseña = convert (varbinary,@Contraseña)
 where Codtutor = @CodTutor
 
 
@@ -70,3 +70,10 @@ update FichaSesion set CodFichaTutoria = @CodFichaTutoria,
 					Observaciones = @Observaciones
 where CodFichaTutoria = @CodFichaTutoria and NroSesion = @NroSesion
 
+--- cambiar contraseña administrador
+create proc ModificarContraseñaAdministrador
+@Usuario char(6),
+@Contraseña varchar(20)
+as
+update Administrador set Contraseña = convert (varbinary,@Contraseña)
+where Usuario = @Usuario
