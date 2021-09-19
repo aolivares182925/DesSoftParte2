@@ -287,5 +287,22 @@ namespace Negocios
             cmd.ExecuteNonQuery();
             conn.GetConeccion().Close();
         }
+        public void EditarContraseñaAdministrador(string Usuario, string Contraseña)
+        {
+            SqlCommand cmd = new SqlCommand("ModificarContraseñaAdministrador", conn.GetConeccion());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Usuario", Usuario);
+            cmd.Parameters.AddWithValue("@Contraseña", Contraseña);
+
+            conn.GetConeccion().Open();
+            cmd.ExecuteNonQuery();
+            conn.GetConeccion().Close();
+        }
+        public DataTable SelectAdministradorCodigo(string Usuario)
+        {
+            string consulta = "select Usuario, APaterno, AMaterno, Nombre, Categoria,Contraseña = CAST(Contraseña as varchar(20)) from Administrador where Usuario = '" +
+                Usuario + "'";
+            return conn.Select(consulta);
+        }
     }
 }

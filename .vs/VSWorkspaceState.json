@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\SistemaTutoria",
+    "\\SistemaTutoria\\Datos",
+    "\\SistemaTutoria\\SistemaTutoria",
+    "\\SistemaTutoria\\TestMock"
   ],
-  "SelectedNode": "\\SistemaTutoria.sln",
+  "SelectedNode": "\\SistemaTutoria\\SistemaTutoria\\FormAdmin.cs",
   "PreviewInSolutionExplorer": false
 }

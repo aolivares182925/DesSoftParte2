@@ -29,7 +29,23 @@ namespace SistemaTutoria
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdmin));
             this.panelMenuBar = new System.Windows.Forms.Panel();
+            this.btnCambiarContraseña = new System.Windows.Forms.Button();
+            this.panelContraseña = new System.Windows.Forms.Panel();
+            this.picboxVerificar = new System.Windows.Forms.PictureBox();
+            this.btnOjo = new System.Windows.Forms.PictureBox();
+            this.btnConfirmar = new System.Windows.Forms.Button();
+            this.txtContraseñaN2 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtContraseñaN = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnOjo2 = new System.Windows.Forms.PictureBox();
+            this.txtContraseñaActual = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lApellido2 = new System.Windows.Forms.Label();
+            this.lApellido1 = new System.Windows.Forms.Label();
+            this.lNombre = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -39,16 +55,19 @@ namespace SistemaTutoria
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lNombre = new System.Windows.Forms.Label();
-            this.lApellido1 = new System.Windows.Forms.Label();
-            this.lApellido2 = new System.Windows.Forms.Label();
             this.panelMenuBar.SuspendLayout();
+            this.panelContraseña.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxVerificar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnOjo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnOjo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenuBar
             // 
             this.panelMenuBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
+            this.panelMenuBar.Controls.Add(this.btnCambiarContraseña);
+            this.panelMenuBar.Controls.Add(this.panelContraseña);
             this.panelMenuBar.Controls.Add(this.lApellido2);
             this.panelMenuBar.Controls.Add(this.lApellido1);
             this.panelMenuBar.Controls.Add(this.lNombre);
@@ -62,6 +81,201 @@ namespace SistemaTutoria
             this.panelMenuBar.Name = "panelMenuBar";
             this.panelMenuBar.Size = new System.Drawing.Size(267, 862);
             this.panelMenuBar.TabIndex = 0;
+            // 
+            // btnCambiarContraseña
+            // 
+            this.btnCambiarContraseña.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnCambiarContraseña.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.btnCambiarContraseña.FlatAppearance.BorderSize = 0;
+            this.btnCambiarContraseña.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnCambiarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCambiarContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCambiarContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.btnCambiarContraseña.Image = ((System.Drawing.Image)(resources.GetObject("btnCambiarContraseña.Image")));
+            this.btnCambiarContraseña.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCambiarContraseña.Location = new System.Drawing.Point(0, 774);
+            this.btnCambiarContraseña.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCambiarContraseña.Name = "btnCambiarContraseña";
+            this.btnCambiarContraseña.Size = new System.Drawing.Size(267, 88);
+            this.btnCambiarContraseña.TabIndex = 8;
+            this.btnCambiarContraseña.Text = "  Cambiar Contraseña";
+            this.btnCambiarContraseña.UseVisualStyleBackColor = true;
+            this.btnCambiarContraseña.Click += new System.EventHandler(this.btnCambiarContraseña_Click);
+            // 
+            // panelContraseña
+            // 
+            this.panelContraseña.Controls.Add(this.picboxVerificar);
+            this.panelContraseña.Controls.Add(this.btnOjo);
+            this.panelContraseña.Controls.Add(this.btnConfirmar);
+            this.panelContraseña.Controls.Add(this.txtContraseñaN2);
+            this.panelContraseña.Controls.Add(this.label10);
+            this.panelContraseña.Controls.Add(this.txtContraseñaN);
+            this.panelContraseña.Controls.Add(this.label9);
+            this.panelContraseña.Controls.Add(this.btnOjo2);
+            this.panelContraseña.Controls.Add(this.txtContraseñaActual);
+            this.panelContraseña.Controls.Add(this.label7);
+            this.panelContraseña.Location = new System.Drawing.Point(0, 422);
+            this.panelContraseña.Name = "panelContraseña";
+            this.panelContraseña.Size = new System.Drawing.Size(267, 345);
+            this.panelContraseña.TabIndex = 7;
+            this.panelContraseña.Visible = false;
+            // 
+            // picboxVerificar
+            // 
+            this.picboxVerificar.Image = global::SistemaTutoria.Properties.Resources.icons8_xbox_x_32;
+            this.picboxVerificar.Location = new System.Drawing.Point(220, 213);
+            this.picboxVerificar.Name = "picboxVerificar";
+            this.picboxVerificar.Size = new System.Drawing.Size(30, 30);
+            this.picboxVerificar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picboxVerificar.TabIndex = 28;
+            this.picboxVerificar.TabStop = false;
+            this.picboxVerificar.Visible = false;
+            this.picboxVerificar.Click += new System.EventHandler(this.picboxVerificar_Click);
+            // 
+            // btnOjo
+            // 
+            this.btnOjo.Image = global::SistemaTutoria.Properties.Resources.icons8_ojo_cerrado_24_blanco;
+            this.btnOjo.Location = new System.Drawing.Point(220, 130);
+            this.btnOjo.Name = "btnOjo";
+            this.btnOjo.Size = new System.Drawing.Size(30, 30);
+            this.btnOjo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnOjo.TabIndex = 27;
+            this.btnOjo.TabStop = false;
+            this.btnOjo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnOjo_MouseDown);
+            this.btnOjo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnOjo_MouseUp);
+            // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(174)))), ((int)(((byte)(29)))));
+            this.btnConfirmar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.btnConfirmar.FlatAppearance.BorderSize = 0;
+            this.btnConfirmar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfirmar.Location = new System.Drawing.Point(17, 280);
+            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(220, 41);
+            this.btnConfirmar.TabIndex = 26;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click_1);
+            // 
+            // txtContraseñaN2
+            // 
+            this.txtContraseñaN2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseñaN2.Location = new System.Drawing.Point(11, 213);
+            this.txtContraseñaN2.Name = "txtContraseñaN2";
+            this.txtContraseñaN2.Size = new System.Drawing.Size(194, 30);
+            this.txtContraseñaN2.TabIndex = 23;
+            this.txtContraseñaN2.UseSystemPasswordChar = true;
+            this.txtContraseñaN2.TextChanged += new System.EventHandler(this.txtContraseñaN2_TextChanged_1);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(3, 174);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(119, 25);
+            this.label10.TabIndex = 22;
+            this.label10.Text = "Confirmar :";
+            // 
+            // txtContraseñaN
+            // 
+            this.txtContraseñaN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseñaN.Location = new System.Drawing.Point(8, 130);
+            this.txtContraseñaN.Name = "txtContraseñaN";
+            this.txtContraseñaN.Size = new System.Drawing.Size(197, 30);
+            this.txtContraseñaN.TabIndex = 21;
+            this.txtContraseñaN.UseSystemPasswordChar = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(6, 91);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(199, 25);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Contraseña Nueva:";
+            // 
+            // btnOjo2
+            // 
+            this.btnOjo2.Image = global::SistemaTutoria.Properties.Resources.icons8_ojo_cerrado_24_blanco;
+            this.btnOjo2.Location = new System.Drawing.Point(220, 42);
+            this.btnOjo2.Name = "btnOjo2";
+            this.btnOjo2.Size = new System.Drawing.Size(30, 30);
+            this.btnOjo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnOjo2.TabIndex = 19;
+            this.btnOjo2.TabStop = false;
+            this.btnOjo2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnOjo2_MouseDown);
+            this.btnOjo2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnOjo2_MouseUp);
+            // 
+            // txtContraseñaActual
+            // 
+            this.txtContraseñaActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseñaActual.Location = new System.Drawing.Point(6, 42);
+            this.txtContraseñaActual.Name = "txtContraseñaActual";
+            this.txtContraseñaActual.Size = new System.Drawing.Size(199, 30);
+            this.txtContraseñaActual.TabIndex = 18;
+            this.txtContraseñaActual.UseSystemPasswordChar = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(4, 10);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(198, 25);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Contraseña Actual:";
+            // 
+            // lApellido2
+            // 
+            this.lApellido2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lApellido2.AutoSize = true;
+            this.lApellido2.BackColor = System.Drawing.Color.Transparent;
+            this.lApellido2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lApellido2.ForeColor = System.Drawing.Color.White;
+            this.lApellido2.Location = new System.Drawing.Point(12, 266);
+            this.lApellido2.Name = "lApellido2";
+            this.lApellido2.Size = new System.Drawing.Size(159, 25);
+            this.lApellido2.TabIndex = 6;
+            this.lApellido2.Text = "Apellido Materno";
+            this.lApellido2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lApellido1
+            // 
+            this.lApellido1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lApellido1.AutoSize = true;
+            this.lApellido1.BackColor = System.Drawing.Color.Transparent;
+            this.lApellido1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lApellido1.ForeColor = System.Drawing.Color.White;
+            this.lApellido1.Location = new System.Drawing.Point(12, 234);
+            this.lApellido1.Name = "lApellido1";
+            this.lApellido1.Size = new System.Drawing.Size(155, 25);
+            this.lApellido1.TabIndex = 5;
+            this.lApellido1.Text = "Apellido Paterno";
+            this.lApellido1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lNombre
+            // 
+            this.lNombre.AutoSize = true;
+            this.lNombre.BackColor = System.Drawing.Color.Transparent;
+            this.lNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNombre.ForeColor = System.Drawing.Color.White;
+            this.lNombre.Location = new System.Drawing.Point(12, 202);
+            this.lNombre.Name = "lNombre";
+            this.lNombre.Size = new System.Drawing.Size(81, 25);
+            this.lNombre.TabIndex = 4;
+            this.lNombre.Text = "Nombre";
+            this.lNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -184,47 +398,6 @@ namespace SistemaTutoria
             this.panel2.Size = new System.Drawing.Size(1333, 800);
             this.panel2.TabIndex = 3;
             // 
-            // lNombre
-            // 
-            this.lNombre.AutoSize = true;
-            this.lNombre.BackColor = System.Drawing.Color.Transparent;
-            this.lNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombre.ForeColor = System.Drawing.Color.White;
-            this.lNombre.Location = new System.Drawing.Point(12, 202);
-            this.lNombre.Name = "lNombre";
-            this.lNombre.Size = new System.Drawing.Size(81, 25);
-            this.lNombre.TabIndex = 4;
-            this.lNombre.Text = "Nombre";
-            this.lNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lApellido1
-            // 
-            this.lApellido1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lApellido1.AutoSize = true;
-            this.lApellido1.BackColor = System.Drawing.Color.Transparent;
-            this.lApellido1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lApellido1.ForeColor = System.Drawing.Color.White;
-            this.lApellido1.Location = new System.Drawing.Point(12, 234);
-            this.lApellido1.Name = "lApellido1";
-            this.lApellido1.Size = new System.Drawing.Size(155, 25);
-            this.lApellido1.TabIndex = 5;
-            this.lApellido1.Text = "Apellido Paterno";
-            this.lApellido1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lApellido2
-            // 
-            this.lApellido2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lApellido2.AutoSize = true;
-            this.lApellido2.BackColor = System.Drawing.Color.Transparent;
-            this.lApellido2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lApellido2.ForeColor = System.Drawing.Color.White;
-            this.lApellido2.Location = new System.Drawing.Point(12, 266);
-            this.lApellido2.Name = "lApellido2";
-            this.lApellido2.Size = new System.Drawing.Size(159, 25);
-            this.lApellido2.TabIndex = 6;
-            this.lApellido2.Text = "Apellido Materno";
-            this.lApellido2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -246,6 +419,11 @@ namespace SistemaTutoria
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Crud_MouseDown);
             this.panelMenuBar.ResumeLayout(false);
             this.panelMenuBar.PerformLayout();
+            this.panelContraseña.ResumeLayout(false);
+            this.panelContraseña.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxVerificar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnOjo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnOjo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -265,6 +443,18 @@ namespace SistemaTutoria
         private System.Windows.Forms.Label lNombre;
         private System.Windows.Forms.Label lApellido2;
         private System.Windows.Forms.Label lApellido1;
+        private System.Windows.Forms.Panel panelContraseña;
+        private System.Windows.Forms.Button btnCambiarContraseña;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtContraseñaActual;
+        private System.Windows.Forms.PictureBox btnOjo2;
+        private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.TextBox txtContraseñaN2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtContraseñaN;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox btnOjo;
+        private System.Windows.Forms.PictureBox picboxVerificar;
     }
 }
 
