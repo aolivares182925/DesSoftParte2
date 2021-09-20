@@ -73,12 +73,12 @@ namespace SistemaTutoria
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Program.Login1.Show();
-            //for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
-            //{
-            //    Application.OpenForms[i].Close();
-            //}
+            //this.Close();
+            //Program.Login1.Show();
+            for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+            {
+                Application.OpenForms[i].Close();
+            }
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)

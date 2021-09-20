@@ -11,7 +11,7 @@ namespace Datos
     public class ConexionSQL
     {
         //SqlConnection conn = new SqlConnection("Data Source=tcp:serverproyectotutoria.database.windows.net;Initial Catalog=BD_Tutoria;User ID=admin1;Password=Grupo2DesarrolloSoftware");
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-P00P1CC;Initial Catalog=Tutoria;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=(local);Initial Catalog=Tutoria;Integrated Security=True");
         /*
             Fiorella    : LAPTOP-K0S4QV2U
             Aler        : DESKTOP-H4RJ2LR  
