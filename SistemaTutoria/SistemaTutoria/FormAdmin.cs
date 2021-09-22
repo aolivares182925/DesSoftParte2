@@ -13,12 +13,19 @@ namespace SistemaTutoria
 {
     public partial class FormAdmin : Form
     {
-        public FormAdmin(string Nombre, string Apellido1, string Apellido2)
+        string UsuarioAdmin;
+        public FormAdmin(string Nombre, string Apellido1, string Apellido2, string Usuario)
         {
             InitializeComponent();
             lNombre.Text = Nombre;
             lApellido1.Text = Apellido1;
             lApellido2.Text = Apellido2;
+            UsuarioAdmin = Usuario;
+
+            ConectarSQL conn = new ConectarSQL();
+
+            DataTable dt = new DataTable();
+            dt = conn.SelectAdministradorCodigo(Usuario);
             //showTutores();
         }
 
@@ -66,12 +73,12 @@ namespace SistemaTutoria
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Program.Login1.Show();
-            //for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
-            //{
-            //    Application.OpenForms[i].Close();
-            //}
+            //this.Close();
+            //Program.Login1.Show();
+            for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+            {
+                Application.OpenForms[i].Close();
+            }
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
@@ -91,6 +98,135 @@ namespace SistemaTutoria
         private void Crud_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCambiarContraseña_Click(object sender, EventArgs e)
+        {
+            if (panelContraseña.Visible)
+            {
+                panelContraseña.Visible = false;
+                txtContraseñaN.Text = "";
+                txtContraseñaN2.Text = "";
+                txtContraseñaActual.Text = "";
+
+                picboxVerificar.Visible = false;
+            }
+            else
+            {
+                panelContraseña.Visible = true;
+            }
+        }
+        private void btnOjo_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.btnOjo.Image = global::SistemaTutoria.Properties.Resources.icons8_visible_24_blanco;
+            txtContraseñaN.UseSystemPasswordChar = false;
+            txtContraseñaN2.UseSystemPasswordChar = false;
+        }
+
+        private void btnOjo_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.btnOjo.Image = global::SistemaTutoria.Properties.Resources.icons8_ojo_cerrado_24_blanco;
+            txtContraseñaN.UseSystemPasswordChar = true;
+            txtContraseñaN2.UseSystemPasswordChar = true;
+
+        }
+
+        private void txtContraseñaN2_TextChanged(object sender, EventArgs e)
+        {
+            picboxVerificar.Visible = true;
+            if (txtContraseñaN.Text == txtContraseñaN2.Text)
+            {
+                picboxVerificar.Image = global::SistemaTutoria.Properties.Resources.icons8_check_64;
+            }
+            else
+            {
+                picboxVerificar.Image = global::SistemaTutoria.Properties.Resources.icons8_xbox_x_32;
+            }
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            //Crear coneccion con la base de datos
+            
+        }
+        private void btnOjo2_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.btnOjo2.Image = global::SistemaTutoria.Properties.Resources.icons8_visible_24_blanco;
+            txtContraseñaActual.UseSystemPasswordChar = false;
+            txtContraseñaActual.UseSystemPasswordChar = false;
+        }
+
+        private void btnOjo2_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.btnOjo2.Image = global::SistemaTutoria.Properties.Resources.icons8_ojo_cerrado_24_blanco;
+            txtContraseñaActual.UseSystemPasswordChar = true;
+            txtContraseñaActual.UseSystemPasswordChar = true;
+        }
+
+        private void picboxVerificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtContraseñaN2_TextChanged_1(object sender, EventArgs e)
+        {
+            picboxVerificar.Visible = true;
+            if (txtContraseñaN.Text == txtContraseñaN2.Text)
+            {
+                picboxVerificar.Image = global::SistemaTutoria.Properties.Resources.icons8_check_64;
+            }
+            else
+            {
+                picboxVerificar.Image = global::SistemaTutoria.Properties.Resources.icons8_xbox_x_32;
+            }
+        }
+
+        private void btnConfirmar_Click_1(object sender, EventArgs e)
+        {
+            ConectarSQL conn = new ConectarSQL();
+
+            DataTable dt = new DataTable();
+            dt = conn.SelectAdministradorCodigo(UsuarioAdmin);
+
+            string PassWord = dt.Rows[0]["Contraseña"].ToString();
+
+            if ((txtContraseñaActual.Text == PassWord) && (txtContraseñaN.Text != "") && (txtContraseñaN.Text == txtContraseñaN2.Text))
+            {
+
+                string ContraseñaNueva = txtContraseñaN.Text.ToString();
+                DialogResult result = MessageBox.Show("¿Seguro que desea cambiar su contraseña?",
+                    "Cambiar Contraseña", MessageBoxButtons.YesNo);
+
+                switch (result)
+                {
+                    case DialogResult.Yes:
+                        try
+                        {
+
+                            conn.EditarContraseñaAdministrador(UsuarioAdmin, ContraseñaNueva);
+                            MessageBox.Show("Contraseña actualizada");
+                            //lblContraseñaActual.Text = ContraseñaNueva;
+                        }
+                        catch
+                        {
+                            MessageBox.Show("No es posible actualizar la contraseña");
+                        }
+                        break;
+
+                    case DialogResult.No:
+                        break;
+                }
+                panelContraseña.Visible = false;
+                txtContraseñaActual.Text = "";
+                txtContraseñaN.Text = "";
+                txtContraseñaN2.Text = "";
+                picboxVerificar.Visible = false;
+
+            }
+            else
+            {
+                MessageBox.Show("Contraseña actual erronea o Contraseña nueva invalida");
+            }
         }
     }
 }

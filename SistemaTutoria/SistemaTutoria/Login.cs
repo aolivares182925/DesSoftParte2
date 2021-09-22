@@ -69,7 +69,7 @@ namespace SistemaTutoria
                 if (dt.Rows.Count == 1)
                 {
                     FormAdmin C = new FormAdmin(dt.Rows[0][3].ToString(),
-                        dt.Rows[0][1].ToString(), dt.Rows[0][2].ToString());
+                        dt.Rows[0][1].ToString(), dt.Rows[0][2].ToString(), dt.Rows[0][0].ToString());
                     this.Hide();
                     C.Show();
                 }

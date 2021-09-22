@@ -37,6 +37,7 @@ create table Alumno
 	Situacion		varchar(50) check (Situacion in('Riesgo', 'No riesgo')),
 	CodTutor		char(3),
 	CodEscuela		varchar(5),
+	Activo			int check (Activo in(1, 0)), 
 	primary key (CodAlumno),
 	foreign key (CodTutor) references Tutor(CodTutor),
 	foreign key ( CodEscuela) references EscuelaProfesional(CodEscuela)
@@ -76,5 +77,15 @@ create table FichaSesion
 	Observaciones		varchar(400),
 	foreign key(CodFichaTutoria) references FichaTutoria(CodFichaTutoria)
 
+)
+
+create table Historial
+(
+	NroOperacion		int identity,
+	Editor				varchar(250),
+	Fecha				datetime,
+	Tabla				varchar(30),
+	Operacion			varchar(50),
+	TuplaAfectada		char(6)
 )
 

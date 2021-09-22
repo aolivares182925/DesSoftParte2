@@ -10,12 +10,12 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using Negocios;
 
+
 namespace SistemaTutoria
 {
     public partial class AlumnosUserControl : UserControl
     {
         private static AlumnosUserControl _instance;
-
         public static AlumnosUserControl Instance
         {
             get
@@ -30,7 +30,9 @@ namespace SistemaTutoria
         public AlumnosUserControl()
         {
             InitializeComponent();
+            Form1_Load();
             refreshDataGridView();
+
         }
         #region Metodos
         public void refreshDataGridView()
@@ -65,7 +67,7 @@ namespace SistemaTutoria
                     case DialogResult.Yes:
                         try
                         {
-                            
+
                             ConectarSQL conn = new ConectarSQL();
                             conn.EliminarAlumno(Codigo);
                             MessageBox.Show("Eliminado");
@@ -74,7 +76,7 @@ namespace SistemaTutoria
                         {
                             MessageBox.Show("No es posible eliminar el Alumno");
                         }
-                        
+
                         break;
                     case DialogResult.No:
                         break;
@@ -100,13 +102,21 @@ namespace SistemaTutoria
                 {
                     cbRiesgo.Checked = false;
                 }
+                if (Int32.Parse(dgvPrincipal.Rows[e.RowIndex].Cells["Activo"].FormattedValue.ToString()) == 1)
+                {
+                    chboxActivo.Checked = true;
+                }
+                else
+                {
+                    chboxActivo.Checked = false;
+                }
                 btnAgregar.Text = "EDITAR";
                 btnCancelar.Visible = true;
                 tbCodigo.Enabled = false;
 
             }
         }
-        
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (btnAgregar.Text == "AGREGAR")
@@ -115,6 +125,7 @@ namespace SistemaTutoria
                 {
                     bool agregado;
                     string Situacion;
+                    int Activo;
 
                     ConectarSQL C = new ConectarSQL();
                     if (cbRiesgo.Checked == true)
@@ -125,8 +136,16 @@ namespace SistemaTutoria
                     {
                         Situacion = "No Riesgo";
                     }
+                    if (chboxActivo.Checked == true)
+                    {
+                        Activo = 1;
+                    }
+                    else
+                    {
+                        Activo = 0;
+                    }
                     agregado = C.AgregarAlumnoSiPosible(tbCodigo.Text, tbApPaterno.Text, tbApMaterno.Text, tbNombres.Text, Situacion,
-                                        tbCodTutor.Text, tbCodEscuela.Text);
+                                        tbCodTutor.Text, tbCodEscuela.Text, Activo);
                     if (agregado)
                     {
                         MessageBox.Show("Agregado Correctamente");
@@ -138,7 +157,7 @@ namespace SistemaTutoria
                     MessageBox.Show("Datos incorrectos o existentes");
                 }
                 Clear();
-                
+
             }
             else
             {
@@ -146,6 +165,9 @@ namespace SistemaTutoria
                 {
                     ConectarSQL conn = new ConectarSQL();
                     string Situacion;
+                    int Activo;
+                    string CodTutor;
+
                     if (cbRiesgo.Checked == true)
                     {
                         Situacion = "Riesgo";
@@ -154,8 +176,24 @@ namespace SistemaTutoria
                     {
                         Situacion = "No Riesgo";
                     }
+                    if (chboxActivo.Checked == true)
+                    {
+                        Activo = 1;
+                    }
+                    else
+                    {
+                        Activo = 0;
+                    }
+                    if (tbCodTutor.Text == "")
+                    {
+                        CodTutor = "NNN";
+                    }
+                    else
+                    {
+                        CodTutor = tbCodTutor.Text;
+                    }
                     conn.EditarAlumno(tbCodigo.Text, tbApPaterno.Text, tbApMaterno.Text, tbNombres.Text, Situacion,
-                        tbCodTutor.Text, tbCodEscuela.Text);
+                        CodTutor, tbCodEscuela.Text, Activo);
 
                     MessageBox.Show("Fila editada correctamente");
                     btnCancelar.Visible = false;
@@ -173,9 +211,9 @@ namespace SistemaTutoria
             refreshDataGridView();
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e )
         {
-            /* codigo aqui
+            /* código aquí
              * 
             */
             refreshDataGridView();
@@ -183,7 +221,7 @@ namespace SistemaTutoria
 
         private void tbBuscar_TextChanged(object sender, EventArgs e)
         {
-            if (tbBuscar.Text != "")
+            if (tbBuscar.Text != "" )
             {
                 dgvPrincipal.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 ConectarSQL conn = new ConectarSQL();
@@ -204,12 +242,97 @@ namespace SistemaTutoria
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Clear();
-            btnAgregar.Text = "AGREGAR"; 
+            btnAgregar.Text = "AGREGAR";
             btnCancelar.Visible = false;
             refreshDataGridView();
         }
 
         private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chboxActivo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chboxActivo.Checked)
+            {
+                tbCodTutor.Enabled = true;
+            }
+            else
+            {
+                tbCodTutor.Text = "";
+                tbCodTutor.Enabled = false;
+            }
+        }
+
+
+        private void Form1_Load()
+        {
+            ConectarSQL conn = new ConectarSQL();
+            DataTable tabla = conn.SelectTutores();
+
+
+            cmbNomTutor.DataSource = tabla;
+            cmbNomTutor.ValueMember = "CodTutor";
+            cmbNomTutor.ValueMember = "APaterno";
+            cmbNomTutor.ValueMember = "AMaterno";
+            cmbNomTutor.DisplayMember = "Nombres";
+
+            tbCodTutor.DataSource = tabla;
+            tbCodTutor.ValueMember = "Nombres";
+            tbCodTutor.DisplayMember = "CodTutor";
+
+            cmbApPatTutor.DataSource = tabla;
+            cmbApPatTutor.ValueMember = "Nombres";
+            cmbApPatTutor.DisplayMember = "APaterno";
+
+            cmbApMatTutor.DataSource = tabla;
+            cmbApMatTutor.ValueMember = "Nombres";
+            cmbApMatTutor.DisplayMember = "AMaterno";
+
+
+
+            AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
+            foreach (DataRow row in tabla.Rows)
+            {
+                coleccion.Add(Convert.ToString(row["Nombres"]));
+                coleccion.Add(Convert.ToString(row["APaterno"]));
+                coleccion.Add(Convert.ToString(row["AMaterno"]));
+
+            }
+
+
+
+
+
+
+            cmbNomTutor.AutoCompleteCustomSource = coleccion;
+            cmbNomTutor.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbNomTutor.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+            tbCodTutor.AutoCompleteCustomSource = coleccion;
+            tbCodTutor.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            tbCodTutor.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+            tbApPaterno.AutoCompleteCustomSource = coleccion;
+            tbApPaterno.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            tbApPaterno.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+            tbApMaterno.AutoCompleteCustomSource = coleccion;
+            tbApMaterno.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            tbApMaterno.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+        }
+        private void tbCodTutor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbCodTutor_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

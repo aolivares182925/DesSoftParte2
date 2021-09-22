@@ -62,7 +62,7 @@ namespace SistemaTutoria
             }
             else
             {
-                dgvPrincipal.DataSource = conn.SelectAlumnos();
+                dgvPrincipal.DataSource = conn.SelectTodosAlumnosParaTutor();
             }
             
         }
@@ -246,6 +246,36 @@ namespace SistemaTutoria
                 lblTitle.Text = "Todos los Alumnos";
                 refreshDataGridView();
             }
+        }
+
+        private void btnOjo2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOjo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picboxVerificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtContraseñaActual_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlInformacion_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
