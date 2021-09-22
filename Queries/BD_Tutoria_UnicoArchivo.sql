@@ -59,6 +59,7 @@ create table FichaTutoria
 (
 	CodTutor			char(3),
 	CodAlumno			char(6),
+	Semestre			varchar(7),
 	CodFichaTutoria		int identity (1,1),
 	primary key (CodFichaTutoria),
 	foreign key (CodTutor) references Tutor(CodTutor),
@@ -69,7 +70,7 @@ create table FichaSesion
 (
 	CodFichaTutoria		int,
 	NroSesion			int check (NroSesion in(1,2,3)),
-	FechaHora			smalldatetime ,
+	FechaHora			datetime ,
 	Tipo				varchar(30) check (Tipo in('Academico','Profesional','Personal')),
 	Completado			int,
 	Descripcion			varchar(400), 
@@ -78,6 +79,7 @@ create table FichaSesion
 	foreign key(CodFichaTutoria) references FichaTutoria(CodFichaTutoria)
 
 )
+--drop table FichaTutoria
 
 create table Historial
 (
@@ -859,20 +861,24 @@ insert into Alumno values
 							('200823','FERNANDEZ BACA','PILLCO','FABRICIO','No riesgo','035','IN', 1)
 go
 --insertar Datos de administrador
-insert into Administrador values('Admin1', 'Acurio','Usca','Nila Zonia','admin', convert (varbinary,'contrasenia1'))
-insert into Administrador values('Admin2', 'Enciso','Rodas','Lauro', 'admin',convert (varbinary,'contrasenia2'))
+insert into Administrador values('Admin1', 'Apellido1','Apellido1','Nombre1','admin', convert (varbinary,'contrasenia1'))
+insert into Administrador values('Admin2', 'Apellido2','Apellido2','Nombre2', 'admin',convert (varbinary,'contrasenia2'))
 go
 
 -- insertar datos de prueba a ficha tutoria
 set Dateformat dmy
 go
 
-insert into FichaTutoria values('001','112207')
-insert into FichaSesion values(1, 1,'10/09/2021 ','Academico', 1,'asbdjkagfiua', 'asbdjkagfiua','asbdjkagfiua')
-insert into FichaSesion values(1, 2,'17/09/2021 ','Profesional', 1,'asbdjkagfiua', 'asbdjkagfiua','asbdjkagfiua')
+insert into FichaTutoria values('001','112207','2019-I')
+insert into FichaSesion values(1, 1,'10/09/2021 ','Academico', 1,'p1', 'p2','p3')
+insert into FichaSesion values(1, 2,'17/09/2021 ','Profesional', 1,'p4', 'p5','p16')
 
-insert into FichaTutoria values('001','150388')
-insert into FichaSesion values(2, 1,'10/09/2021 ','Academico', 1,'El alumno muestra un gran interes y desempeño por el campo de la Inteligencia Artificial. ','Nota del curso de IA.','El alumno tuvo un percance con el profesor Angelito')
+insert into FichaTutoria values('001','112207','2019-II')
+insert into FichaSesion values(2, 1,'10/09/2021 ','Academico', 1,'huola', 'p7','p8')
+insert into FichaSesion values(2, 2,'17/09/2021 ','Profesional', 1,'p9', 'p10','P11')
+
+insert into FichaTutoria values('001','150388','2019-II')
+insert into FichaSesion values(3, 1,'10/09/2021 ','Academico', 1,'El alumno muestra un gran interes y desempeño por el campo de la Inteligencia Artificial. ','Nota del curso de IA.','El alumno tuvo un percance con el profesor Angelito')
 go
 create proc ModificarAlumno
 @CodAlumno varchar(15),
@@ -893,8 +899,8 @@ update Alumno set CodAlumno = @CodAlumno,
 					CodEscuela = @CodEscuela,
 					Activo = @Activo
 where CodAlumno = @CodAlumno
-go
 
+go
 ---
 create proc ModificarTutor
 @CodTutor char(3),
@@ -911,7 +917,7 @@ update Tutor set CodTutor = @CodTutor,
 where Codtutor = @CodTutor
 go
 
----
+---go
 create proc ModificarContraseñaTutor
 @CodTutor char(3),
 @Contraseña varchar(20)
@@ -919,7 +925,6 @@ as
 update Tutor set Contraseña = convert (varbinary,@Contraseña)
 where Codtutor = @CodTutor
 go
-
 ---
 create proc ModificarFichaSesion
 @CodFichaTutoria	int,
