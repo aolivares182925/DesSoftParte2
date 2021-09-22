@@ -9,7 +9,7 @@ Cancel changes
 - **Escuela Profesional:** Ingenieria Informatica y de Sistemas
 ## Ingeniera 👩‍🏫👩‍💻
 **Quintanilla Portugal Roxana Lisette** - *DOCENTE* - [CONCYTEC](http://directorio.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do;jsessionid=a64a00668b861c4a52fdead99791?id_investigador=40930)
-## Trabajo
+## Trabajo 📚📖
 ### REALIZAR UN CRUD PARA EL SISTEMA DE TUTORIAS UNSAAC
 **DISTRIBUCION DE TUTORIAS UNSAAC 2020-2** [DistribucionTutorias2020-2.pdf](https://github.com/MigVC/PROYECTO/files/6878187/DistribucionTutorias2020-2.pdf)
 
