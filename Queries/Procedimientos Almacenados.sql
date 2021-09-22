@@ -22,7 +22,7 @@ update Alumno set CodAlumno = @CodAlumno,
 					CodEscuela = @CodEscuela,
 					Activo = @Activo
 where CodAlumno = @CodAlumno
-
+go
 
 ---
 create proc ModificarTutor
@@ -38,7 +38,7 @@ update Tutor set CodTutor = @CodTutor,
 					Nombres = @Nombres,
 					Estado = @Estado
 where Codtutor = @CodTutor
-
+go
 
 ---
 create proc ModificarContraseñaTutor
@@ -47,7 +47,7 @@ create proc ModificarContraseñaTutor
 as
 update Tutor set Contraseña = convert (varbinary,@Contraseña)
 where Codtutor = @CodTutor
-
+go
 
 ---
 create proc ModificarFichaSesion
@@ -69,7 +69,7 @@ update FichaSesion set CodFichaTutoria = @CodFichaTutoria,
 					Referencia = @Referencia,
 					Observaciones = @Observaciones
 where CodFichaTutoria = @CodFichaTutoria and NroSesion = @NroSesion
-
+go
 --- cambiar contraseña administrador
 create proc ModificarContraseñaAdministrador
 @Usuario char(6),
@@ -77,3 +77,4 @@ create proc ModificarContraseñaAdministrador
 as
 update Administrador set Contraseña = convert (varbinary,@Contraseña)
 where Usuario = @Usuario
+go
