@@ -30,10 +30,10 @@ namespace SistemaTutoria
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTutor));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMenuBar = new System.Windows.Forms.Panel();
             this.panelContraseña = new System.Windows.Forms.Panel();
             this.txtContraseñaActual = new System.Windows.Forms.TextBox();
@@ -73,6 +73,8 @@ namespace SistemaTutoria
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panelMenuBar.SuspendLayout();
             this.panelContraseña.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnOjo2)).BeginInit();
@@ -83,6 +85,7 @@ namespace SistemaTutoria
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenuBar
@@ -95,8 +98,9 @@ namespace SistemaTutoria
             this.panelMenuBar.Controls.Add(this.pictureBox1);
             this.panelMenuBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenuBar.Location = new System.Drawing.Point(0, 0);
+            this.panelMenuBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelMenuBar.Name = "panelMenuBar";
-            this.panelMenuBar.Size = new System.Drawing.Size(247, 640);
+            this.panelMenuBar.Size = new System.Drawing.Size(329, 788);
             this.panelMenuBar.TabIndex = 1;
             // 
             // panelContraseña
@@ -112,20 +116,20 @@ namespace SistemaTutoria
             this.panelContraseña.Controls.Add(this.label9);
             this.panelContraseña.Controls.Add(this.label7);
             this.panelContraseña.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContraseña.Location = new System.Drawing.Point(0, 318);
-            this.panelContraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelContraseña.Location = new System.Drawing.Point(0, 391);
+            this.panelContraseña.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelContraseña.Name = "panelContraseña";
-            this.panelContraseña.Size = new System.Drawing.Size(247, 269);
+            this.panelContraseña.Size = new System.Drawing.Size(329, 332);
             this.panelContraseña.TabIndex = 5;
             this.panelContraseña.Visible = false;
             // 
             // txtContraseñaActual
             // 
             this.txtContraseñaActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseñaActual.Location = new System.Drawing.Point(9, 47);
-            this.txtContraseñaActual.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContraseñaActual.Location = new System.Drawing.Point(12, 58);
+            this.txtContraseñaActual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContraseñaActual.Name = "txtContraseñaActual";
-            this.txtContraseñaActual.Size = new System.Drawing.Size(192, 26);
+            this.txtContraseñaActual.Size = new System.Drawing.Size(255, 30);
             this.txtContraseñaActual.TabIndex = 17;
             this.txtContraseñaActual.UseSystemPasswordChar = true;
             this.txtContraseñaActual.TextChanged += new System.EventHandler(this.txtContraseñaActual_TextChanged);
@@ -133,10 +137,10 @@ namespace SistemaTutoria
             // btnOjo2
             // 
             this.btnOjo2.Image = global::SistemaTutoria.Properties.Resources.icons8_ojo_cerrado_24_blanco;
-            this.btnOjo2.Location = new System.Drawing.Point(211, 47);
-            this.btnOjo2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOjo2.Location = new System.Drawing.Point(281, 58);
+            this.btnOjo2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOjo2.Name = "btnOjo2";
-            this.btnOjo2.Size = new System.Drawing.Size(22, 24);
+            this.btnOjo2.Size = new System.Drawing.Size(29, 30);
             this.btnOjo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnOjo2.TabIndex = 16;
             this.btnOjo2.TabStop = false;
@@ -154,9 +158,10 @@ namespace SistemaTutoria
             this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.Color.White;
             this.btnConfirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfirmar.Location = new System.Drawing.Point(9, 206);
+            this.btnConfirmar.Location = new System.Drawing.Point(12, 254);
+            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(191, 33);
+            this.btnConfirmar.Size = new System.Drawing.Size(255, 41);
             this.btnConfirmar.TabIndex = 15;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = false;
@@ -165,10 +170,10 @@ namespace SistemaTutoria
             // picboxVerificar
             // 
             this.picboxVerificar.Image = global::SistemaTutoria.Properties.Resources.icons8_xbox_x_32;
-            this.picboxVerificar.Location = new System.Drawing.Point(211, 164);
-            this.picboxVerificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picboxVerificar.Location = new System.Drawing.Point(281, 202);
+            this.picboxVerificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picboxVerificar.Name = "picboxVerificar";
-            this.picboxVerificar.Size = new System.Drawing.Size(22, 24);
+            this.picboxVerificar.Size = new System.Drawing.Size(29, 30);
             this.picboxVerificar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picboxVerificar.TabIndex = 14;
             this.picboxVerificar.TabStop = false;
@@ -178,10 +183,10 @@ namespace SistemaTutoria
             // btnOjo
             // 
             this.btnOjo.Image = global::SistemaTutoria.Properties.Resources.icons8_ojo_cerrado_24_blanco;
-            this.btnOjo.Location = new System.Drawing.Point(211, 106);
-            this.btnOjo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOjo.Location = new System.Drawing.Point(281, 130);
+            this.btnOjo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOjo.Name = "btnOjo";
-            this.btnOjo.Size = new System.Drawing.Size(22, 24);
+            this.btnOjo.Size = new System.Drawing.Size(29, 30);
             this.btnOjo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnOjo.TabIndex = 13;
             this.btnOjo.TabStop = false;
@@ -192,10 +197,10 @@ namespace SistemaTutoria
             // txtContraseñaN2
             // 
             this.txtContraseñaN2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseñaN2.Location = new System.Drawing.Point(9, 164);
-            this.txtContraseñaN2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContraseñaN2.Location = new System.Drawing.Point(12, 202);
+            this.txtContraseñaN2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContraseñaN2.Name = "txtContraseñaN2";
-            this.txtContraseñaN2.Size = new System.Drawing.Size(192, 26);
+            this.txtContraseñaN2.Size = new System.Drawing.Size(255, 30);
             this.txtContraseñaN2.TabIndex = 12;
             this.txtContraseñaN2.UseSystemPasswordChar = true;
             this.txtContraseñaN2.TextChanged += new System.EventHandler(this.txtContraseñaN2_TextChanged);
@@ -205,20 +210,19 @@ namespace SistemaTutoria
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(5, 141);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(7, 174);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(245, 20);
+            this.label10.Size = new System.Drawing.Size(299, 25);
             this.label10.TabIndex = 11;
             this.label10.Text = "Confirmar Contraseña Nueva:";
             // 
             // txtContraseñaN
             // 
             this.txtContraseñaN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseñaN.Location = new System.Drawing.Point(9, 106);
-            this.txtContraseñaN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContraseñaN.Location = new System.Drawing.Point(12, 130);
+            this.txtContraseñaN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContraseñaN.Name = "txtContraseñaN";
-            this.txtContraseñaN.Size = new System.Drawing.Size(192, 26);
+            this.txtContraseñaN.Size = new System.Drawing.Size(255, 30);
             this.txtContraseñaN.TabIndex = 10;
             this.txtContraseñaN.UseSystemPasswordChar = true;
             // 
@@ -227,10 +231,9 @@ namespace SistemaTutoria
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(5, 83);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(7, 102);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(162, 20);
+            this.label9.Size = new System.Drawing.Size(199, 25);
             this.label9.TabIndex = 9;
             this.label9.Text = "Contraseña Nueva:";
             // 
@@ -239,10 +242,9 @@ namespace SistemaTutoria
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(5, 19);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(7, 23);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(246, 20);
+            this.label7.Size = new System.Drawing.Size(298, 25);
             this.label7.TabIndex = 7;
             this.label7.Text = "Confirmar Contraseña Actual:";
             // 
@@ -257,9 +259,10 @@ namespace SistemaTutoria
             this.btnCambiarContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.btnCambiarContraseña.Image = ((System.Drawing.Image)(resources.GetObject("btnCambiarContraseña.Image")));
             this.btnCambiarContraseña.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCambiarContraseña.Location = new System.Drawing.Point(0, 587);
+            this.btnCambiarContraseña.Location = new System.Drawing.Point(0, 723);
+            this.btnCambiarContraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCambiarContraseña.Name = "btnCambiarContraseña";
-            this.btnCambiarContraseña.Size = new System.Drawing.Size(247, 53);
+            this.btnCambiarContraseña.Size = new System.Drawing.Size(329, 65);
             this.btnCambiarContraseña.TabIndex = 4;
             this.btnCambiarContraseña.Text = "  Cambiar Contraseña";
             this.btnCambiarContraseña.UseVisualStyleBackColor = true;
@@ -276,10 +279,10 @@ namespace SistemaTutoria
             this.pnlInformacion.Controls.Add(this.label2);
             this.pnlInformacion.Controls.Add(this.label1);
             this.pnlInformacion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlInformacion.Location = new System.Drawing.Point(0, 153);
-            this.pnlInformacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlInformacion.Location = new System.Drawing.Point(0, 188);
+            this.pnlInformacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlInformacion.Name = "pnlInformacion";
-            this.pnlInformacion.Size = new System.Drawing.Size(247, 165);
+            this.pnlInformacion.Size = new System.Drawing.Size(329, 203);
             this.pnlInformacion.TabIndex = 3;
             this.pnlInformacion.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlInformacion_Paint);
             // 
@@ -288,10 +291,9 @@ namespace SistemaTutoria
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.ForeColor = System.Drawing.Color.White;
-            this.lblCodigo.Location = new System.Drawing.Point(95, 126);
-            this.lblCodigo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCodigo.Location = new System.Drawing.Point(127, 155);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(59, 20);
+            this.lblCodigo.Size = new System.Drawing.Size(75, 25);
             this.lblCodigo.TabIndex = 7;
             this.lblCodigo.Text = "Codigo";
             // 
@@ -300,10 +302,9 @@ namespace SistemaTutoria
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(5, 126);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(7, 155);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 20);
+            this.label5.Size = new System.Drawing.Size(88, 25);
             this.label5.TabIndex = 6;
             this.label5.Text = "Codigo:";
             // 
@@ -312,10 +313,9 @@ namespace SistemaTutoria
             this.lblAMaterno.AutoSize = true;
             this.lblAMaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAMaterno.ForeColor = System.Drawing.Color.White;
-            this.lblAMaterno.Location = new System.Drawing.Point(95, 101);
-            this.lblAMaterno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAMaterno.Location = new System.Drawing.Point(127, 124);
             this.lblAMaterno.Name = "lblAMaterno";
-            this.lblAMaterno.Size = new System.Drawing.Size(83, 20);
+            this.lblAMaterno.Size = new System.Drawing.Size(103, 25);
             this.lblAMaterno.TabIndex = 5;
             this.lblAMaterno.Text = "A Materno";
             // 
@@ -324,10 +324,9 @@ namespace SistemaTutoria
             this.lblAPaterno.AutoSize = true;
             this.lblAPaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAPaterno.ForeColor = System.Drawing.Color.White;
-            this.lblAPaterno.Location = new System.Drawing.Point(95, 80);
-            this.lblAPaterno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAPaterno.Location = new System.Drawing.Point(127, 98);
             this.lblAPaterno.Name = "lblAPaterno";
-            this.lblAPaterno.Size = new System.Drawing.Size(80, 20);
+            this.lblAPaterno.Size = new System.Drawing.Size(99, 25);
             this.lblAPaterno.TabIndex = 4;
             this.lblAPaterno.Text = "A Paterno";
             // 
@@ -336,10 +335,9 @@ namespace SistemaTutoria
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(95, 55);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre.Location = new System.Drawing.Point(127, 68);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(63, 20);
+            this.lblNombre.Size = new System.Drawing.Size(78, 25);
             this.lblNombre.TabIndex = 3;
             this.lblNombre.Text = "nombre";
             // 
@@ -348,10 +346,9 @@ namespace SistemaTutoria
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(5, 80);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(7, 98);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 20);
+            this.label3.Size = new System.Drawing.Size(108, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Apellidos:";
             // 
@@ -360,10 +357,9 @@ namespace SistemaTutoria
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(5, 55);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(7, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 20);
+            this.label2.Size = new System.Drawing.Size(94, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre:";
             // 
@@ -372,10 +368,9 @@ namespace SistemaTutoria
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(5, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(7, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 24);
+            this.label1.Size = new System.Drawing.Size(246, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Informacion Personal:";
             // 
@@ -384,18 +379,19 @@ namespace SistemaTutoria
             this.pnlUnsaac.Controls.Add(this.panel1);
             this.pnlUnsaac.Controls.Add(this.label4);
             this.pnlUnsaac.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlUnsaac.Location = new System.Drawing.Point(0, 114);
-            this.pnlUnsaac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlUnsaac.Location = new System.Drawing.Point(0, 140);
+            this.pnlUnsaac.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlUnsaac.Name = "pnlUnsaac";
-            this.pnlUnsaac.Size = new System.Drawing.Size(247, 39);
+            this.pnlUnsaac.Size = new System.Drawing.Size(329, 48);
             this.pnlUnsaac.TabIndex = 2;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(158)))), ((int)(((byte)(68)))));
-            this.panel1.Location = new System.Drawing.Point(99, 27);
+            this.panel1.Location = new System.Drawing.Point(132, 33);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(50, 1);
+            this.panel1.Size = new System.Drawing.Size(67, 1);
             this.panel1.TabIndex = 5;
             // 
             // label4
@@ -403,9 +399,10 @@ namespace SistemaTutoria
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(97, 6);
+            this.label4.Location = new System.Drawing.Point(129, 7);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 13);
+            this.label4.Size = new System.Drawing.Size(70, 17);
             this.label4.TabIndex = 4;
             this.label4.Text = "UNSAAC";
             // 
@@ -416,8 +413,9 @@ namespace SistemaTutoria
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(247, 114);
+            this.pictureBox1.Size = new System.Drawing.Size(329, 140);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -431,9 +429,10 @@ namespace SistemaTutoria
             this.panel.Controls.Add(this.tbBuscar);
             this.panel.Controls.Add(this.lblTitle);
             this.panel.Controls.Add(this.dgvPrincipal);
-            this.panel.Location = new System.Drawing.Point(262, 60);
+            this.panel.Location = new System.Drawing.Point(349, 74);
+            this.panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(908, 620);
+            this.panel.Size = new System.Drawing.Size(1211, 763);
             this.panel.TabIndex = 6;
             // 
             // chboxSoloTutorados
@@ -443,10 +442,10 @@ namespace SistemaTutoria
             this.chboxSoloTutorados.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chboxSoloTutorados.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chboxSoloTutorados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
-            this.chboxSoloTutorados.Location = new System.Drawing.Point(708, 6);
-            this.chboxSoloTutorados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chboxSoloTutorados.Location = new System.Drawing.Point(944, 7);
+            this.chboxSoloTutorados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chboxSoloTutorados.Name = "chboxSoloTutorados";
-            this.chboxSoloTutorados.Size = new System.Drawing.Size(158, 24);
+            this.chboxSoloTutorados.Size = new System.Drawing.Size(192, 29);
             this.chboxSoloTutorados.TabIndex = 16;
             this.chboxSoloTutorados.Text = "Ver solo tutorados";
             this.chboxSoloTutorados.UseVisualStyleBackColor = true;
@@ -456,10 +455,9 @@ namespace SistemaTutoria
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(456, 62);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(608, 76);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 16);
+            this.label6.Size = new System.Drawing.Size(67, 20);
             this.label6.TabIndex = 15;
             this.label6.Text = "Campo:";
             // 
@@ -475,10 +473,10 @@ namespace SistemaTutoria
             "CodTutor",
             "Situacion",
             "CodEscuela"});
-            this.cmbCategoria.Location = new System.Drawing.Point(520, 59);
-            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbCategoria.Location = new System.Drawing.Point(693, 73);
+            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(121, 24);
+            this.cmbCategoria.Size = new System.Drawing.Size(160, 28);
             this.cmbCategoria.TabIndex = 14;
             this.cmbCategoria.Text = "CodAlumno";
             // 
@@ -487,9 +485,10 @@ namespace SistemaTutoria
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Image = global::SistemaTutoria.Properties.Resources.icons8_búsqueda_24;
-            this.btnBuscar.Location = new System.Drawing.Point(856, 56);
+            this.btnBuscar.Location = new System.Drawing.Point(1141, 69);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(30, 30);
+            this.btnBuscar.Size = new System.Drawing.Size(40, 37);
             this.btnBuscar.TabIndex = 13;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -497,9 +496,10 @@ namespace SistemaTutoria
             // tbBuscar
             // 
             this.tbBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbBuscar.Location = new System.Drawing.Point(653, 60);
+            this.tbBuscar.Location = new System.Drawing.Point(871, 74);
+            this.tbBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbBuscar.Name = "tbBuscar";
-            this.tbBuscar.Size = new System.Drawing.Size(200, 26);
+            this.tbBuscar.Size = new System.Drawing.Size(265, 30);
             this.tbBuscar.TabIndex = 12;
             this.tbBuscar.TextChanged += new System.EventHandler(this.tbBuscar_TextChanged);
             // 
@@ -508,9 +508,10 @@ namespace SistemaTutoria
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
-            this.lblTitle.Location = new System.Drawing.Point(3, 6);
+            this.lblTitle.Location = new System.Drawing.Point(4, 7);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(209, 46);
+            this.lblTitle.Size = new System.Drawing.Size(261, 58);
             this.lblTitle.TabIndex = 8;
             this.lblTitle.Text = "Tutorados";
             // 
@@ -526,49 +527,50 @@ namespace SistemaTutoria
             this.dgvPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPrincipal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvPrincipal.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPrincipal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPrincipal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvPrincipal.ColumnHeadersHeight = 30;
             this.dgvPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPrincipal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FichaTutoria});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPrincipal.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPrincipal.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvPrincipal.EnableHeadersVisualStyles = false;
             this.dgvPrincipal.GridColor = System.Drawing.Color.White;
-            this.dgvPrincipal.Location = new System.Drawing.Point(3, 93);
+            this.dgvPrincipal.Location = new System.Drawing.Point(4, 114);
+            this.dgvPrincipal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvPrincipal.Name = "dgvPrincipal";
             this.dgvPrincipal.ReadOnly = true;
             this.dgvPrincipal.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPrincipal.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPrincipal.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvPrincipal.RowHeadersVisible = false;
             this.dgvPrincipal.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(158)))), ((int)(((byte)(68)))));
-            this.dgvPrincipal.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(158)))), ((int)(((byte)(68)))));
+            this.dgvPrincipal.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPrincipal.Size = new System.Drawing.Size(872, 524);
+            this.dgvPrincipal.Size = new System.Drawing.Size(1163, 645);
             this.dgvPrincipal.TabIndex = 7;
             this.dgvPrincipal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrincipal_CellContentClick);
             // 
@@ -585,10 +587,13 @@ namespace SistemaTutoria
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.button2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(247, -10);
+            this.panel2.Location = new System.Drawing.Point(329, -12);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(941, 650);
+            this.panel2.Size = new System.Drawing.Size(1255, 800);
             this.panel2.TabIndex = 7;
             // 
             // dataGridViewImageColumn1
@@ -611,9 +616,10 @@ namespace SistemaTutoria
             this.btnMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.ForeColor = System.Drawing.Color.White;
             this.btnMinimize.Image = global::SistemaTutoria.Properties.Resources.icons8_macos_minimizar_31;
-            this.btnMinimize.Location = new System.Drawing.Point(1072, 9);
+            this.btnMinimize.Location = new System.Drawing.Point(1429, 11);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(35, 35);
+            this.btnMinimize.Size = new System.Drawing.Size(47, 43);
             this.btnMinimize.TabIndex = 4;
             this.btnMinimize.UseVisualStyleBackColor = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
@@ -627,26 +633,61 @@ namespace SistemaTutoria
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Image = global::SistemaTutoria.Properties.Resources.icons8_macos_cerrar_31;
-            this.btnClose.Location = new System.Drawing.Point(1114, 9);
+            this.btnClose.Location = new System.Drawing.Point(1485, 11);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(35, 35);
+            this.btnClose.Size = new System.Drawing.Size(47, 43);
             this.btnClose.TabIndex = 5;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(195)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::SistemaTutoria.Properties.Resources.icons8_macos_minimizar_31;
+            this.button1.Location = new System.Drawing.Point(1082, 23);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(47, 43);
+            this.button1.TabIndex = 3;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(224)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::SistemaTutoria.Properties.Resources.icons8_macos_cerrar_31;
+            this.button2.Location = new System.Drawing.Point(1137, 23);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(47, 43);
+            this.button2.TabIndex = 4;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // FormTutor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1188, 640);
+            this.ClientSize = new System.Drawing.Size(1584, 788);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnMinimize);
             this.Controls.Add(this.panelMenuBar);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormTutor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTutor";
@@ -665,6 +706,7 @@ namespace SistemaTutoria
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -710,5 +752,7 @@ namespace SistemaTutoria
         private System.Windows.Forms.PictureBox btnOjo2;
         private System.Windows.Forms.TextBox txtContraseñaActual;
         private System.Windows.Forms.CheckBox chboxSoloTutorados;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

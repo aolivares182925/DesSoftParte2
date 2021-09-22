@@ -16,6 +16,7 @@ namespace SistemaTutoria
         public string Cod_Alumno;
         public string Cod_Tutor;
         public int Cod_Ficha;
+        public string Semestre;
         public FormFichaTutoria(string CodAlumno, string CodTutor, bool es_tutor)
         {
             Cod_Alumno = CodAlumno;
@@ -29,6 +30,23 @@ namespace SistemaTutoria
             tbNombres.Text = Dt.Rows[0][3].ToString();
             tbSituacion.Text = Dt.Rows[0][4].ToString();
             tbCodEscuela.Text = Dt.Rows[0][6].ToString();
+            
+            DataTable Semestres = conn.Semestres(Cod_Alumno);
+            int Nro_Semestres = Semestres.Rows.Count;
+            if (Nro_Semestres != 0)
+            {
+                for (int i = 0; i< Nro_Semestres;i++)
+                {
+                    cbSemestre.Items.Add(Semestres.Rows[i][0].ToString());  
+                }
+            }
+
+            //Semestre
+            int index = cbSemestre.SelectedIndex;
+            Semestre = cbSemestre.Items[cbSemestre.Items.Count - 1].ToString();
+            if ((index != -1) && (index < cbSemestre.Items.Count - 1))
+                Semestre = cbSemestre.Items[index].ToString();
+            cbSemestre.SelectedItem = Semestre;
 
             if (!es_tutor)
             {
@@ -62,11 +80,11 @@ namespace SistemaTutoria
             else
                 txtNota.Text = "NOTA: \n En la sección de observaciones se ingresa información confidencial del alumno \n que solo es visible para su tutor.";
 
-            Cod_Ficha = conn.Cod_Ficha_Tutoria(Cod_Alumno); 
+            Cod_Ficha = conn.Cod_Ficha_Tutoria(Cod_Alumno, Semestre); 
 
             if (Cod_Ficha != 0)
             {
-                DataTable Dt_Sesion = conn.SelectFichaSesionAlumno(CodAlumno);
+                DataTable Dt_Sesion = conn.SelectFichaSesionAlumno(CodAlumno, Semestre);
                 int Nro_Sesiones = Dt_Sesion.Rows.Count;
                 if (Nro_Sesiones != 0)
                 {
@@ -110,8 +128,8 @@ namespace SistemaTutoria
             }
             else
             {
-                conn.AgregarFicha(Cod_Tutor, Cod_Alumno);
-                Cod_Ficha = conn.Cod_Ficha_Tutoria(Cod_Alumno);
+                conn.AgregarFicha(Cod_Tutor, Cod_Alumno,Semestre);
+                Cod_Ficha = conn.Cod_Ficha_Tutoria(Cod_Alumno,Semestre);
             }
                 
         }
@@ -288,7 +306,7 @@ namespace SistemaTutoria
                 if (Descripcion != "")
                 {
                     ConectarSQL conn = new ConectarSQL();
-                    DataTable Dt_Sesion = conn.SelectFichaSesionAlumno(Cod_Alumno);
+                    DataTable Dt_Sesion = conn.SelectFichaSesionAlumno(Cod_Alumno,Semestre);
                     int Nro_Sesiones = Dt_Sesion.Rows.Count;
                     bool Editado = false;
                     string date = Fecha(Nro_sesion);
@@ -419,6 +437,74 @@ namespace SistemaTutoria
                     break;
             }
         }
+
+        public void Desbloquear(int Nro_sesion)
+        {
+            switch (Nro_sesion)
+            {
+                case 1:
+                    cbTipo1.Enabled = true;
+                    dtpFecha1.Enabled = true;
+                    txtDescripcion1.Enabled = true;
+                    txtReferencia1.Enabled = true;
+                    txtObservaciones1.Enabled = true;
+                    btnEditar1.Cursor = Cursors.Hand;
+                    break;
+
+                case 2:
+                    cbTipo2.Enabled = true;
+                    dtpFecha2.Enabled = true;
+                    txtDescripcion2.Enabled = true;
+                    txtReferencia2.Enabled = true;
+                    txtObservaciones2.Enabled = true;
+                    btnEditar2.Cursor = Cursors.Hand;
+                    break;
+
+                case 3:
+                    cbTipo3.Enabled = true;
+                    dtpFecha3.Enabled = true;
+                    txtDescripcion3.Enabled = true;
+                    txtReferencia3.Enabled = true;
+                    txtObservaciones3.Enabled = true;
+                    btnEditar3.Cursor = Cursors.Hand;
+                    break;
+            }
+        }
+
+        public void Limpiar(int Nro_sesion)
+        {
+            switch (Nro_sesion)
+            {
+                case 1:
+
+                    cbTipo1.SelectedItem = "";
+                    dtpFecha1.Text = "";
+                    txtDescripcion1.Text = "";
+                    txtReferencia1.Text = "";
+                    txtObservaciones1.Text = "";
+                    btnEditar1.Cursor = Cursors.Hand;
+                    break;
+
+                case 2:
+                    cbTipo2.SelectedItem = "";
+                    dtpFecha2.Text = "";
+                    txtDescripcion2.Text = "";
+                    txtReferencia2.Text = "";
+                    txtObservaciones2.Text = "";
+                    btnEditar2.Cursor = Cursors.Hand;
+                    break;
+
+                case 3:
+                    cbTipo3.SelectedItem = "";
+                    dtpFecha3.Text = "";
+                    txtDescripcion3.Text = "";
+                    txtReferencia3.Text = "";
+                    txtObservaciones3.Text = "";
+                    btnEditar3.Cursor = Cursors.Hand;
+                    break;
+            }
+        }
+
         private void btnEditar2_Click(object sender, EventArgs e)
         {
             Editar(2);
@@ -437,6 +523,60 @@ namespace SistemaTutoria
         private void btnGuardar3_Click(object sender, EventArgs e)
         {
             Guardar(3);
+        }
+
+        private void cbSemestre_SelectedValueChanged(object sender, EventArgs e)
+        {
+            Semestre = cbSemestre.SelectedItem.ToString();
+            Desbloquear(1);
+            Desbloquear(2);
+            Desbloquear(3);
+            Limpiar(1);
+            Limpiar(2);
+            Limpiar(3);
+            ConectarSQL conn = new ConectarSQL();
+            DataTable Dt_Sesion = conn.SelectFichaSesionAlumno(Cod_Alumno, Semestre);
+            int Nro_Sesiones = Dt_Sesion.Rows.Count;
+            if (Nro_Sesiones != 0)
+            {
+                for (int i = 0; i < Nro_Sesiones; i++)
+                {
+                    int Nro_sesion = Int32.Parse(Dt_Sesion.Rows[i][0].ToString());
+
+                    switch (Nro_sesion)
+                    {
+                        case 1:
+
+                            cbTipo1.SelectedIndex = Indice_Tipo(Dt_Sesion.Rows[i][2].ToString());
+                            dtpFecha1.Text = Dt_Sesion.Rows[i][1].ToString();
+                            txtDescripcion1.Text = Dt_Sesion.Rows[i][3].ToString();
+                            txtReferencia1.Text = Dt_Sesion.Rows[i][4].ToString();
+                            txtObservaciones1.Text = Dt_Sesion.Rows[i][5].ToString();
+                            btnEditar1.Cursor = Cursors.Hand;
+                            break;
+
+                        case 2:
+                            cbTipo2.SelectedIndex = Indice_Tipo(Dt_Sesion.Rows[i][2].ToString());
+                            dtpFecha2.Text = Dt_Sesion.Rows[i][1].ToString();
+                            txtDescripcion2.Text = Dt_Sesion.Rows[i][3].ToString();
+                            txtReferencia2.Text = Dt_Sesion.Rows[i][4].ToString();
+                            txtObservaciones2.Text = Dt_Sesion.Rows[i][5].ToString();
+                            btnEditar2.Cursor = Cursors.Hand;
+                            break;
+
+                        case 3:
+                            cbTipo3.SelectedIndex = Indice_Tipo(Dt_Sesion.Rows[i][2].ToString());
+                            dtpFecha3.Text = Dt_Sesion.Rows[i][1].ToString();
+                            txtDescripcion3.Text = Dt_Sesion.Rows[i][3].ToString();
+                            txtReferencia3.Text = Dt_Sesion.Rows[i][4].ToString();
+                            txtObservaciones3.Text = Dt_Sesion.Rows[i][5].ToString();
+                            btnEditar3.Cursor = Cursors.Hand;
+                            break;
+                    }
+                    Bloquear(Nro_sesion);
+                }
+            }
+
         }
     }
 }

@@ -44,6 +44,16 @@ namespace Negocios
                 CodTutor + "'";
             return conn.Select(consulta);
         }
+        public DataTable SemestreActual()
+        {
+            string Semestre = " ";
+            string Consulta = "Select Semestre from FichaTutoria";
+            DataTable aux = conn.Select(Consulta);
+            int Nr = aux.Rows.Count;
+            Semestre = aux.Rows[Nr - 1][0].ToString();
+            return aux;
+
+        }
         public DataTable BuscarTutor(string categoria, string buscar)
         {
             string consulta = "select CodTutor, APaterno, AMaterno, Nombres, Estado from Tutor where " + categoria + " like '" + buscar + "%'";
@@ -86,29 +96,28 @@ namespace Negocios
             return conn.Select(consulta);
         }
 
-        public DataTable SelectFichaSesionAlumno(string CodAlumno)
+        public DataTable SelectFichaSesionAlumno(string CodAlumno, string Semestre)
         {
             string consulta = "select NroSesion, FechaHora, Tipo, Descripcion," +
                 "Referencia,Observaciones from FichaTutoria as FT inner join FichaSesion" +
-                " as FS on(FT.CodFichaTutoria = FS.CodFichaTutoria) where CodAlumno = '" + CodAlumno + "'";
+                " as FS on(FT.CodFichaTutoria = FS.CodFichaTutoria) where CodAlumno = '" + CodAlumno + "' and Semestre = '" + Semestre + "'";
             return conn.Select(consulta);
         }
 
-        public int Cod_Ficha_Tutoria(string CodAlumno)
+        public int Cod_Ficha_Tutoria(string CodAlumno, string Semestre)
         {
             string consulta = "select CodFichaTutoria from FichaTutoria where " + 
-                "CodAlumno = '" + CodAlumno + "'";
+                "CodAlumno = '" + CodAlumno + "' and Semestre = '" + Semestre + "'";
             DataTable Dt = conn.Select(consulta);
             if (Dt.Rows.Count == 0)
                 return 0;
             else
                 return Int32.Parse(Dt.Rows[0][0].ToString());
-
         }
 
-        public void AgregarFicha(string Cod_Tutor, string CodAlumno)
+        public void AgregarFicha(string Cod_Tutor, string CodAlumno, string Semestre)
         {
-            string consulta = "insert into FichaTutoria values ('" + Cod_Tutor + "','" + CodAlumno + "')";
+            string consulta = "insert into FichaTutoria values ('" + Cod_Tutor + "','" + CodAlumno + "','" + Semestre + "')";
             SqlCommand cmd = new SqlCommand(consulta, conn.GetConeccion());
             conn.GetConeccion().Open();
             cmd.ExecuteNonQuery();
@@ -144,6 +153,12 @@ namespace Negocios
             conn.GetConeccion().Open();
             cmd.ExecuteNonQuery();
             conn.GetConeccion().Close();
+        }
+
+        public DataTable Semestres (string CodAlumno)
+        {
+            string consulta = "select Semestre from FichaTutoria where CodAlumno = '" + CodAlumno + "'";
+            return conn.Select(consulta);
         }
 
         public virtual int ContarSeleccionAdministrador(string usuario, string contraseña)
