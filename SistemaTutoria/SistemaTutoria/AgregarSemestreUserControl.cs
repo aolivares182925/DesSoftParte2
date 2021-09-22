@@ -62,7 +62,7 @@ namespace SistemaTutoria
                         existe = true;
                     break;
                 }
-                if ((SemestreActual == textBox1.Text) || (!existe))
+                if ((SemestreActual == textBox1.Text) || (existe))
                 {
                     MessageBox.Show("El semestre ya existe , ingrese Semestre valido");
                 }
