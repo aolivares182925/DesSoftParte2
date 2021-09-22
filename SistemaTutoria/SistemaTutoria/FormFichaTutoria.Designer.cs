@@ -92,6 +92,8 @@ namespace SistemaTutoria
             this.lblFecha1 = new System.Windows.Forms.Label();
             this.cbTipo1 = new System.Windows.Forms.ComboBox();
             this.txtNota = new System.Windows.Forms.Label();
+            this.cbSemestre = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.P_Sesiones.SuspendLayout();
             this.p_sesion3.SuspendLayout();
@@ -855,12 +857,35 @@ namespace SistemaTutoria
             this.txtNota.TabIndex = 36;
             this.txtNota.Text = "NOTA.";
             // 
+            // cbSemestre
+            // 
+            this.cbSemestre.FormattingEnabled = true;
+            this.cbSemestre.Location = new System.Drawing.Point(655, 59);
+            this.cbSemestre.Name = "cbSemestre";
+            this.cbSemestre.Size = new System.Drawing.Size(193, 24);
+            this.cbSemestre.TabIndex = 37;
+            this.cbSemestre.SelectedValueChanged += new System.EventHandler(this.cbSemestre_SelectedValueChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.label4.Location = new System.Drawing.Point(557, 63);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 20);
+            this.label4.TabIndex = 38;
+            this.label4.Text = "Semestre :";
+            // 
             // FormFichaTutoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(925, 700);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cbSemestre);
             this.Controls.Add(this.txtNota);
             this.Controls.Add(this.P_Sesiones);
             this.Controls.Add(this.tbCodigo);
@@ -972,5 +997,7 @@ namespace SistemaTutoria
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label txtNota;
+        private System.Windows.Forms.ComboBox cbSemestre;
+        private System.Windows.Forms.Label label4;
     }
 }
