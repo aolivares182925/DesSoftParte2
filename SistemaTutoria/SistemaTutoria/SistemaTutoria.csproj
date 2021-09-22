@@ -51,6 +51,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarSemestreUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AgregarSemestreUserControl.Designer.cs">
+      <DependentUpon>AgregarSemestreUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="AlumnosUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     <Compile Include="TutoresUserControl.Designer.cs">
       <DependentUpon>TutoresUserControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AgregarSemestreUserControl.resx">
+      <DependentUpon>AgregarSemestreUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AlumnosUserControl.resx">
       <DependentUpon>AlumnosUserControl.cs</DependentUpon>
     </EmbeddedResource>

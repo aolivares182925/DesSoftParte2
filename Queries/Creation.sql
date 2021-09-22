@@ -59,6 +59,7 @@ create table FichaTutoria
 (
 	CodTutor			char(3),
 	CodAlumno			char(6),
+	Semestre			varchar(7),
 	CodFichaTutoria		int identity (1,1),
 	primary key (CodFichaTutoria),
 	foreign key (CodTutor) references Tutor(CodTutor),
@@ -69,7 +70,7 @@ create table FichaSesion
 (
 	CodFichaTutoria		int,
 	NroSesion			int check (NroSesion in(1,2,3)),
-	FechaHora			smalldatetime ,
+	FechaHora			datetime ,
 	Tipo				varchar(30) check (Tipo in('Academico','Profesional','Personal')),
 	Completado			int,
 	Descripcion			varchar(400), 
@@ -78,6 +79,7 @@ create table FichaSesion
 	foreign key(CodFichaTutoria) references FichaTutoria(CodFichaTutoria)
 
 )
+--drop table FichaTutoria
 
 create table Historial
 (
@@ -88,4 +90,3 @@ create table Historial
 	Operacion			varchar(50),
 	TuplaAfectada		char(6)
 )
-

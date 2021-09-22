@@ -44,6 +44,16 @@ namespace Negocios
                 CodTutor + "'";
             return conn.Select(consulta);
         }
+        public DataTable SemestreActual()
+        {
+            string Semestre = " ";
+            string Consulta = "Select Semestre from FichaTutoria";
+            DataTable aux = conn.Select(Consulta);
+            int Nr = aux.Rows.Count;
+            Semestre = aux.Rows[Nr - 1][0].ToString();
+            return aux;
+
+        }
         public DataTable BuscarTutor(string categoria, string buscar)
         {
             string consulta = "select CodTutor, APaterno, AMaterno, Nombres, Estado from Tutor where " + categoria + " like '" + buscar + "%'";
@@ -103,7 +113,6 @@ namespace Negocios
                 return 0;
             else
                 return Int32.Parse(Dt.Rows[0][0].ToString());
-
         }
 
         public void AgregarFicha(string Cod_Tutor, string CodAlumno, string Semestre)

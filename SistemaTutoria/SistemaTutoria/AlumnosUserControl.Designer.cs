@@ -68,6 +68,7 @@ namespace SistemaTutoria
             this.tbCodTutor = new System.Windows.Forms.ComboBox();
             this.cmbApMatTutor = new System.Windows.Forms.ComboBox();
             this.lblApMatTutor = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,8 +78,9 @@ namespace SistemaTutoria
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(13)))), ((int)(((byte)(15)))));
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(183, 46);
+            this.lblTitle.Size = new System.Drawing.Size(227, 58);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Alumnos";
             // 
@@ -87,9 +89,10 @@ namespace SistemaTutoria
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.lblCodigo.Location = new System.Drawing.Point(5, 64);
+            this.lblCodigo.Location = new System.Drawing.Point(7, 79);
+            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(52, 16);
+            this.lblCodigo.Size = new System.Drawing.Size(61, 20);
             this.lblCodigo.TabIndex = 1;
             this.lblCodigo.Text = "Codigo";
             // 
@@ -97,9 +100,10 @@ namespace SistemaTutoria
             // 
             this.tbCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCodigo.Location = new System.Drawing.Point(92, 61);
+            this.tbCodigo.Location = new System.Drawing.Point(123, 75);
+            this.tbCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.tbCodigo.Name = "tbCodigo";
-            this.tbCodigo.Size = new System.Drawing.Size(150, 22);
+            this.tbCodigo.Size = new System.Drawing.Size(199, 26);
             this.tbCodigo.TabIndex = 2;
             // 
             // lblNombres
@@ -107,9 +111,10 @@ namespace SistemaTutoria
             this.lblNombres.AutoSize = true;
             this.lblNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombres.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.lblNombres.Location = new System.Drawing.Point(5, 89);
+            this.lblNombres.Location = new System.Drawing.Point(7, 110);
+            this.lblNombres.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombres.Name = "lblNombres";
-            this.lblNombres.Size = new System.Drawing.Size(64, 16);
+            this.lblNombres.Size = new System.Drawing.Size(77, 20);
             this.lblNombres.TabIndex = 1;
             this.lblNombres.Text = "Nombres";
             // 
@@ -117,9 +122,10 @@ namespace SistemaTutoria
             // 
             this.tbNombres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNombres.Location = new System.Drawing.Point(92, 89);
+            this.tbNombres.Location = new System.Drawing.Point(123, 110);
+            this.tbNombres.Margin = new System.Windows.Forms.Padding(4);
             this.tbNombres.Name = "tbNombres";
-            this.tbNombres.Size = new System.Drawing.Size(150, 22);
+            this.tbNombres.Size = new System.Drawing.Size(199, 26);
             this.tbNombres.TabIndex = 2;
             // 
             // lblApPaterno
@@ -127,9 +133,10 @@ namespace SistemaTutoria
             this.lblApPaterno.AutoSize = true;
             this.lblApPaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApPaterno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.lblApPaterno.Location = new System.Drawing.Point(349, 64);
+            this.lblApPaterno.Location = new System.Drawing.Point(465, 79);
+            this.lblApPaterno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblApPaterno.Name = "lblApPaterno";
-            this.lblApPaterno.Size = new System.Drawing.Size(78, 16);
+            this.lblApPaterno.Size = new System.Drawing.Size(96, 20);
             this.lblApPaterno.TabIndex = 1;
             this.lblApPaterno.Text = "Ap. Paterno";
             // 
@@ -137,9 +144,10 @@ namespace SistemaTutoria
             // 
             this.tbApPaterno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbApPaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbApPaterno.Location = new System.Drawing.Point(436, 61);
+            this.tbApPaterno.Location = new System.Drawing.Point(581, 75);
+            this.tbApPaterno.Margin = new System.Windows.Forms.Padding(4);
             this.tbApPaterno.Name = "tbApPaterno";
-            this.tbApPaterno.Size = new System.Drawing.Size(150, 22);
+            this.tbApPaterno.Size = new System.Drawing.Size(199, 26);
             this.tbApPaterno.TabIndex = 2;
             // 
             // lblApMaterno
@@ -147,9 +155,10 @@ namespace SistemaTutoria
             this.lblApMaterno.AutoSize = true;
             this.lblApMaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApMaterno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.lblApMaterno.Location = new System.Drawing.Point(703, 64);
+            this.lblApMaterno.Location = new System.Drawing.Point(937, 79);
+            this.lblApMaterno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblApMaterno.Name = "lblApMaterno";
-            this.lblApMaterno.Size = new System.Drawing.Size(80, 16);
+            this.lblApMaterno.Size = new System.Drawing.Size(99, 20);
             this.lblApMaterno.TabIndex = 1;
             this.lblApMaterno.Text = "Ap. Materno";
             // 
@@ -157,25 +166,28 @@ namespace SistemaTutoria
             // 
             this.tbApMaterno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbApMaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbApMaterno.Location = new System.Drawing.Point(790, 61);
+            this.tbApMaterno.Location = new System.Drawing.Point(1053, 75);
+            this.tbApMaterno.Margin = new System.Windows.Forms.Padding(4);
             this.tbApMaterno.Name = "tbApMaterno";
-            this.tbApMaterno.Size = new System.Drawing.Size(150, 22);
+            this.tbApMaterno.Size = new System.Drawing.Size(199, 26);
             this.tbApMaterno.TabIndex = 2;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(158)))), ((int)(((byte)(68)))));
-            this.panel1.Location = new System.Drawing.Point(270, 190);
+            this.panel1.Location = new System.Drawing.Point(360, 234);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(400, 1);
+            this.panel1.Size = new System.Drawing.Size(533, 1);
             this.panel1.TabIndex = 3;
             // 
             // tbBuscar
             // 
             this.tbBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbBuscar.Location = new System.Drawing.Point(704, 205);
+            this.tbBuscar.Location = new System.Drawing.Point(939, 252);
+            this.tbBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.tbBuscar.Name = "tbBuscar";
-            this.tbBuscar.Size = new System.Drawing.Size(200, 26);
+            this.tbBuscar.Size = new System.Drawing.Size(265, 30);
             this.tbBuscar.TabIndex = 4;
             this.tbBuscar.TextChanged += new System.EventHandler(this.tbBuscar_TextChanged);
             // 
@@ -214,7 +226,8 @@ namespace SistemaTutoria
             this.dgvPrincipal.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPrincipal.EnableHeadersVisualStyles = false;
             this.dgvPrincipal.GridColor = System.Drawing.Color.White;
-            this.dgvPrincipal.Location = new System.Drawing.Point(0, 240);
+            this.dgvPrincipal.Location = new System.Drawing.Point(0, 295);
+            this.dgvPrincipal.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPrincipal.Name = "dgvPrincipal";
             this.dgvPrincipal.ReadOnly = true;
             this.dgvPrincipal.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -234,7 +247,7 @@ namespace SistemaTutoria
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(158)))), ((int)(((byte)(68)))));
             this.dgvPrincipal.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPrincipal.Size = new System.Drawing.Size(940, 380);
+            this.dgvPrincipal.Size = new System.Drawing.Size(1253, 468);
             this.dgvPrincipal.TabIndex = 6;
             this.dgvPrincipal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrincipal_CellContentClick);
             // 
@@ -264,9 +277,10 @@ namespace SistemaTutoria
             this.lblCodTutor.AutoSize = true;
             this.lblCodTutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodTutor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.lblCodTutor.Location = new System.Drawing.Point(5, 118);
+            this.lblCodTutor.Location = new System.Drawing.Point(7, 145);
+            this.lblCodTutor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodTutor.Name = "lblCodTutor";
-            this.lblCodTutor.Size = new System.Drawing.Size(70, 16);
+            this.lblCodTutor.Size = new System.Drawing.Size(87, 20);
             this.lblCodTutor.TabIndex = 1;
             this.lblCodTutor.Text = "Cod. Tutor";
             // 
@@ -275,9 +289,10 @@ namespace SistemaTutoria
             this.lblCodEscuela.AutoSize = true;
             this.lblCodEscuela.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodEscuela.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.lblCodEscuela.Location = new System.Drawing.Point(349, 89);
+            this.lblCodEscuela.Location = new System.Drawing.Point(465, 110);
+            this.lblCodEscuela.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodEscuela.Name = "lblCodEscuela";
-            this.lblCodEscuela.Size = new System.Drawing.Size(72, 16);
+            this.lblCodEscuela.Size = new System.Drawing.Size(89, 20);
             this.lblCodEscuela.TabIndex = 1;
             this.lblCodEscuela.Text = "Escuela P.";
             // 
@@ -285,9 +300,10 @@ namespace SistemaTutoria
             // 
             this.tbCodEscuela.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCodEscuela.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCodEscuela.Location = new System.Drawing.Point(436, 87);
+            this.tbCodEscuela.Location = new System.Drawing.Point(581, 107);
+            this.tbCodEscuela.Margin = new System.Windows.Forms.Padding(4);
             this.tbCodEscuela.Name = "tbCodEscuela";
-            this.tbCodEscuela.Size = new System.Drawing.Size(150, 22);
+            this.tbCodEscuela.Size = new System.Drawing.Size(199, 26);
             this.tbCodEscuela.TabIndex = 2;
             // 
             // btnAgregar
@@ -298,9 +314,10 @@ namespace SistemaTutoria
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.btnAgregar.Location = new System.Drawing.Point(840, 136);
+            this.btnAgregar.Location = new System.Drawing.Point(1120, 167);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(100, 30);
+            this.btnAgregar.Size = new System.Drawing.Size(133, 37);
             this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -310,9 +327,10 @@ namespace SistemaTutoria
             // 
             this.cbRiesgo.AutoSize = true;
             this.cbRiesgo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbRiesgo.Location = new System.Drawing.Point(704, 102);
+            this.cbRiesgo.Location = new System.Drawing.Point(939, 126);
+            this.cbRiesgo.Margin = new System.Windows.Forms.Padding(4);
             this.cbRiesgo.Name = "cbRiesgo";
-            this.cbRiesgo.Size = new System.Drawing.Size(84, 20);
+            this.cbRiesgo.Size = new System.Drawing.Size(102, 24);
             this.cbRiesgo.TabIndex = 8;
             this.cbRiesgo.Text = "En riesgo";
             this.cbRiesgo.UseVisualStyleBackColor = true;
@@ -339,9 +357,10 @@ namespace SistemaTutoria
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Image = global::SistemaTutoria.Properties.Resources.icons8_búsqueda_24;
-            this.btnBuscar.Location = new System.Drawing.Point(907, 201);
+            this.btnBuscar.Location = new System.Drawing.Point(1209, 247);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(30, 30);
+            this.btnBuscar.Size = new System.Drawing.Size(40, 37);
             this.btnBuscar.TabIndex = 5;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -358,10 +377,10 @@ namespace SistemaTutoria
             "Situacion",
             "CodTutor",
             "CodEscuela"});
-            this.cmbCategoria.Location = new System.Drawing.Point(571, 204);
-            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbCategoria.Location = new System.Drawing.Point(761, 251);
+            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(121, 24);
+            this.cmbCategoria.Size = new System.Drawing.Size(160, 28);
             this.cmbCategoria.TabIndex = 9;
             this.cmbCategoria.Text = "CodAlumno";
             this.cmbCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbCategoria_SelectedIndexChanged);
@@ -375,9 +394,10 @@ namespace SistemaTutoria
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.btnCancelar.Location = new System.Drawing.Point(704, 136);
+            this.btnCancelar.Location = new System.Drawing.Point(939, 167);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(128, 30);
+            this.btnCancelar.Size = new System.Drawing.Size(171, 37);
             this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -388,10 +408,9 @@ namespace SistemaTutoria
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(507, 206);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(676, 254);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 16);
+            this.label1.Size = new System.Drawing.Size(67, 20);
             this.label1.TabIndex = 11;
             this.label1.Text = "Campo:";
             // 
@@ -399,9 +418,10 @@ namespace SistemaTutoria
             // 
             this.chboxActivo.AutoSize = true;
             this.chboxActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chboxActivo.Location = new System.Drawing.Point(826, 103);
+            this.chboxActivo.Location = new System.Drawing.Point(1101, 127);
+            this.chboxActivo.Margin = new System.Windows.Forms.Padding(4);
             this.chboxActivo.Name = "chboxActivo";
-            this.chboxActivo.Size = new System.Drawing.Size(64, 20);
+            this.chboxActivo.Size = new System.Drawing.Size(77, 24);
             this.chboxActivo.TabIndex = 12;
             this.chboxActivo.Text = "Activo";
             this.chboxActivo.UseVisualStyleBackColor = true;
@@ -411,9 +431,10 @@ namespace SistemaTutoria
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(-3, 150);
+            this.label2.Location = new System.Drawing.Point(-4, 185);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 16);
+            this.label2.Size = new System.Drawing.Size(112, 20);
             this.label2.TabIndex = 13;
             this.label2.Text = "Nombre Tutor";
             // 
@@ -421,14 +442,16 @@ namespace SistemaTutoria
             // 
             this.lblApPatTutor.AutoSize = true;
             this.lblApPatTutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApPatTutor.Location = new System.Drawing.Point(318, 118);
+            this.lblApPatTutor.Location = new System.Drawing.Point(424, 145);
+            this.lblApPatTutor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblApPatTutor.Name = "lblApPatTutor";
-            this.lblApPatTutor.Size = new System.Drawing.Size(112, 16);
+            this.lblApPatTutor.Size = new System.Drawing.Size(140, 20);
             this.lblApPatTutor.TabIndex = 14;
             this.lblApPatTutor.Text = "Ap. Paterno Tutor";
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
@@ -436,51 +459,56 @@ namespace SistemaTutoria
             // 
             this.cmbNomTutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNomTutor.FormattingEnabled = true;
-            this.cmbNomTutor.Location = new System.Drawing.Point(92, 144);
+            this.cmbNomTutor.Location = new System.Drawing.Point(123, 177);
+            this.cmbNomTutor.Margin = new System.Windows.Forms.Padding(4);
             this.cmbNomTutor.Name = "cmbNomTutor";
-            this.cmbNomTutor.Size = new System.Drawing.Size(150, 24);
+            this.cmbNomTutor.Size = new System.Drawing.Size(199, 28);
             this.cmbNomTutor.TabIndex = 15;
             // 
             // cmbApPatTutor
             // 
             this.cmbApPatTutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbApPatTutor.FormattingEnabled = true;
-            this.cmbApPatTutor.Location = new System.Drawing.Point(436, 115);
+            this.cmbApPatTutor.Location = new System.Drawing.Point(581, 142);
+            this.cmbApPatTutor.Margin = new System.Windows.Forms.Padding(4);
             this.cmbApPatTutor.Name = "cmbApPatTutor";
-            this.cmbApPatTutor.Size = new System.Drawing.Size(150, 24);
+            this.cmbApPatTutor.Size = new System.Drawing.Size(199, 28);
             this.cmbApPatTutor.TabIndex = 17;
             // 
             // tbCodTutor
             // 
             this.tbCodTutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCodTutor.FormattingEnabled = true;
-            this.tbCodTutor.Location = new System.Drawing.Point(92, 115);
+            this.tbCodTutor.Location = new System.Drawing.Point(123, 142);
+            this.tbCodTutor.Margin = new System.Windows.Forms.Padding(4);
             this.tbCodTutor.Name = "tbCodTutor";
-            this.tbCodTutor.Size = new System.Drawing.Size(150, 24);
+            this.tbCodTutor.Size = new System.Drawing.Size(199, 28);
             this.tbCodTutor.TabIndex = 18;
             // 
             // cmbApMatTutor
             // 
             this.cmbApMatTutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbApMatTutor.FormattingEnabled = true;
-            this.cmbApMatTutor.Location = new System.Drawing.Point(436, 143);
+            this.cmbApMatTutor.Location = new System.Drawing.Point(581, 176);
+            this.cmbApMatTutor.Margin = new System.Windows.Forms.Padding(4);
             this.cmbApMatTutor.Name = "cmbApMatTutor";
-            this.cmbApMatTutor.Size = new System.Drawing.Size(150, 24);
+            this.cmbApMatTutor.Size = new System.Drawing.Size(199, 28);
             this.cmbApMatTutor.TabIndex = 19;
             // 
             // lblApMatTutor
             // 
             this.lblApMatTutor.AutoSize = true;
             this.lblApMatTutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApMatTutor.Location = new System.Drawing.Point(318, 147);
+            this.lblApMatTutor.Location = new System.Drawing.Point(424, 181);
+            this.lblApMatTutor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblApMatTutor.Name = "lblApMatTutor";
-            this.lblApMatTutor.Size = new System.Drawing.Size(114, 16);
+            this.lblApMatTutor.Size = new System.Drawing.Size(143, 20);
             this.lblApMatTutor.TabIndex = 20;
             this.lblApMatTutor.Text = "Ap. Materno Tutor";
             // 
             // AlumnosUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.lblApMatTutor);
@@ -512,8 +540,9 @@ namespace SistemaTutoria
             this.Controls.Add(this.lblNombres);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.lblTitle);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AlumnosUserControl";
-            this.Size = new System.Drawing.Size(940, 620);
+            this.Size = new System.Drawing.Size(1253, 763);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -556,5 +585,6 @@ namespace SistemaTutoria
         private System.Windows.Forms.ComboBox tbCodTutor;
         private System.Windows.Forms.ComboBox cmbApMatTutor;
         private System.Windows.Forms.Label lblApMatTutor;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

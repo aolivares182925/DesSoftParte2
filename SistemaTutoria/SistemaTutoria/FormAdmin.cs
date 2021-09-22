@@ -69,6 +69,15 @@ namespace SistemaTutoria
             defaulButtonstBackColor();
             btnMenuAlumnos.BackColor = Color.FromArgb(255, 255, 255);
         }
+
+        public void showSemestres()
+        {
+            if (!panel.Controls.Contains(Agregar_SemestreUserControl.Instance))
+                panel.Controls.Add(Agregar_SemestreUserControl.Instance);
+            Agregar_SemestreUserControl.Instance.BringToFront();
+            defaulButtonstBackColor();
+            btnAgregar_S.BackColor = Color.FromArgb(255, 255, 255);
+        }
         #endregion
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -227,6 +236,11 @@ namespace SistemaTutoria
             {
                 MessageBox.Show("Contraseña actual erronea o Contraseña nueva invalida");
             }
+        }
+
+        private void btnAgregar_S_Click(object sender, EventArgs e)
+        {
+            showSemestres();
         }
     }
 }
