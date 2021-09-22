@@ -211,9 +211,9 @@ namespace SistemaTutoria
             refreshDataGridView();
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e )
         {
-            /* codigo aqui
+            /* código aquí
              * 
             */
             refreshDataGridView();
@@ -221,7 +221,7 @@ namespace SistemaTutoria
 
         private void tbBuscar_TextChanged(object sender, EventArgs e)
         {
-            if (tbBuscar.Text != "")
+            if (tbBuscar.Text != "" )
             {
                 dgvPrincipal.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 ConectarSQL conn = new ConectarSQL();
